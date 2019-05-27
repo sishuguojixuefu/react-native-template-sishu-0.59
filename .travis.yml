@@ -10,7 +10,7 @@ cache:
     - 'node_modules'
 # 通知
 notifications:
-  on_success: always
+  on_success: change
   email:
     - github@sishuguojixuefu.com
     - lijianfei@sishuguojixuefu.com
