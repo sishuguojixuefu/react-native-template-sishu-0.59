@@ -15,12 +15,18 @@
 
 ## 🚀 快速开始
 
+### 初始化项目
+
 ```sh
 $ react-native init MyApp --template sishu
 ```
 
+### link 原生应用
+
+> `react-native link` 命令有时候会失败，建议执行完命令后到相应插件主页阅读文档。
+
 ```sh
-$ react-native link react-native-gesture-handler
+$ react-native link react-native-gesture-handler react-native-vector-icons
 ```
 
 ## 🏗 额外添加的依赖
@@ -45,6 +51,10 @@ $ react-native link react-native-gesture-handler
 - [react-navigation-collapsible](http://t.cn/E9D8NTs): 可折叠标题的 React Navigation 扩展。使您的 React Navigation 标题可折叠
 - [react-navigation-header-buttons](http://t.cn/R1LoGK6): 轻松渲染用于反应导航的标题按钮。
 - [react-navigation-transitions](http://t.cn/E9DR3R7): react-navigation 的自定义过渡效果组件
+
+#### UI 组件
+
+- [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
 
 ### devDependencies
 
