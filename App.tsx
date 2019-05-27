@@ -2,7 +2,7 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
- * Generated with the sishuguojixuefu template
+ * Generated with the sishu template
  * https://github.com/sishuguojixuefu/react-native-template-sishu
  *
  * @format

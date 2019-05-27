@@ -40,6 +40,9 @@ module.exports = {
         rootPathSuffix: 'src',
         rootPathPrefix: '~',
       },
+      node: {
+        extensions: ['.js', '.jsx', 'ts', '.tsx'],
+      },
     },
   },
   rules: {
@@ -85,6 +88,7 @@ module.exports = {
     'react-native/no-color-literals': 0,
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 0,
+    '@typescript-eslint/no-empty-interface': 1,
     '@typescript-eslint/explicit-function-return-type': {
       allowExpressions: true,
       allowTypedFunctionExpressions: true,
