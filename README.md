@@ -19,6 +19,10 @@
 $ react-native init MyApp --template sishu
 ```
 
+```sh
+$ react-native link react-native-gesture-handler
+```
+
 ## 🏗 额外添加的依赖
 
 ### dependencies
@@ -29,6 +33,15 @@ $ react-native init MyApp --template sishu
 - [mobx-react](http://t.cn/R5cHJQf): Mobx 的 React 粘合剂
 - [mobx-react-devtools](http://t.cn/RGnCdNB): 用于执行由 MobX 和 React 提供支持的 React 应用程序的运行时分析的工具
 - [mobx-persist](http://t.cn/AiKIRSjX): 持久化 mobx stores
+
+#### react-navigation
+
+- [react-native-gesture-handler](http://t.cn/AiKMLWNy): react-navigation 依赖这个插件
+- [react-navigation](http://t.cn/RBfba1a): 官方推荐导航组件
+- [react-navigation-back-button](http://t.cn/E9DntJc): 模仿 react-navigation 返回键，能够拦截返回事件
+- [react-navigation-backhandler](http://t.cn/RkCpfeP): 使用 React-Navigation 轻松处理 Android 后退按钮行为
+- [react-navigation-header-buttons](http://t.cn/R1LoGK6): 轻松渲染用于反应导航的标题按钮。
+- [react-navigation-transitions](http://t.cn/E9DR3R7): react-navigation 的自定义过渡效果组件
 
 ### devDependencies
 
@@ -83,3 +96,4 @@ $ react-native init MyApp --template sishu
 - [react-native-template-youngjuning](http://t.cn/ECLfOA5): 杨俊宁的个人 react-native 模版
 - [react-native-template-rocketseat-basic](http://t.cn/AiKIMyxQ): 具有 Rocketseat 中使用的结构的 React Native 应用程序的基本模板
 - [awesome-mobx](https://github.com/mobxjs/awesome-mobx)
+- [react-navigation-slide-from-right-transition](http://t.cn/RsjwjbZ): 从右侧滑动转换配置，用于在 android 上使用 react navigation 的堆栈导航器

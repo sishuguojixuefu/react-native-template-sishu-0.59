@@ -2,5 +2,11 @@
   "mobx": "latest",
   "mobx-persist": "latest",
   "mobx-react-devtools": "latest",
-  "mobx-react": "latest"
+  "mobx-react": "latest",
+  "react-native-gesture-handler": "latest",
+  "react-navigation": "latest",
+  "react-navigation-back-button": "latest",
+  "react-navigation-backhandler": "latest",
+  "react-navigation-header-buttons": "latest",
+  "react-navigation-transitions": "latest"
 }
