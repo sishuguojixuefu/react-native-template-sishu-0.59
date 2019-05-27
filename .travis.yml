@@ -12,6 +12,4 @@ cache:
 notifications:
   on_success: change
   email:
-    - github@sishuguojixuefu.com
-    - lijianfei@sishuguojixuefu.com
     - 1003719811@qq.com
