@@ -26,7 +26,7 @@ $ react-native init MyApp --template sishu
 > `react-native link` 命令有时候会失败，建议执行完命令后到相应插件主页阅读文档。
 
 ```sh
-$ react-native link react-native-gesture-handler react-native-vector-icons
+$ react-native link react-native-gesture-handler react-native-vector-icons @ant-design/icons-react-native
 ```
 
 ## 🏗 额外添加的依赖
@@ -54,6 +54,7 @@ $ react-native link react-native-gesture-handler react-native-vector-icons
 
 #### UI 组件
 
+- [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
 
 #### utils

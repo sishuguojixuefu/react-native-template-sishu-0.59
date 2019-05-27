@@ -8,6 +8,7 @@
  * @format
  */
 
+import { Provider as AntdProvider } from '@sishuguojixuefu/antd-mobile-rn'
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
@@ -33,8 +34,10 @@ class App extends Component<Props> {
   public render() {
     return (
       <View style={styles.container}>
-        {/* <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。 */}
-        <AppContainer />
+        <AntdProvider>
+          {/* <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。 */}
+          <AppContainer />
+        </AntdProvider>
       </View>
     )
   }
