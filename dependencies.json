@@ -1,4 +1,7 @@
 {
+  "axios": "latest",
+  "dayjs": "latest",
+  "md5": "latest",
   "mobx": "latest",
   "mobx-persist": "latest",
   "mobx-react-devtools": "latest",
@@ -12,5 +15,6 @@
   "react-navigation-backhandler": "latest",
   "react-navigation-collapsible": "latest",
   "react-navigation-header-buttons": "latest",
-  "react-navigation-transitions": "latest"
+  "react-navigation-transitions": "latest",
+  "uuid": "latest"
 }

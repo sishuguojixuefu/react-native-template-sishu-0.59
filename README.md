@@ -56,6 +56,13 @@ $ react-native link react-native-gesture-handler react-native-vector-icons
 
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
 
+#### utils
+
+- [axios](http://t.cn/ROfXFuj): Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
+- [dayjs](http://t.cn/Ei0icT0): Moment.js 的 2kB 轻量化方案，拥有同样强大的 API
+- [md5](http://t.cn/RAG3xcN): 用于使用 MD5 散列消息的 JavaScript 函数
+- [uuid](http://t.cn/RarS3SE): 简单，快速生成 RFC4122 UUIDS
+
 ### devDependencies
 
 - @types/jest
