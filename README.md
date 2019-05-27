@@ -1,6 +1,6 @@
 # react-native-template-sishu
 
-私塾国际学府react-native项目模板
+私塾国际学府 React Native 团队开箱即用项目模板
 
 ## :art:特性
 
