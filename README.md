@@ -20,5 +20,5 @@ $ react-native init MyApp --template sishu
 
 ## 相关项目
 
-- [react-native-template-youngjuning](http://t.cn/ECLfOA5): 杨俊宁的个人react-native模版
 - [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的React Native模板，可快速启动TypeScript
+- [react-native-template-youngjuning](http://t.cn/ECLfOA5): 杨俊宁的个人react-native模版
