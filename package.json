@@ -1,6 +1,6 @@
 {
   "name": "@sishuguojixuefu/react-native-template-sishu",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "私塾国际学府 React Native 团队开箱即用项目模板",
   "scripts": {
     "install": "node setup.js",
@@ -20,15 +20,15 @@
     "sishuguojixuefu"
   ],
   "author": {
-    "name" : "sishuguojixuefu",
-    "email" : "github@sishuguojixuefu.com",
-    "url" : "https://github.com/sishuguojixuefu"
+    "name": "sishuguojixuefu",
+    "email": "github@sishuguojixuefu.com",
+    "url": "https://github.com/sishuguojixuefu"
   },
   "contributors": [
     {
-      "name" : "杨俊宁",
-      "email" : "1003719811@qq.com",
-      "url" : "https://youngjuning.js.org"
+      "name": "杨俊宁",
+      "email": "1003719811@qq.com",
+      "url": "https://youngjuning.js.org"
     }
   ],
   "license": "MIT",
