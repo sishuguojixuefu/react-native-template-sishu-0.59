@@ -23,6 +23,13 @@ $ react-native init MyApp --template sishu
 
 ### dependencies
 
+#### mobx
+
+- [mobx](http://t.cn/R3Kne8l): 简单、可扩展的状态管理
+- [mobx-react](http://t.cn/R5cHJQf): Mobx 的 React 粘合剂
+- [mobx-react-devtools](http://t.cn/RGnCdNB): 用于执行由 MobX 和 React 提供支持的 React 应用程序的运行时分析的工具
+- [mobx-persist](http://t.cn/AiKIRSjX): 持久化 mobx stores
+
 ### devDependencies
 
 - @types/jest
@@ -68,9 +75,11 @@ $ react-native init MyApp --template sishu
 
 - `App.js` -> `App.tsx`
 - `__tests__/App-test.js` -> `__tests__/App-test.tsx`
+- `index.js`
 
 ## 相关项目
 
 - [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的 React Native 模板，可快速启动 TypeScript
 - [react-native-template-youngjuning](http://t.cn/ECLfOA5): 杨俊宁的个人 react-native 模版
 - [react-native-template-rocketseat-basic](http://t.cn/AiKIMyxQ): 具有 Rocketseat 中使用的结构的 React Native 应用程序的基本模板
+- [awesome-mobx](https://github.com/mobxjs/awesome-mobx)

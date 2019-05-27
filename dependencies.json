@@ -1,0 +1,6 @@
+{
+  "mobx": "latest",
+  "mobx-persist": "latest",
+  "mobx-react-devtools": "latest",
+  "mobx-react": "latest"
+}
