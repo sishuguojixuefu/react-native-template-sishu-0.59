@@ -1,0 +1,39 @@
+{
+  "name": "@sishuguojixuefu/react-native-template-sishu",
+  "version": "0.0.0",
+  "description": "私塾国际学府 React Native 团队开箱即用项目模板",
+  "scripts": {
+    "install": "node setup.js",
+    "postversion": "git push --tags && git push && npm publish",
+    "commit": "git add . && git commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sishuxuefu/react-native-template-sishu.git"
+  },
+  "keywords": [
+    "react-native",
+    "typescript",
+    "jest",
+    "template",
+    "boilerplate",
+    "sishuguojixuefu"
+  ],
+  "author": {
+    "name" : "sishuguojixuefu",
+    "email" : "github@sishuguojixuefu.com",
+    "url" : "https://github.com/sishuguojixuefu"
+  },
+  "contributors": [
+    {
+      "name" : "杨俊宁",
+      "email" : "1003719811@qq.com",
+      "url" : "https://youngjuning.js.org"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sishuguojixuefu/react-native-template-sishu/issues"
+  },
+  "homepage": "https://github.com/sishuguojixuefu/react-native-template-sishu#readme"
+}
