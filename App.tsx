@@ -9,21 +9,32 @@
  */
 
 import React, { Component } from 'react'
-import { Platform, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { createAppContainer, createStackNavigator } from 'react-navigation'
+import HomeScreen from '~/screen/HomeScreen'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
-})
+// stack navigator 为你的应用提供了一种在屏幕之间切换并管理导航历史记录的方式。
+// createStackNavigator是一个函数，它接受一个路由配置对象和一个可选配置对象并返回一个 React 组件。
+const AppNavigator = createStackNavigator(
+  {
+    HomeScreen: {
+      screen: HomeScreen, // 配置中唯一必须的属性是screen（此项设置一个组件）
+    },
+  },
+  {
+    initialRouteName: 'Home', // 指定堆栈中的初始路由
+  }
+)
+
+const AppContainer = createAppContainer(AppNavigator)
 
 interface Props {}
-export default class App extends Component<Props> {
+class App extends Component<Props> {
   public render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.tsx</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        {/* <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。 */}
+        <AppContainer />
       </View>
     )
   }
@@ -31,19 +42,9 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F2F2F2',
     flex: 1,
-    justifyContent: 'center',
-  },
-  instructions: {
-    color: '#333333',
-    marginBottom: 5,
-    textAlign: 'center',
-  },
-  welcome: {
-    fontSize: 20,
-    margin: 10,
-    textAlign: 'center',
   },
 })
+
+export default App
