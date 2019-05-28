@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/sishuguojixuefu/react-native-template-sishu.svg?branch=master)](https://travis-ci.org/sishuguojixuefu/react-native-template-sishu)
 [![npm version](https://badge.fury.io/js/react-native-template-sishu.svg)](https://badge.fury.io/js/react-native-template-sishu)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://t.cn/AiKIqGM6)
+[![CONTRIBUTING](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+[![CHANGELOG](https://img.shields.io/static/v1.svg?label=CHANGELOG&message=Look&color=success)](./CHANGELOG.md)
 
 私塾国际学府 React Native 团队开箱即用项目模板
 
