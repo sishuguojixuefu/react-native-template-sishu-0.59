@@ -26,13 +26,25 @@
 $ react-native init MyApp --template sishu
 ```
 
-### link 原生应用
+## 📄 额外的文件
 
-> `react-native link` 命令有时候会失败，建议执行完命令后到相应插件主页阅读文档。
+- `.vscode`
+  - [settings.json](http://t.cn/RrW80SM): VSCode 配置文件
+- [.editorconfig](http://t.cn/EIManp7): EditorConfig 配置文件
+- [.eslintignore](http://t.cn/AiKfQ2lw): ESLint 忽略配置文件
+- [.eslintrc.js](http://t.cn/R1frsCU): ESLint 配置文件
+- [.prettierignore](http://t.cn/AiKfH938): Prettier 忽略配置文件
+- [.prettierrc.js](http://t.cn/RB0SYNU): Prettier 配置文件
+- [.huskyrc.js](http://t.cn/AiKfHhpj): husky 配置文件
+- [lint-staged.config.js](http://t.cn/AiKfTuw1): lint-staged 配置文件
+- [tsconfig.json](http://t.cn/RgGMOQ7): TypeScript 配置文件
+- jest.config.js: jest 配置文件
 
-```sh
-$ react-native link react-native-gesture-handler react-native-vector-icons @ant-design/icons-react-native
-```
+## ⚡️ 改动的文件
+
+- `App.js` -> `App.tsx`
+- `__tests__/App-test.js` -> `__tests__/App-test.tsx`
+- `index.js`
 
 ## 🏗 额外添加的依赖
 
@@ -107,25 +119,23 @@ $ react-native link react-native-gesture-handler react-native-vector-icons @ant-
 - prettier
 - typescript
 
-## 📄 额外的文件
+## 如何删除不想要的依赖？
 
-- `.vscode`
-  - [settings.json](http://t.cn/RrW80SM): VSCode 配置文件
-- [.editorconfig](http://t.cn/EIManp7): EditorConfig 配置文件
-- [.eslintignore](http://t.cn/AiKfQ2lw): ESLint 忽略配置文件
-- [.eslintrc.js](http://t.cn/R1frsCU): ESLint 配置文件
-- [.prettierignore](http://t.cn/AiKfH938): Prettier 忽略配置文件
-- [.prettierrc.js](http://t.cn/RB0SYNU): Prettier 配置文件
-- [.huskyrc.js](http://t.cn/AiKfHhpj): husky 配置文件
-- [lint-staged.config.js](http://t.cn/AiKfTuw1): lint-staged 配置文件
-- [tsconfig.json](http://t.cn/RgGMOQ7): TypeScript 配置文件
-- jest.config.js: jest 配置文件
+> 注意：react-navigation、axios、@sishuguojixuefu/antd-mobile-rn 不能简单的进行移除，如果要移除。请自行删除项目中的配置
 
-## ⚡️ 改动的文件
+### 原生库
 
-- `App.js` -> `App.tsx`
-- `__tests__/App-test.js` -> `__tests__/App-test.tsx`
-- `index.js`
+原生库需要先执行 `react-native unlink packageName`，然后再执行 `yarn remove packageName`
+
+下面是依赖的原生库:
+
+- react-native-gesture-handler
+- react-native-vector-icons
+- @ant-design/icons-react-native
+
+### 非原生库
+
+直接执行 `yarn remove packageName`
 
 ## 相关项目
 
