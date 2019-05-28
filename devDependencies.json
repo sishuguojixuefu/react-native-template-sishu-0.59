@@ -1,4 +1,5 @@
 {
+  "@babel/plugin-transform-flow-strip-types": "latest",
   "@types/jest": "latest",
   "@types/react": "latest",
   "@types/react-native": "latest",

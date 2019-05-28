@@ -98,6 +98,7 @@ $ react-native init MyApp --template sishu
 
 ### devDependencies
 
+- @babel/plugin-transform-flow-strip-types: http://t.cn/AiKNGn4F
 - @types/jest
 - @types/react
 - @types/react-native
@@ -141,6 +142,30 @@ $ react-native init MyApp --template sishu
 
 直接执行 `yarn remove packageName`
 
+## 更多
+
+### 超六的 npm 工作流程
+
+```json
+{
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "run:ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "run:android": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
+    "bundle:ios": "react-native bundle --entry-file index.js --bundle-output ./ios/index.ios.bundle --platform ios --dev false --assets-dest ./ios --sourcemap-output ./ios/index.ios.bundle.map",
+    "bundle:android": "react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false --assets-dest ./android/app/src/main/res --sourcemap-output ./android/app/src/main/assets/index.android.bundle.map",
+    "gradle:clean": "cd android && ./gradlew clean",
+    "gradle:stop": "cd android && ./gradlew stop",
+    "android:assembleRelease": "cd android && ./gradlew assembleRelease",
+    "android:installRelease": "cd android && ./gradlew installRelease",
+    "android:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
+    "android:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
+    "android:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
+  }
+}
+```
+
 ## 相关项目
 
 - [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的 React Native 模板，可快速启动 TypeScript
@@ -148,3 +173,7 @@ $ react-native init MyApp --template sishu
 - [react-native-template-rocketseat-basic](http://t.cn/AiKIMyxQ): 具有 Rocketseat 中使用的结构的 React Native 应用程序的基本模板
 - [awesome-mobx](https://github.com/mobxjs/awesome-mobx)
 - [react-navigation-slide-from-right-transition](http://t.cn/RsjwjbZ): 从右侧滑动转换配置，用于在 android 上使用 react navigation 的堆栈导航器
+
+```
+
+```
