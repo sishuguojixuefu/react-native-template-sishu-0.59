@@ -10,7 +10,7 @@
 
 import { Provider as AntdProvider } from '@sishuguojixuefu/antd-mobile-rn'
 import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 import HomeScreen from '~/screen/HomeScreen'
 
@@ -23,7 +23,7 @@ const AppNavigator = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'Home', // 指定堆栈中的初始路由
+    initialRouteName: 'HomeScreen', // 指定堆栈中的初始路由
   }
 )
 
@@ -37,6 +37,7 @@ class App extends Component<Props> {
         <AntdProvider>
           {/* <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。 */}
           <AppContainer />
+          <Text>请自行配置React Navigation</Text>
         </AntdProvider>
       </View>
     )

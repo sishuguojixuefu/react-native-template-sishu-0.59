@@ -50,6 +50,10 @@ $ react-native init MyApp --template sishu
 
 ### dependencies
 
+#### 数据可视化
+
+- [ ] [react-native-echarts-wrapper](http://t.cn/E9VgJEU):
+
 #### 数据持久化
 
 - [ ] [WatermelonDB](http://t.cn/RsoPVsb): 用于功能强大的 React 和 React Native 应用程序的高性能 React 化数据库
