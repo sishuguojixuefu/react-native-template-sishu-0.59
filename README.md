@@ -33,6 +33,10 @@ $ react-native link react-native-gesture-handler react-native-vector-icons @ant-
 
 ### dependencies
 
+#### 数据持久化
+
+- [ ] [WatermelonDB](http://t.cn/RsoPVsb): 用于功能强大的 React 和 React Native 应用程序的高性能 React 化数据库
+
 #### mobx
 
 - [mobx](http://t.cn/R3Kne8l): 简单、可扩展的状态管理
@@ -56,6 +60,13 @@ $ react-native link react-native-gesture-handler react-native-vector-icons @ant-
 
 - [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
+
+#### 图片
+
+- [ ] [react-native-image-crop-picker](http://t.cn/RcqvN9z): iOS / Android 图像选择器，支持相机，视频，可配置压缩，多个图像和裁剪
+- [ ] [react-native-image-viewer](http://t.cn/RsjOuLE): 微小而快速的 lib，用于反应原生图像查看器平移和缩放
+- [ ] [react-native-lightbox](http://t.cn/RyfvWiQ): 全屏灯箱中的图像等弹出用于 React Native
+- [ ] [react-native-fast-image](http://t.cn/RsjRZzg): 高性能的 React Native 图像组件
 
 #### utils
 
