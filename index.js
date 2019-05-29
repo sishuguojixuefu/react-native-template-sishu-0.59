@@ -11,5 +11,8 @@ import { name as appName } from './app.json'
 configure({
   enforceActions: 'observed',
 })
+// 屏蔽黄屏警告
+console.disableYellowBox = true
+console.warn('YellowBox is disabled.')
 
 AppRegistry.registerComponent(appName, () => App)
