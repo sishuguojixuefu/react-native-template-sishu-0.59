@@ -27,6 +27,39 @@
 $ react-native init MyApp --template sishu
 ```
 
+### react-native-gesture-handler 配置
+
+iOS 啥都不用做
+
+为了完成 `react-native-gesture-handler` 在 Android 上的安装，请确保在 `MainActivity.java` 上完成如下修改：
+
+```diff
+package com.reactnavigation.example;
+
+import com.facebook.react.ReactActivity;
++ import com.facebook.react.ReactActivityDelegate;
++ import com.facebook.react.ReactRootView;
++ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
+public class MainActivity extends ReactActivity {
+
+  @Override
+  protected String getMainComponentName() {
+    return "Example";
+  }
+
++  @Override
++  protected ReactActivityDelegate createReactActivityDelegate() {
++    return new ReactActivityDelegate(this, getMainComponentName()) {
++      @Override
++      protected ReactRootView createRootView() {
++       return new RNGestureHandlerEnabledRootView(MainActivity.this);
++      }
++    };
++  }
+}
+```
+
 ## 📄 额外的文件
 
 - `.vscode`
@@ -167,6 +200,12 @@ $ react-native init MyApp --template sishu
 }
 ```
 
+## 踩过的坑
+
+### TypeError:undefined is not an object(evaluating `this._call Listeners.bind`)
+
+> 解决办法来自：http://t.cn/AiK0Nr8R @Xiao-HuangShu
+
 ## 相关项目
 
 - [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的 React Native 模板，可快速启动 TypeScript
@@ -174,7 +213,3 @@ $ react-native init MyApp --template sishu
 - [react-native-template-rocketseat-basic](http://t.cn/AiKIMyxQ): 具有 Rocketseat 中使用的结构的 React Native 应用程序的基本模板
 - [awesome-mobx](https://github.com/mobxjs/awesome-mobx)
 - [react-navigation-slide-from-right-transition](http://t.cn/RsjwjbZ): 从右侧滑动转换配置，用于在 android 上使用 react navigation 的堆栈导航器
-
-```
-
-```
