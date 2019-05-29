@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.0.7] - 2019-5-29 9
+
+- 修复 react-navigation 引入问题 @http://t.cn/AiK0Nr8R
+
 ## [0.0.6] - 2019-5-28 21
 
 - 填加 @sishuguojixuefu/antd-mobile-rn
@@ -32,7 +36,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - :tada:init commit
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.6...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.7...HEAD
+[0.0.7]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.3...v0.0.4
