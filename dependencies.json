@@ -1,4 +1,6 @@
 {
+  "@nozbe/watermelondb": "latest",
+  "@nozbe/with-observables": "latest",
   "@sishuguojixuefu/antd-mobile-rn": "latest",
   "axios": "latest",
   "dayjs": "latest",

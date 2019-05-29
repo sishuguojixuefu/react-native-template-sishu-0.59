@@ -1,7 +1,8 @@
 # 🎨react-native-template-sishu
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/sishuguojixuefu/react-native-template-sishu.svg?branch=master)](https://travis-ci.org/sishuguojixuefu/react-native-template-sishu)
-[![npm version](https://badge.fury.io/js/react-native-template-sishu.svg)](https://badge.fury.io/js/react-native-template-sishu)
+[![npm version](https://img.shields.io/npm/v/react-native-template-sishu.svg)](https://badge.fury.io/js/react-native-template-sishu)
 [![CONTRIBUTING](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![CHANGELOG](https://img.shields.io/static/v1.svg?label=CHANGELOG&message=Look&color=success)](./CHANGELOG.md)
 
@@ -90,7 +91,8 @@ public class MainActivity extends ReactActivity {
 
 #### 数据持久化
 
-- [ ] [WatermelonDB](http://t.cn/RsoPVsb): 用于功能强大的 React 和 React Native 应用程序的高性能 React 化数据库
+- [@nozbe/watermelondb](http://t.cn/RsoPVsb): 用于功能强大的 React 和 React Native 应用程序的高性能响应式数据库
+- [@nozbe/with-observables](http://t.cn/AiKjlDYC): 用于将 RxJS Observable 连接到 React 组件的 HOC（高阶组件）
 
 #### mobx
 
@@ -132,6 +134,7 @@ public class MainActivity extends ReactActivity {
 
 ### devDependencies
 
+- @babel/plugin-proposal-decorators: http://t.cn/AiKjjaPG
 - @babel/plugin-transform-flow-strip-types: http://t.cn/AiKNGn4F
 - @types/jest
 - @types/react
