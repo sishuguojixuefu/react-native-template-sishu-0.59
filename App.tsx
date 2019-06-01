@@ -12,7 +12,7 @@ import { Provider as AntdProvider } from '@sishuguojixuefu/antd-mobile-rn'
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
-import HomeScreen from '~/screen/HomeScreen'
+import HomeScreen from '~/screens/HomeScreen'
 
 // stack navigator 为你的应用提供了一种在屏幕之间切换并管理导航历史记录的方式。
 // createStackNavigator是一个函数，它接受一个路由配置对象和一个可选配置对象并返回一个 React 组件。
