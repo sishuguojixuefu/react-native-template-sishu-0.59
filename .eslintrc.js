@@ -46,8 +46,9 @@ module.exports = {
     },
   },
   globals: {
-    ios: true,
-    android: true,
+    ios: false,
+    android: false,
+    ROUTES: false,
   },
   rules: {
     // 启用的规则及其各自的错误级别
