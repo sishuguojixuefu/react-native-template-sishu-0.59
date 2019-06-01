@@ -99,7 +99,6 @@ public class MainActivity extends ReactActivity {
 - [mobx](http://t.cn/R3Kne8l): 简单、可扩展的状态管理
 - [mobx-react](http://t.cn/R5cHJQf): Mobx 的 React 粘合剂
 - [mobx-react-devtools](http://t.cn/RGnCdNB): 用于执行由 MobX 和 React 提供支持的 React 应用程序的运行时分析的工具
-- [mobx-persist](http://t.cn/AiKIRSjX): 持久化 mobx stores
 
 #### react-navigation
 

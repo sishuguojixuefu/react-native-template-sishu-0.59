@@ -6,7 +6,6 @@
   "dayjs": "latest",
   "md5": "latest",
   "mobx": "latest",
-  "mobx-persist": "latest",
   "mobx-react-devtools": "latest",
   "mobx-react": "latest",
   "react-native-gesture-handler": "latest",
