@@ -45,6 +45,10 @@ module.exports = {
       },
     },
   },
+  globals: {
+    ios: true,
+    android: true,
+  },
   rules: {
     // 启用的规则及其各自的错误级别
     'global-require': 0,
@@ -74,6 +78,7 @@ module.exports = {
         object: true,
       },
     ],
+    'import/prefer-default-export': 0,
     'react/prefer-stateless-function': 0,
     'react/destructuring-assignment': 0,
     'react/prop-types': 0,

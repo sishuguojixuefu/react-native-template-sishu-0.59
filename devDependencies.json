@@ -3,6 +3,7 @@
   "@types/jest": "latest",
   "@types/react": "latest",
   "@types/react-native": "latest",
+  "@types/react-native-vector-icons": "latest",
   "@types/react-test-renderer": "latest",
   "@typescript-eslint/eslint-plugin": "latest",
   "@typescript-eslint/parser": "latest",

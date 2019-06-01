@@ -19,6 +19,7 @@
 - 使用一个有经验的项目目录结构
 - 使用一个有经验的 VSCode 配置
 - 支持相对根目录引入文件(默认根目录 src)
+- 优雅地声明全局变量（通过定义命名空间）
 
 ## 🚀 快速开始
 
@@ -133,6 +134,7 @@ public class MainActivity extends ReactActivity {
 - @types/jest
 - @types/react
 - @types/react-native
+- @types/react-native-vector-icons
 - @types/react-test-renderer
 - @typescript-eslint/eslint-plugin
 - @typescript-eslint/parser

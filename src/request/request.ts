@@ -2,7 +2,7 @@ import axios from 'axios'
 // 中文文档: http://t.cn/ROfXFuj
 // 创建实例
 const request = axios.create({
-  baseURL: 'http://yapi.youngjuning.com/mock/27/api/',
+  baseURL: '', // 配置baseURL
   timeout: 10000,
   headers: { platform: 'app' },
 })
