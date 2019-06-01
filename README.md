@@ -85,9 +85,11 @@ public class MainActivity extends ReactActivity {
 
 ### dependencies
 
+- [react-native-webview](http://t.cn/Ai9vWU0O): React Native 跨平台 WebView
+
 #### 数据可视化
 
-- [ ] [react-native-echarts-wrapper](http://t.cn/E9VgJEU):
+- [react-native-echarts-wrapper](http://t.cn/E9VgJEU): 用于流行的 echarts 图表框架的 React Native 包装器
 
 #### 数据持久化
 
@@ -116,13 +118,6 @@ public class MainActivity extends ReactActivity {
 
 - [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
-
-#### 图片
-
-- [ ] [react-native-image-crop-picker](http://t.cn/RcqvN9z): iOS / Android 图像选择器，支持相机，视频，可配置压缩，多个图像和裁剪
-- [ ] [react-native-image-viewer](http://t.cn/RsjOuLE): 微小而快速的 lib，用于反应原生图像查看器平移和缩放
-- [ ] [react-native-lightbox](http://t.cn/RyfvWiQ): 全屏灯箱中的图像等弹出用于 React Native
-- [ ] [react-native-fast-image](http://t.cn/RsjRZzg): 高性能的 React Native 图像组件
 
 #### utils
 
@@ -202,13 +197,22 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-## 踩过的坑
+### 推荐组件
 
-### TypeError:undefined is not an object(evaluating `this._call Listeners.bind`)
+#### 图片
+
+- [ ] [react-native-image-crop-picker](http://t.cn/RcqvN9z): iOS / Android 图像选择器，支持相机，视频，可配置压缩，多个图像和裁剪
+- [ ] [react-native-image-viewer](http://t.cn/RsjOuLE): 微小而快速的 lib，用于反应原生图像查看器平移和缩放
+- [ ] [react-native-lightbox](http://t.cn/RyfvWiQ): 全屏灯箱中的图像等弹出用于 React Native
+- [ ] [react-native-fast-image](http://t.cn/RsjRZzg): 高性能的 React Native 图像组件
+
+### 踩过的坑
+
+#### TypeError:undefined is not an object(evaluating `this._call Listeners.bind`)
 
 > 解决办法来自：http://t.cn/AiK0Nr8R @Xiao-HuangShu
 
-## 相关项目
+### 相关项目
 
 - [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的 React Native 模板，可快速启动 TypeScript
 - [react-native-template-youngjuning](http://t.cn/ECLfOA5): 杨俊宁的个人 react-native 模版
