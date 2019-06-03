@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.0.9] - 2019-6-3 13
+
+- 移除 mobx-persit
+- 添加 react-native-echarts-wrapper
+- 设计 BaseScreen
+- 参考 http://t.cn/Ai97dB0E 配置 react-navigation
+
+## [0.0.8] - 2019-5-29 19
+
+- 添加 @nozbe/watermelondb、@nozbe/with-observables 依赖
+- 屏蔽黄屏警告
+
 ## [0.0.7] - 2019-5-29 9
 
 - 修复 react-navigation 引入问题 @http://t.cn/AiK0Nr8R
@@ -36,7 +48,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - :tada:init commit
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.7...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.9...HEAD
+[0.0.9]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.8...v0.0.9
+[0.0.8]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.4...v0.0.5
