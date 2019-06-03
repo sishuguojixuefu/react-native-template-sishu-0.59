@@ -1,19 +1,32 @@
 import React from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
-import BaseScreen from '~/screens/BaseScreen'
+import BaseScreen, { BaseScreenProps } from '~/screens/BaseScreen'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
 })
 
-interface Props {}
-class HomeScreen extends BaseScreen<Props> {
+interface IProps extends BaseScreenProps {}
+
+interface IState {
+  entry: string
+}
+
+class HomeScreen extends BaseScreen<IProps, IState> {
+  public constructor(props: IProps) {
+    super(props)
+    this.state = {
+      entry: 'App.tsx',
+    }
+  }
+
   public render() {
+    const { entry } = this.state
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.tsx</Text>
+        <Text style={styles.instructions}>To get started, edit {entry}</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     )

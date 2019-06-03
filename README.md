@@ -62,6 +62,16 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
+### watermelondb 配置
+
+> 翻译不甚精准，可参考[原文](http://t.cn/Ai9ZWNsp)
+
+android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
+
+- 在 Xcode 中打开 `ios/YourAppName.xcodeproj`
+- 右键**你的 App 名字**(它在左侧的项目导航上)，然后点击 `New File`
+- 给项目创建一个空的 `Swift` 文件（确保添加的时候**你的 App 名字**是被选中的），然后当 Xcode 询问时，点击 **Create Bridging Header** **并且不要删除 `Swift`**
+
 ## 📄 额外的文件
 
 - `.vscode`
@@ -135,6 +145,7 @@ public class MainActivity extends ReactActivity {
 - @types/react
 - @types/react-native
 - @types/react-native-vector-icons
+- @types/react-navigation
 - @types/react-test-renderer
 - @typescript-eslint/eslint-plugin
 - @typescript-eslint/parser

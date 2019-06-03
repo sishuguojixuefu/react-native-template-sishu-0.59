@@ -1,12 +1,15 @@
 import React from 'react'
-import { NavigationScreenProp } from 'react-navigation'
+import { NavigationScreenProp, NavigationParams } from 'react-navigation'
 
-interface Props {
+export interface BaseScreenProps {
   navigation: NavigationScreenProp<any, any>
 }
-// 泛型组件: http://t.cn/Ai9zc35Y
-export default class BaseScreen<P = {}, S = {}, SS = any> extends React.Component<Props> {
+
+export default class BaseScreen<P = {}, S = {}, SS = any> extends React.Component<P, S, SS> {
+  public params: NavigationParams
   public constructor(props: any) {
     super(props)
+    // @ts-ignore
+    this.params = this.props.navigation.state.params
   }
 }
