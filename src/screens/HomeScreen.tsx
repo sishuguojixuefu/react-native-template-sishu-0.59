@@ -7,14 +7,14 @@ const instructions = Platform.select({
   android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
 })
 
-interface IProps extends BaseScreenProps {}
+interface Props extends BaseScreenProps {}
 
-interface IState {
+interface State {
   entry: string
 }
 
-class HomeScreen extends BaseScreen<IProps, IState> {
-  public constructor(props: IProps) {
+class HomeScreen extends BaseScreen<Props, State> {
+  public constructor(props: Props) {
     super(props)
     this.state = {
       entry: 'App.tsx',
