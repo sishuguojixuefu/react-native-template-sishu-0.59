@@ -13,6 +13,5 @@ notifications:
 # 缓存，可以节省集成的时间，这里我用了yarn，如果不用可以删除
 cache:
   apt: true
-  yarn: true
   directories:
     - 'node_modules'
