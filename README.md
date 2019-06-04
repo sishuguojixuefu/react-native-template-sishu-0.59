@@ -227,6 +227,12 @@ android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
 
 > 解决办法来自：http://t.cn/AiK0Nr8R @Xiao-HuangShu
 
+### 高级配置
+
+> 由于在模版中修改原生部分过于繁琐，而且可能并不符合你的项目。我们把这些高级配置放在这里，你可以有选择的食用
+
+- [Android](./Android.md)
+
 ### 相关项目
 
 - [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的 React Native 模板，可快速启动 TypeScript

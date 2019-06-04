@@ -14,6 +14,10 @@ const MainStack = createStackNavigator(
   {
     [ROUTES.Home]: {
       screen: HomeScreen, // 配置中唯一必须的属性是screen（此项设置一个组件）
+      navigationOptions: {
+        title: 'Home', // 可用作 headerTitle 的回退的字符串。 此外, 将用作 tabBarLabel 的回退 (如果嵌套在 TabNavigator 中) 或 drawerLabel (如果嵌套在DrawerNavigator)
+        headerTitle: '首页', // 支持自定义组件，默认是一个 Text
+      },
     },
   },
   {
@@ -26,6 +30,7 @@ const RootStack = createStackNavigator(
   {
     [ROUTES.MainStack]: {
       screen: MainStack,
+      title: 'Welcome',
     },
   },
   {
