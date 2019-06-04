@@ -20,3 +20,6 @@ indent_size = 4
 
 [BUCK]
 indent_size = 4
+
+[*.java]
+indent_size = 4
