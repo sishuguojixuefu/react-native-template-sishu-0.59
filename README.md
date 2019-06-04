@@ -75,7 +75,7 @@ android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
 
 > 注意：ios 已经在模版中配置好，安卓需要手动配置
 
-在 `android\app\src\main\java\com\appName\MainApplication.java` 文件中加入如下代码：
+在 `android\app\src\main\java\com\appName\MainActivity.java` 文件中加入如下代码：
 
 ```java
 ...
