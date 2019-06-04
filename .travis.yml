@@ -1,12 +1,5 @@
-# 指定开发语言
-language: node_js
-# 环境版本
-node_js: stable
 # 通知
 notifications:
   on_success: always
   emial:
     - 1003719811@qq.com
-cache:
-  directories:
-    - 'node_modules'
