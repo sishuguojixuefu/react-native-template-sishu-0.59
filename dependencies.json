@@ -9,6 +9,7 @@
   "mobx": "latest",
   "mobx-react-devtools": "latest",
   "mobx-react": "latest",
+  "react-native-add-custom-props": "latest",
   "react-native-echarts-wrapper": "latest",
   "react-native-gesture-handler": "latest",
   "react-native-vector-icons": "latest",

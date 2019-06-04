@@ -1,3 +1,29 @@
+## 自定义安卓打包的后缀
+
+配置 `android/build.gradle`:
+
+```diff
++def releaseTime() {
++    return new Date().format("yyyyMMdd-HHmmss", TimeZone.getTimeZone("GMT+08:00"))
++}
+android: {
+    applicationVariants.all { variant ->
++    		variant.outputs.all {
++            // the apk name is e.g. galaxy_v1.0.1_2018-11-1_debug.apk
++            outputFileName = "galaxy_v${defaultConfig.versionName}_${releaseTime()}_${variant.buildType.name}.apk"
++        }
+    }
+}
+```
+
+## 配置 App 名称
+
+很简单,我们直接打开 `android/app/src/main/res/values/strings.xml`，即可看到配置中的 `app_name`，修改为你想要的即可。
+
+## 修改 App 的图标
+
+也很简单，在 `android\app\src\main\res\mipmap-xxxxxx` 中直接覆盖图标就可以，注意图标的大小。
+
 ## Maven 仓库
 
 将以下代码配置到 `android/build.gradle` 配置文件的 `buildscript/repositories` 和 `allprojects/repositories` 下
@@ -7,6 +33,8 @@ maven{
     url 'http://maven.aliyun.com/nexus/content/groups/public/'
     name 'aliyun'
 }
+...
+// 请务必将jitpack放在最后
 maven {
     url "https://jitpack.io"
     name 'jitpack'
@@ -75,6 +103,9 @@ buildTypes {
 - `zipAlignEnabled`: 可以让安装包中的资源按 4 字节对齐，这样可以减少应用在运行时的内存消耗。所以打包正式版最好也开启，[zipalign 的工具的使用](http://t.cn/EwcA9K8)
 - `shrinkResources`: 移除无用的 resource 文件，[Android 混淆简单入门](http://t.cn/EwcLLUa)、[shrinkResources 的使用](http://t.cn/Ai90Jgrd)
 - debuggable: 是否 debug，[react-native 区分环境（安卓）](http://t.cn/Ai906otI)
+
+> 注意 `shrinkResources` 只要在 `minifyEnabled` 开启的情况下才能使用
+> 否则编译报错：Removing unused resources requires unused code shrinking to be turned on. See http://d.android.com/r/tools/shrink-resources.html for more information.
 
 ### 4、去除无用的语言资源
 
@@ -156,3 +187,51 @@ Proguard 是一个 Java 字节码混淆压缩工具，它可以移除掉 React N
 当您使用 ProGuard 时，您必须始终解决所有警告。
 
 这些警告告诉你，这些库引用了一些代码，没有任何来源。那可能可能不行这取决于有问题的代码是否被调用。参考：[android – 使用 Proguard 获取警告(使用外部库)](http://t.cn/EwIL17p)
+
+### 11、Failed to read PNG signature: file does not start with PNG signature
+
+> 原文：http://t.cn/EwQnc12
+
+有时从网上下载的 Demo 资源文件不规范，会出现直接将 jpg 文件改为 png 后缀名的情况，gradle 打包检查时报错编译通不过的。我们通过 `aaptOptions.cruncherEnabled=false` 来禁止 Gradle 检查 png 的合法性：
+
+```diff
+buildTypes {
+  release {
++    aaptOptions.cruncherEnabled=false
+  }
+}
+```
+
+## 打包 APK
+
+1、在项目根目录执行 `yarn android:keygen` 生成密钥文件 `my-release-key.keystore`
+2、把 `my-release-key.keystore` 文件放到你工程中的 `android/app` 文件夹下。
+3、编辑 `android/gradle.properties` ，添加如下的代码（注意把其中的\*\*\*\*替换为相应密码）
+
+```diff
++ MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
++ MYAPP_RELEASE_KEY_ALIAS=my-key-alias
++ MYAPP_RELEASE_STORE_PASSWORD=****
++ MYAPP_RELEASE_KEY_PASSWORD=****
+```
+
+4、配置 `android/app/build.gradle`
+
+```diff
+android{
++    signingConfigs {
++        debug {}
++        release {
++           storeFile file("my-release-key.keystore")
++           storePassword "****"
++           keyAlias "my-key-alias"
++           keyPassword "****"
++        }
++    }
+    buildTypes {
+        release {
++            signingConfig signingConfigs.release
+        }
+    }
+}
+```

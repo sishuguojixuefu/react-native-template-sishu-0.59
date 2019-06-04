@@ -3,7 +3,8 @@
  */
 
 import { configure } from 'mobx'
-import { AppRegistry } from 'react-native'
+import { AppRegistry, Text, TextInput } from 'react-native'
+import addCustomProps from 'react-native-add-custom-props'
 import './global'
 import App from './App'
 import { name as appName } from './app.json'
@@ -15,5 +16,10 @@ configure({
 // 屏蔽黄屏警告
 console.disableYellowBox = true
 console.warn('YellowBox is disabled.')
+// 处理ios系统文字
+if (ios) {
+  addCustomProps(Text, { allowFontScaling: false })
+  addCustomProps(TextInput, { allowFontScaling: false })
+}
 
 AppRegistry.registerComponent(appName, () => App)

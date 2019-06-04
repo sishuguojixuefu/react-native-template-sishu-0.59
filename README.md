@@ -71,6 +71,42 @@ android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
 - 右键**你的 App 名字**(它在左侧的项目导航上)，然后点击 `New File`
 - 给项目创建一个空的 `Swift` 文件（确保添加的时候**你的 App 名字**是被选中的），然后当 Xcode 询问时，点击 **Create Bridging Header** **并且不要删除 `Swift`**
 
+### 处理系统字体
+
+> 注意：ios 已经在模版中配置好，安卓需要手动配置
+
+在 `android\app\src\main\java\com\appName\MainApplication.java` 文件中加入如下代码：
+
+```java
+...
+import android.content.res.Configuration;
+import android.content.res.Resources;
+...
+
+public class MainActivity extends ReactActivity {
+    ...
+    // 让文字不随系统文字变化：http://t.cn/Rs26Veb
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        if (newConfig.fontScale != 1)//非默认值
+        getResources();
+        super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public Resources getResources() {
+        Resources res = super.getResources();
+        if (res.getConfiguration().fontScale != 1) {//非默认值
+            Configuration newConfig = new Configuration();
+            newConfig.setToDefaults();//设置默认
+            res.updateConfiguration(newConfig, res.getDisplayMetrics());
+        }
+        return res;
+    }
+    ...
+}
+```
+
 ## 📄 额外的文件
 
 - `.vscode`
@@ -132,6 +168,7 @@ android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
 
 #### utils
 
+- [react-native-add-custom-props](http://t.cn/Ai9O4Ptd): add custom props tp react native component
 - [axios](http://t.cn/ROfXFuj): Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
 - [dayjs](http://t.cn/Ei0icT0): Moment.js 的 2kB 轻量化方案，拥有同样强大的 API
 - [md5](http://t.cn/RAG3xcN): 用于使用 MD5 散列消息的 JavaScript 函数
@@ -203,8 +240,8 @@ android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
     "bundle:android": "react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false --assets-dest ./android/app/src/main/res --sourcemap-output ./android/app/src/main/assets/index.android.bundle.map",
     "gradle:clean": "cd android && ./gradlew clean",
     "gradle:stop": "cd android && ./gradlew stop",
-    "android:assembleRelease": "cd android && ./gradlew assembleRelease",
-    "android:installRelease": "cd android && ./gradlew installRelease",
+    "android:assembleRelease": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
+    "android:installRelease": "yarn gradle:clean && cd android && ./gradlew installRelease",
     "android:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
     "android:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
     "android:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
