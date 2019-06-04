@@ -1,5 +1,19 @@
 language: node_js
-node_js: 8.11.3
+node_js: stable
+# 缓存，可以节省集成的时间，这里我用了yarn，如果不用可以删除
+cache:
+  apt: true
+  yarn: true
+  directories:
+    - node_modules
+# tarvis生命周期执行顺序详见官网文档
+before_install:
+  - git config --global user.name "杨俊宁"
+  - git config --global user.email "1003719811@qq.com"
+  # 由于使用了yarn，所以需要下载，如不用yarn这两行可以删除
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+# 通知
 notifications:
   on_success: always
   emial:
