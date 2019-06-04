@@ -2,6 +2,7 @@
   "@nozbe/watermelondb": "latest",
   "@nozbe/with-observables": "latest",
   "@sishuguojixuefu/antd-mobile-rn": "latest",
+  "@ant-design/icons-react-native": "latest",
   "axios": "latest",
   "dayjs": "latest",
   "md5": "latest",
