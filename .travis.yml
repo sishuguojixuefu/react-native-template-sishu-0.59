@@ -2,14 +2,17 @@
 language: node_js
 # 环境版本
 node_js: stable
+branches:
+  only:
+    - master
+# 通知
+notifications:
+  on_success: always
+  emial:
+    - 1003719811@qq.com
 # 缓存，可以节省集成的时间，这里我用了yarn，如果不用可以删除
 cache:
   apt: true
   yarn: true
   directories:
     - 'node_modules'
-# 通知
-notifications:
-  on_success: change
-  email:
-    - 1003719811@qq.com
