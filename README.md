@@ -127,6 +127,7 @@ android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
 #### UI 组件
 
 - [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
+- [@ant-design/icons-react-native](http://t.cn/Ai9CXbQn): Ant Design Icons for React Native
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
 
 #### utils
