@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
-## [0.0.10] - 2019-6-3 13
+## [0.1.0] - 2019-6-4 10
 
 - 添加 `@ant-design/icons-react-native` 依赖
 
