@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.1.1] - 2019-6-4 18
+
+- 添加 @ant-design/icons-react-native 依赖
+- 添加 react-native-add-custom-props 依赖
+- 完善文档，编写了 android 高级配置文档
+- 提供处理系统文字的解决方案
+
 ## [0.1.0] - 2019-6-4 10
 
 - 添加 `@ant-design/icons-react-native` 依赖
@@ -52,7 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - :tada:init commit
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.9...v0.1.0
 [0.0.9]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.7...v0.0.8
