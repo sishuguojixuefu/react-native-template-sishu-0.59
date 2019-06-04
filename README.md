@@ -181,6 +181,8 @@ android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
 - react-native-gesture-handler
 - react-native-vector-icons
 - @ant-design/icons-react-native
+- react-native-webview
+- @nozbe/watermelondb
 
 ### 非原生库
 
