@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["types/*"],
+      "~/*": ["src/*"]
+    },
     "target": "esnext",
     "module": "commonjs",
     "allowJs": true,
@@ -11,11 +16,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["types/*"],
-      "~/*": ["src/*"]
-    }
+    "suppressImplicitAnyIndexErrors": true
   },
   "exclude": ["node_modules", "**/*.js"]
 }

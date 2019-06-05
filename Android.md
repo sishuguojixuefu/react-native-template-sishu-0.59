@@ -235,3 +235,12 @@ android{
     }
 }
 ```
+
+## React Native 软件盘顶起 tabbar 的问题
+
+打开 `android/app/src/main/AndroidManifest.xml` 文件，加入下面的代码：
+
+```diff
+- android:windowSoftInputMode="adjustResize"
++ android:windowSoftInputMode="stateAlwaysHidden|adjustPan|adjustResize"
+```
