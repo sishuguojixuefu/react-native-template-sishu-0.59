@@ -179,6 +179,7 @@ public class MainActivity extends ReactActivity {
 - @babel/plugin-proposal-decorators: http://t.cn/AiKjjaPG
 - @babel/plugin-transform-flow-strip-types: http://t.cn/AiKNGn4F
 - @types/jest
+- @types/md5
 - @types/react
 - @types/react-native
 - @types/react-native-vector-icons
