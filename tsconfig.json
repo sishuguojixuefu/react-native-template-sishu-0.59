@@ -12,6 +12,7 @@
     "jsx": "react",
     "strict": true,
     "noEmit": true,
+    "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
