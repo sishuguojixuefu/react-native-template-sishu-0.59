@@ -16,8 +16,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "suppressImplicitAnyIndexErrors": true
+    "emitDecoratorMetadata": true
   },
   "exclude": ["node_modules", "**/*.js"]
 }

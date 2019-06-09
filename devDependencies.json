@@ -7,6 +7,7 @@
   "@types/react-native-vector-icons": "latest",
   "@types/react-navigation": "latest",
   "@types/react-test-renderer": "latest",
+  "@types/uuid": "latest",
   "@typescript-eslint/eslint-plugin": "latest",
   "@typescript-eslint/parser": "latest",
   "babel-plugin-import": "latest",
