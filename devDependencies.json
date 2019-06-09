@@ -1,7 +1,6 @@
 {
   "@babel/plugin-transform-flow-strip-types": "latest",
   "@types/jest": "latest",
-  "@types/md5": "latest",
   "@types/react": "latest",
   "@types/react-native": "latest",
   "@types/react-native-vector-icons": "latest",
