@@ -65,7 +65,9 @@ module.exports = {
     'no-unused-vars': 0,
     'no-use-before-define': 0,
     'no-underscore-dangle': 0,
+    'no-useless-constructor': 0,
     'no-unused-expressions': 0,
+    'no-plusplus': 0,
     'lines-between-class-members': [
       2,
       'always',
@@ -95,6 +97,7 @@ module.exports = {
     'react-native/no-color-literals': 0,
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 0,
+    '@typescript-eslint/explicit-member-accessibility': 1,
     '@typescript-eslint/no-empty-interface': 1,
     '@typescript-eslint/explicit-function-return-type': {
       allowExpressions: true,
