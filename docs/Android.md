@@ -1,6 +1,6 @@
 ## 自定义安卓打包的后缀
 
-配置 `android/build.gradle`:
+配置 `android/app/build.gradle`:
 
 ```diff
 +def releaseTime() {
