@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.1.2] - 2019-6-4 18
+
+- 更新 eslint rules
+- 更新 Android 高级配置文档
+- 添加 @types/uuid 库
+
 ## [0.1.1] - 2019-6-4 18
 
 - 添加 @ant-design/icons-react-native 依赖
@@ -59,7 +65,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - :tada:init commit
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.1...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.9...v0.1.0
 [0.0.9]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.8...v0.0.9
