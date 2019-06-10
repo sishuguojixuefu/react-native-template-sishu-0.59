@@ -130,11 +130,15 @@ public class MainActivity extends ReactActivity {
 
 ## 文档
 
-- [基于官方模版的变动之处](./docs/Change.md)
 - [安卓高级配置](./docs/Android.md)
+- [基于官方模版的变动之处](./docs/Change.md)
+- [如何删除不想要的依赖？](./docs/Remove.md)
+- [踩过的坑](./Shit.md)
 
-## 踩过的坑
+## 相关项目
 
-### TypeError:undefined is not an object(evaluating `this._call Listeners.bind`)
-
-> 解决办法来自：http://t.cn/AiK0Nr8R @Xiao-HuangShu
+- [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的 React Native 模板，可快速启动 TypeScript
+- [react-native-template-youngjuning](http://t.cn/ECLfOA5): 杨俊宁的个人 react-native 模版
+- [react-native-template-rocketseat-basic](http://t.cn/AiKIMyxQ): 具有 Rocketseat 中使用的结构的 React Native 应用程序的基本模板
+- [awesome-mobx](https://github.com/mobxjs/awesome-mobx)
+- [react-navigation-slide-from-right-transition](http://t.cn/RsjwjbZ): 从右侧滑动转换配置，用于在 android 上使用 react navigation 的堆栈导航器
