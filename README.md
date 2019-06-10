@@ -54,7 +54,7 @@ public class MainActivity extends ReactActivity {
 +    return new ReactActivityDelegate(this, getMainComponentName()) {
 +      @Override
 +      protected ReactRootView createRootView() {
-+       return new RNGestureHandlerEnabledRootView(MainActivity.this);
++        return new RNGestureHandlerEnabledRootView(MainActivity.this);
 +      }
 +    };
 +  }
@@ -84,26 +84,25 @@ import android.content.res.Resources;
 ...
 
 public class MainActivity extends ReactActivity {
-    ...
-    // 让文字不随系统文字变化：http://t.cn/Rs26Veb
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        if (newConfig.fontScale != 1)//非默认值
-        getResources();
-        super.onConfigurationChanged(newConfig);
+  ...
+  // 让文字不随系统文字变化：http://t.cn/Rs26Veb
+  @Override
+  public void onConfigurationChanged(Configuration newConfig) {
+    if (newConfig.fontScale != 1)//非默认值
+    getResources();
+    super.onConfigurationChanged(newConfig);
+  }
+  @Override
+  public Resources getResources() {
+    Resources res = super.getResources();
+    if (res.getConfiguration().fontScale != 1) {//非默认值
+      Configuration newConfig = new Configuration();
+      newConfig.setToDefaults();//设置默认
+      res.updateConfiguration(newConfig, res.getDisplayMetrics());
     }
-
-    @Override
-    public Resources getResources() {
-        Resources res = super.getResources();
-        if (res.getConfiguration().fontScale != 1) {//非默认值
-            Configuration newConfig = new Configuration();
-            newConfig.setToDefaults();//设置默认
-            res.updateConfiguration(newConfig, res.getDisplayMetrics());
-        }
-        return res;
-    }
-    ...
+    return res;
+  }
+  ...
 }
 ```
 
@@ -129,13 +128,10 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-## 基于官方模版的变动之处
+## 文档
 
-- [Change](./docs/Change.md)
-
-## 高级配置
-
-- [Android](./docs/Android.md)
+- [基于官方模版的变动之处](./docs/Change.md)
+- [安卓高级配置](./docs/Android.md)
 
 ## 踩过的坑
 
