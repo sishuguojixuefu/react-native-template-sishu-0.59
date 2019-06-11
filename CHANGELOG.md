@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.1.3] - 2019-6-11 13
+
+- 更新文档
+- 添加 @babel/plugin-proposal-decorators 及其配置
+
 ## [0.1.3] - 2019-6-10 18
 
 - 更新 `.eslintrc.js` 文件 rules
