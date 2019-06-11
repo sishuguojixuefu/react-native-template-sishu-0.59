@@ -41,7 +41,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 - 设计 BaseScreen
 - 参考 http://t.cn/Ai97dB0E 配置 react-navigation
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.3...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.1...v0.1.2
 [0.1.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.1...v0.1.2
