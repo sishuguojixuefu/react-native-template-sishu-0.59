@@ -65,11 +65,66 @@ public class MainActivity extends ReactActivity {
 
 > 翻译不甚精准，可参考[原文](http://t.cn/Ai9ZWNsp)
 
-android 啥都不用做，ios 需要配置 Xcode 项目对 swift 的支持：
+#### ios
+
+ios 需要配置 Xcode 项目对 swift 的支持：
 
 - 在 Xcode 中打开 `ios/YourAppName.xcodeproj`
 - 右键**你的 App 名字**(它在左侧的项目导航上)，然后点击 `New File`
 - 给项目创建一个空的 `Swift` 文件（确保添加的时候**你的 App 名字**是被选中的），然后当 Xcode 询问时，点击 **Create Bridging Header** **并且不要删除 `Swift`**
+
+#### android
+
+android 需要手动 link
+
+1、在 `android/settings.gradle` 添加：
+
+```js
+include ':watermelondb'
+project(':watermelondb').projectDir = new File(rootProject.projectDir, '../node_modules/@nozbe/watermelondb/native/android')
+```
+
+2、在 `android/app/build.gradle` 添加：
+
+```js
+apply plugin: "com.android.application"
+apply plugin: 'kotlin-android'  // ⬅️ This!
+// ...
+dependencies {
+    // ...
+    implementation project(':watermelondb') // ⬅️ This!
+}
+```
+
+3、在 `android/build.gradle`, 添加 Kotlin 支持:
+
+```js
+buildscript {
+    ext {
+        kotlin_version = '1.3.21' // ⬅️ This!
+    }
+    // ...
+    dependencies {
+        // ...
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // ⬅️ This!
+    }
+}
+```
+
+4、最后，在 `android/app/src/main/java/{YOUR_APP_PACKAGE}/MainApplication.java`, 中添加：
+
+```java
+// ...
+import com.nozbe.watermelondb.WatermelonDBPackage; // ⬅️ This!
+// ...
+@Override
+protected List<ReactPackage> getPackages() {
+  return Arrays.<ReactPackage>asList(
+    new MainReactPackage(),
+    new WatermelonDBPackage() // ⬅️ Here!
+  );
+}
+```
 
 ### 处理系统字体
 
