@@ -13,8 +13,7 @@ import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import AppContainer from './src/routes'
 
-interface Props {}
-class App extends Component<Props> {
+class App extends Component {
   public render() {
     return (
       <View style={styles.container}>
