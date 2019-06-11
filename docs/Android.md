@@ -205,27 +205,19 @@ buildTypes {
 ## 打包 APK
 
 1、在项目根目录执行 `yarn android:keygen` 生成密钥文件 `my-release-key.keystore`
+
 2、把 `my-release-key.keystore` 文件放到你工程中的 `android/app` 文件夹下。
-3、编辑 `android/gradle.properties` ，添加如下的代码（注意把其中的\*\*\*\*替换为相应密码）
 
-```diff
-+ MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
-+ MYAPP_RELEASE_KEY_ALIAS=my-key-alias
-+ MYAPP_RELEASE_STORE_PASSWORD=****
-+ MYAPP_RELEASE_KEY_PASSWORD=****
-```
-
-4、配置 `android/app/build.gradle`
+3、配置 `android/app/build.gradle`
 
 ```diff
 android{
 +    signingConfigs {
-+        debug {}
 +        release {
-+           storeFile file("my-release-key.keystore")
-+           storePassword "****"
-+           keyAlias "my-key-alias"
-+           keyPassword "****"
++            storeFile file("my-release-key.keystore")
++            storePassword "****"
++            keyAlias "my-key-alias"
++            keyPassword "****"
 +        }
 +    }
     buildTypes {
