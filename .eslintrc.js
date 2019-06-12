@@ -57,7 +57,7 @@ module.exports = {
     'no-console': [
       'error',
       {
-        allow: ['warn', 'error', 'log', 'disableYellowBox'],
+        allow: ['warn', 'error', 'info', 'disableYellowBox'],
       },
     ],
     'no-param-reassign': ['error', { props: false }],
@@ -69,7 +69,7 @@ module.exports = {
     'no-unused-expressions': 0,
     'no-plusplus': 0,
     'lines-between-class-members': [
-      2,
+      1,
       'always',
       {
         exceptAfterSingleLine: true,
