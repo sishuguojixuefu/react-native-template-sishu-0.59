@@ -64,5 +64,5 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.enable": false
+  "eslint.enable": true
 }
