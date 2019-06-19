@@ -113,5 +113,6 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-unused-vars': [1, { args: 'none' }],
+    '@typescript-eslint/no-non-null-assertion': 0,
   },
 }
