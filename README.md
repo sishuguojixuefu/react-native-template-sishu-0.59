@@ -165,20 +165,20 @@ public class MainActivity extends ReactActivity {
 
 ```json
 {
-  "scripts": {
+    "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "ios:bundle": "react-native bundle --entry-file index.js --bundle-output ./ios/index.ios.bundle --platform ios --dev false --assets-dest ./ios --sourcemap-output ./ios/index.ios.bundle.map",
     "ios:run": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "ios:bundle": "react-native bundle --entry-file index.js --bundle-output ./ios/index.ios.bundle --platform ios --dev false --assets-dest ./ios --sourcemap-output ./ios/index.ios.bundle.map",
     "gradle:clean": "cd android && ./gradlew clean",
     "gradle:stop": "cd android && ./gradlew stop",
-    "android:bundle": "react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false --assets-dest ./android/app/src/main/res --sourcemap-output ./android/app/src/main/assets/index.android.bundle.map",
-    "android:run": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
-    "android:assembleRelease": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
-    "android:installRelease": "yarn gradle:clean && cd android && ./gradlew installRelease",
-    "android:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
-    "android:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
-    "android:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
+    "an:bundle": "react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false --assets-dest ./android/app/src/main/res --sourcemap-output ./android/app/src/main/assets/index.android.bundle.map",
+    "an:run": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
+    "an:release": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
+    "an:installRelease": "yarn gradle:clean && cd android && ./gradlew installRelease",
+    "an:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
+    "an:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
+    "an:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
   }
 }
 ```
