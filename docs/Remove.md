@@ -13,6 +13,10 @@
 - @ant-design/icons-react-native
 - react-native-webview
 - @nozbe/watermelondb
+- react-native-config-reader
+- react-native-device-info
+- @react-native-community/async-storage
+- react-native-fs
 
 ### 非原生库
 

@@ -23,6 +23,8 @@
 ### dependencies
 
 - [react-native-webview](http://t.cn/Ai9vWU0O): React Native 跨平台 WebView
+- [react-native-config-reader](http://t.cn/AipaaEq2): 🛠 Easily access any of the build configs defined in build.gradle or info.plist from your JS code.
+- [react-native-fs](http://t.cn/RsYhBvM): React Native 原生文件系统访问组件
 
 #### 数据可视化
 
@@ -30,6 +32,7 @@
 
 #### 数据持久化
 
+- [@react-native-community/async-storage](http://t.cn/Aipa9GHY): An asynchronous, persistent, key-value storage system for React Native.
 - [@nozbe/watermelondb](http://t.cn/RsoPVsb): 用于功能强大的 React 和 React Native 应用程序的高性能响应式数据库
 - [@nozbe/with-observables](http://t.cn/AiKjlDYC): 用于将 RxJS Observable 连接到 React 组件的 HOC（高阶组件）
 
@@ -37,7 +40,6 @@
 
 - [mobx](http://t.cn/R3Kne8l): 简单、可扩展的状态管理
 - [mobx-react](http://t.cn/R5cHJQf): Mobx 的 React 粘合剂
-- [mobx-react-devtools](http://t.cn/RGnCdNB): 用于执行由 MobX 和 React 提供支持的 React 应用程序的运行时分析的工具
 
 #### react-navigation
 
