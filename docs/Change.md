@@ -25,6 +25,7 @@
 - [react-native-webview](http://t.cn/Ai9vWU0O): React Native 跨平台 WebView
 - [react-native-config-reader](http://t.cn/AipaaEq2): 🛠 Easily access any of the build configs defined in build.gradle or info.plist from your JS code.
 - [react-native-fs](http://t.cn/RsYhBvM): React Native 原生文件系统访问组件
+- [react-native-code-push](http://t.cn/Ai91zL6x): React Native module for CodePush
 
 #### 数据可视化
 

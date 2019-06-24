@@ -48,6 +48,9 @@ module.exports = {
   globals: {
     ios: false,
     android: false,
+    windowHeight: false,
+    windowWidth: false,
+    hairlineWidth: false
     ROUTES: false,
   },
   rules: {

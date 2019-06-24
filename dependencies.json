@@ -10,6 +10,7 @@
   "mobx": "latest",
   "mobx-react": "latest",
   "react-native-add-custom-props": "latest",
+  "react-native-code-push": "latest",
   "react-native-config-reader": "latest",
   "react-native-device-info": "latest",
   "react-native-echarts-wrapper": "latest",
