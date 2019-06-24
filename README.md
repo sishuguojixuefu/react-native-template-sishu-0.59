@@ -165,7 +165,7 @@ public class MainActivity extends ReactActivity {
 
 ```json
 {
-    "scripts": {
+  "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "ios:run": "node node_modules/react-native/local-cli/cli.js run-ios",
