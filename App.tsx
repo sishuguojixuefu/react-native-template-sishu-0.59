@@ -15,7 +15,9 @@ import AppContainer from './src/routes'
 
 class App extends Component {
   public componentDidMount() {
-    CodePushSync.syncOnNextSuspend()
+    if (!__DEV__) {
+      CodePushSync.syncOnNextSuspend()
+    }
   }
 
   public render() {

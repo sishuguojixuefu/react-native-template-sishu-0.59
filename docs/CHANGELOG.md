@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.2.0] - 2019-6-24 14
+
+- 添加全局变量 windowHeight、windowWidth、hairlineWidth、observable、action、computed、toJS、observer
+- 添加插件 react-native-code-push 及其配置
+
 ## [0.1.9] - 2019-6-24 11
 
 - 添加 gitignore 模板

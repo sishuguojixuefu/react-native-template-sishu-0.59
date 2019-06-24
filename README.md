@@ -176,6 +176,8 @@ public class MainActivity extends ReactActivity {
     "an:run": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
     "an:release": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
     "an:installRelease": "yarn gradle:clean && cd android && ./gradlew installRelease",
+    "android:staging": "yarn gradle:clean && cd android && ./gradlew assembleReleaseStaging",
+    "android:installStaging": "yarn gradle:clean && cd android && ./gradlew installReleaseStaging",
     "an:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
     "an:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
     "an:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
@@ -185,6 +187,7 @@ public class MainActivity extends ReactActivity {
 
 ## 文档
 
+- [react-native-code-push 多部署配置](./docs/react-native-code-push-multi-deployment.md)
 - [安卓高级配置](./docs/Android.md)
 - [基于官方模版的变动之处](./docs/Change.md)
 - [如何删除不想要的依赖？](./docs/Remove.md)

@@ -50,7 +50,12 @@ module.exports = {
     android: false,
     windowHeight: false,
     windowWidth: false,
-    hairlineWidth: false
+    hairlineWidth: false,
+    observable: false,
+    action: false,
+    computed: false,
+    toJS: false,
+    observer: false,
     ROUTES: false,
   },
   rules: {

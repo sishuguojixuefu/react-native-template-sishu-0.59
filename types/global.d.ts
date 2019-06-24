@@ -20,6 +20,28 @@ declare namespace global {
    */
   let hairlineWidth: number
   /**
+   * Observable 值可以是JS基本数据类型、引用类型、普通对象、类实例、数组和映射
+   */
+  let observable: any
+  /**
+   * 应该永远只对修改状态的函数使用动作。
+   * 只执行查找，过滤器等函数不应该被标记为动作，以允许 MobX 跟踪它们的调用。
+   */
+  let action: any
+  /**
+   * 计算值(computed values)是可以根据现有的状态或其它计算值衍生出的值
+   */
+  let computed: any
+  /**
+   * 递归地将一个(observable)对象转换为 javascript 结构
+   */
+  let toJS: any
+  /**
+   * observer 组件越多，渲染效率越高
+   */
+  let observer: any
+  let __DEV__: boolean
+  /**
    * 路由配置
    */
   let ROUTES: any
@@ -29,4 +51,10 @@ declare const android: boolean
 declare const windowHeight: number
 declare const windowWidth: number
 declare const hairlineWidth: number
+declare const observable: any
+declare const action: any
+declare const computed: any
+declare const toJS: any
+declare const observer: any
+declare const __DEV__: boolean
 declare const ROUTES: any
