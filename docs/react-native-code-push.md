@@ -1,4 +1,18 @@
-# react-native-code-push 多部署配置
+# 安装
+
+## 添加依赖
+
+```sh
+$ yarn add react-native-code-push
+```
+
+## link
+
+```sh
+$ react-native link react-native-code-push
+```
+
+# 配置
 
 ## Android
 
@@ -47,11 +61,11 @@ android {
 }
 ```
 
-1. 提醒一句，你可以在命令行通过 `code-push deployment ls <APP_NAME> -k` 获取他们的 `keys`
+> 注意: 你可以在命令行通过 `code-push deployment ls <APP_NAME> -k` 获取他们的 `keys`
 
 ## iOS
 
-Xcode 允许您为每个“配置”（例如，调试，发布）定义自定义构建设置，然后可以将其作为 `Info.plist` 文件中的键值（例如 `CodePushDeploymentKey` 设置）引用。此机制允许您轻松配置构建以生成二进制文件，这些二进制文件配置为与不同的 CodePush 部署同步
+Xcode 允许你为每个“配置”（例如，调试，发布）定义自定义构建设置，然后可以将其作为 `Info.plist` 文件中的键值（例如 `CodePushDeploymentKey` 设置）引用。此机制允许你轻松配置构建以生成二进制文件，这些二进制文件配置为与不同的 CodePush 部署同步
 
 #### 1、自定义`Configurations`
 
@@ -79,19 +93,19 @@ Xcode 允许您为每个“配置”（例如，调试，发布）定义自定�
 
 ![](https://i.loli.net/2018/11/19/5bf281ac19fce.png)
 
-给这个设置命名为`CODEPUSH_KEY`(名字可自定义),展开它。把`Staging`的 key 添加到`Staging`项上，把`Production`的 key 添加到`Release`下
+给这个设置命名为 `CODEPUSH_KEY` (名字可自定义),展开它。把 `Staging` 的 key 添加到 `Staging` 项上，把 `Production` 的 key 添加到 `Release` 下
 
 ![](https://i.loli.net/2018/11/19/5bf281ac19fce.png)
 
-注意：提醒您，您可以通过 `code-push deployment ls <APP_NAME> -k` 终端运行来检索这些 key
+> 注意：你可以通过 `code-push deployment ls <APP_NAME> -k` 终端运行来检索这些 key
 
 #### 4、配置`info.plist`
 
-打开项目的`Info.plist`文件并将`CodePushDeploymentKey`的值更改为`$(CODEPUSH_KEY)`(与第三步名字统一)
+打开项目的 `Info.plist` 文件并将 `CodePushDeploymentKey` 的值更改为 `$(CODEPUSH_KEY)` (与第三步名字统一)
 
 ![](https://i.loli.net/2018/11/19/5bf28490a1010.png)
 
-就是这样现在，当您运行或构建应用程序时，`Staging` 环境将自动配置为与您的 `Staging` 部署同步，并且您的 `release` 版本将配置为 `Production key`
+就是这样现在，当你运行或构建应用程序时，`Staging` 环境将自动配置为与你的 `Staging` 部署同步，并且你的 `release` 版本将配置为 `Production key`
 
 ## 参考
 
