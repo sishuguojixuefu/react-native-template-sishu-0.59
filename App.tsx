@@ -4,8 +4,6 @@
  *
  * Generated with the sishu template
  * https://github.com/sishuguojixuefu/react-native-template-sishu
- *
- * @format
  */
 
 import { Provider as AntdProvider } from '@sishuguojixuefu/antd-mobile-rn'

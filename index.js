@@ -1,7 +1,3 @@
-/**
- * @format
- */
-
 import { configure } from 'mobx'
 import { AppRegistry, Text, TextInput } from 'react-native'
 import addCustomProps from 'react-native-add-custom-props'
