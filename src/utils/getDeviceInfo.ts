@@ -2,7 +2,7 @@ import { Platform } from 'react-native'
 import DeviceInfo from 'react-native-device-info'
 
 const getDeviceInfo = () => ({
-  apiLeavel: Platform.OS === 'ios' ? '' : DeviceInfo.getAPILevel(),
+  apiLevel: Platform.OS === 'ios' ? '' : DeviceInfo.getAPILevel(),
   appName: DeviceInfo.getApplicationName(),
   brand: DeviceInfo.getBrand(),
   buildNumber: DeviceInfo.getBuildNumber(),
