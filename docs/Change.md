@@ -70,6 +70,7 @@
 - @babel/plugin-proposal-decorators: http://t.cn/AiKjjaPG
 - @babel/plugin-transform-flow-strip-types: http://t.cn/AiKNGn4F
 - @types/jest
+- @types/md5
 - @types/react
 - @types/react-native
 - @types/react-native-vector-icons
@@ -77,6 +78,7 @@
 - @types/react-test-renderer
 - @typescript-eslint/eslint-plugin
 - @typescript-eslint/parser
+- @types/uuid
 - babel-plugin-import
 - babel-plugin-root-import
 - babel-plugin-transform-remove-console
