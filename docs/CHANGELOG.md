@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.1.9] - 2019-6-24 11
+
+- 添加 gitignore 模板
+- 删除多余的注释
+- 忽略 CHANGELOG.MD
+- 添加 `@react-native-community/async-storage`、`react-native-config-reader`、`react-native-device-info`、`react-native-fs` 等 4 个插件
+- 删除 `mobx-react-devtools` 依赖
+
 ## [0.1.8] - 2019-6-24 10
 
 - 添加 `@types/md5`
@@ -59,7 +67,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 - 设计 BaseScreen
 - 参考 http://t.cn/Ai97dB0E 配置 react-navigation
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.8...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.9...HEAD
+[0.1.9]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.8...v0.1.9
 [0.1.8]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.7...v0.1.8
 [0.1.7]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.5...v0.1.6
