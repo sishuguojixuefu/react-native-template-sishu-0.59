@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-6-24 17
+
+- 移除 react-native-code-push 原生配置，改为文档的形式（但还是强制）
+
 ## [0.2.0] - 2019-6-24 14
 
 - 添加全局变量 windowHeight、windowWidth、hairlineWidth、observable、action、computed、toJS、observer
@@ -72,7 +76,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 - 设计 BaseScreen
 - 参考 http://t.cn/Ai97dB0E 配置 react-navigation
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.9...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.9...v0.2.0
 [0.1.9]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.8...v0.1.9
 [0.1.8]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.7...v0.1.8
 [0.1.7]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.6...v0.1.7
