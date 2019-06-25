@@ -30,12 +30,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default CodePush({
-  /**
-   * 检查更新的频率
-   * ON_APP_RESUME: APP恢复到前台的时候
-   * ON_APP_START: APP开启的时候
-   * MANUAL: 手动调用 codePush.sync() 检查
-   */
-  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
-})(App)
+export default App

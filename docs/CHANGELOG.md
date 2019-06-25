@@ -7,7 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
-## [0.2.2] - 2019-6-24 18
+## [0.2.3] - 2019-6-25 14
+
+- 修复若干错误
+
+## [0.2.2] - 2019-6-25 13
 
 - 修改 apiLeavel 为 apiLevel
 - 删除 react-native-code-push 默认调用
@@ -81,7 +85,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 - 设计 BaseScreen
 - 参考 http://t.cn/Ai97dB0E 配置 react-navigation
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.2...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.3...v0.2.3
 [0.2.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.9...v0.2.0
