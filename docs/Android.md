@@ -204,7 +204,7 @@ buildTypes {
 
 ## 打包 APK
 
-1、在项目根目录执行 `yarn android:keygen` 生成密钥文件 `my-release-key.keystore`
+1、在项目根目录执行 `yarn an:keygen` 生成密钥文件 `my-release-key.keystore`
 
 2、把 `my-release-key.keystore` 文件放到你工程中的 `android/app` 文件夹下。
 
@@ -235,4 +235,51 @@ android{
 ```diff
 - android:windowSoftInputMode="adjustResize"
 + android:windowSoftInputMode="stateAlwaysHidden|adjustPan|adjustResize"
+```
+
+## BuidConfig
+
+> 最初学习自：https://www.jianshu.com/p/3d9b23afe514
+> 在 react-native 中，我们可以借助 react-native-config-reader 来方便地读取这些属性
+
+BuildConfig 是程序编译后，根据 buildType 生成在 `app\build\generated\source\buildConfig\debug(release)\` 包名下的一个 java 文件。默认有一下属性：
+
+- DEBUG：是否是调试版本
+- APPLICATION_ID：当前应用的包名
+- FLAVOR：产品（渠道包的名称）
+- BUILD_TYPE：当前的编译类型(release/debug)
+- VERSION_CODE：版本号(数字)
+- VERSION_NAME：版本号
+
+### 自定义 BuildConfig
+
+```java
+defaultConfig {
+  // APP_NAME
+  buildConfigField "String", "APP_NAME", '"我是谁"'
+  // BUILD_TIME
+  buildConfigField "String", "BUILD_TIME", '"' + new Date().format("yyyy-MM-dd HH:mm:ss", TimeZone.getTimeZone("Asia/Shanghai")) + '"'
+}
+```
+
+### 在子模块中取主项目的 BuildConfig
+
+```java
+...
+public static Object getBuildConfigValue(Context context, String fieldName) {
+  try {
+    Class<?> clazz = Class.forName(context.getPackageName() + ".BuildConfig");
+    Field field = clazz.getField(fieldName);
+    return field.get(null);
+  } catch (ClassNotFoundException e) {
+    e.printStackTrace();
+  } catch (NoSuchFieldException e) {
+    e.printStackTrace();
+  } catch (IllegalAccessException e) {
+    e.printStackTrace();
+  }
+  return null;
+}
+...
+String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 ```

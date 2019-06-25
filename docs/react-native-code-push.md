@@ -16,6 +16,16 @@ $ react-native link react-native-code-push
 
 ## Android
 
+### strings.xml
+
+> 文件路径：`android/app/src/main/res/values/strings.xml`
+
+删除下面的代码：
+
+```xml
+<string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">deployment-key-here</string>
+```
+
 ### MainApplication.java
 
 > 文件路径：`android/app/src/main/.../MainApplication.java`
