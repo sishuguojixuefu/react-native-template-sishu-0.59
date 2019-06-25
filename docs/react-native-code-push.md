@@ -50,7 +50,7 @@ android {
     buildTypes {
         debug {
             ...
-            // 注意： 由于会被 RN packager 覆盖，所以CodePush 更新不应该在 Debug 模式下被测试。然而由于 CodePush 在所有模式下都会检查更新，所有我们必须提供一个key（如果你在前端判断了模式，那就不用）
+            // 注意： 由于会被 RN packager 覆盖，所以CodePush 更新不应该在 Debug 模式下被测试。然而由于 CodePush 在所有模式下都会检查更新，所有我们必须提供一个key
             buildConfigField "String", "CODEPUSH_KEY", '""'
             ...
         }
