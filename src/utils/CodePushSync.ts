@@ -30,6 +30,8 @@ const codePushStatusDidChange = syncStatus => {
     case CodePush.SyncStatus.UPDATE_INSTALLED: // 更新下载 8
       console.info(`[CodePush]${syncStatus}: 更新下载`)
       break
+    default:
+      break
   }
 }
 
@@ -38,13 +40,13 @@ const codePushStatusDidChange = syncStatus => {
  */
 const syncImmediate = () => {
   console.info('[CodePush]syncImmediate')
-  CodePush.sync(
-    { installMode: CodePush.InstallMode.IMMEDIATE, updateDialog: false },
-    codePushStatusDidChange,
-    progress => {
-      console.info('[CodePush]codePushDownloadDidProgress: ', progress)
+  CodePush.disallowRestart() // 禁止重启
+  CodePush.sync({ installMode: CodePush.InstallMode.IMMEDIATE }, codePushStatusDidChange, progress => {
+    console.info('[CodePush]codePushDownloadDidProgress: ', progress)
+    if (progress.receivedBytes >= progress.totalBytes) {
+      CodePush.allowRestart() // 强制更新
     }
-  )
+  })
 }
 
 /**
