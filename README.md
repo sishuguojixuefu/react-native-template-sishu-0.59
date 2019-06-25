@@ -163,10 +163,6 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-### 热更新配置
-
-- [react-native-code-push](./docs/react-native-code-push.md)
-
 ### 超六的 npm 工作流程
 
 ```json
@@ -193,6 +189,7 @@ public class MainActivity extends ReactActivity {
 
 ## 文档
 
+- [react-native-code-push](./docs/react-native-code-push.md)
 - [安卓高级配置](./docs/Android.md)
 - [iOS 高级配置](./docs/iOS.md)
 - [基于官方模版的变动之处](./docs/Change.md)

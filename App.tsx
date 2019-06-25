@@ -9,17 +9,9 @@
 import { Provider as AntdProvider } from '@sishuguojixuefu/antd-mobile-rn'
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
-import CodePush from 'react-native-code-push'
-import CodePushSync from './src/utils/CodePushSync'
 import AppContainer from './src/routes'
 
 class App extends Component {
-  public componentDidMount() {
-    if (!__DEV__) {
-      CodePushSync.syncOnNextSuspend()
-    }
-  }
-
   public render() {
     return (
       <View style={styles.container}>

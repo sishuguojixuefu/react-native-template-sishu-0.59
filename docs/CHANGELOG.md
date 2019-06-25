@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.2.2] - 2019-6-24 18
+
+- 修改 apiLeavel 为 apiLevel
+- 删除 react-native-code-push 默认调用
+
 ## [0.2.1] - 2019-6-24 17
 
 - 移除 react-native-code-push 原生配置，改为文档的形式（但还是强制）
