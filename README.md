@@ -128,6 +128,10 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
+### react-native-config-reader
+
+打开 `android/app/src/main/packageName/MainApplication.java` 把 `new RNConfigReaderPackage()` 替换为 `new RNConfigReaderPackage(BuildConfig.class)`
+
 ### 处理系统字体
 
 > 注意：ios 已经在模版中配置好，安卓需要手动配置
