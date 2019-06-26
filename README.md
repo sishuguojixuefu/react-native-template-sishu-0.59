@@ -130,7 +130,28 @@ protected List<ReactPackage> getPackages() {
 
 ### react-native-config-reader
 
+#### Android
+
 打开 `android/app/src/main/packageName/MainApplication.java` 把 `new RNConfigReaderPackage()` 替换为 `new RNConfigReaderPackage(BuildConfig.class)`
+
+> 自定义 BuildConfig 请戳 http://t.cn/AipENa1O
+
+#### iOS
+
+> 由于插件需要读取系统配置，我们需要手动在 info.plist 中添加一些字段
+
+1. 添加 `BUILD_TYPE`，取值为 `\$(CONFIGURATION)`
+2. 添加 `CodePushDeploymentKey`，取值为配置好的热更新 Key
+3. 添加 `BUILD_TIME`,取值为空，并通过脚本在每次编译的时候对其更新，脚本添加步骤 `Target`-> `Build Phases` -> `+` -> `New Run Script Phase`, Shell 代码如下
+
+```shell
+echo "In the build time script run."
+infoplist="$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH"
+builddate=`date +%Y-%m-%d_%H:%M`
+if [[ -n "$builddate" ]]; then
+/usr/libexec/PlistBuddy -c "Set :BUILD_TIME $builddate" ${infoplist}
+fi
+```
 
 ### 处理系统字体
 
@@ -195,7 +216,6 @@ public class MainActivity extends ReactActivity {
 
 - [react-native-code-push](./docs/react-native-code-push.md)
 - [安卓高级配置](./docs/Android.md)
-- [iOS 高级配置](./docs/iOS.md)
 - [基于官方模版的变动之处](./docs/Change.md)
 - [如何删除不想要的依赖？](./docs/Remove.md)
 - [踩过的坑](./Shit.md)

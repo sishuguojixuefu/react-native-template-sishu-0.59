@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.2.4] - 2019-6-26 10
+
+- 优化文档
+- 增加全局变量 DeviceInfo
+- 简化 App.tsx 的代码
+- 修复警告与错误
+
 ## [0.2.3] - 2019-6-25 14
 
 - 修复若干错误
@@ -51,41 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - 支持在开发者模式下打印 info、warn、error
 
-## [0.1.4] - 2019-6-11 13
-
-- 更新文档
-- 添加 @babel/plugin-proposal-decorators 及其配置
-
-## [0.1.3] - 2019-6-10 18
-
-- 更新 `.eslintrc.js` 文件 rules
-- 更改 babel 配置
-
-## [0.1.2] - 2019-6-10 18
-
-- 更新 eslint rules
-- 更新 Android 高级配置文档
-- 添加 @types/uuid 库
-
-## [0.1.1] - 2019-6-4 18
-
-- 添加 @ant-design/icons-react-native 依赖
-- 添加 react-native-add-custom-props 依赖
-- 完善文档，编写了 android 高级配置文档
-- 提供处理系统文字的解决方案
-
-## [0.1.0] - 2019-6-4 10
-
-- 添加 `@ant-design/icons-react-native` 依赖
-
-## [0.0.9] - 2019-6-3 13
-
-- 移除 mobx-persit
-- 添加 react-native-echarts-wrapper
-- 设计 BaseScreen
-- 参考 http://t.cn/Ai97dB0E 配置 react-navigation
-
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.3...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.4...HEAD
+[0.2.4]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.0...v0.2.1
@@ -94,11 +68,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 [0.1.8]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.7...v0.1.8
 [0.1.7]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.6...v0.1.7
 [0.1.6]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.5...v0.1.6
-[0.1.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.4...v0.1.5
-[0.1.4]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.3...v0.1.4
-[0.1.3]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.2...v0.1.3
-[0.1.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.1...v0.1.2
-[0.1.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.1...v0.1.2
-[0.1.1]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.0.9...v0.1.0
-[0.0.9]: https://github.com/sishuguojixuefu/react-native-template-sishu/releases/tag/v0.0.9
+[0.1.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/releases/tag/v0.1.5
