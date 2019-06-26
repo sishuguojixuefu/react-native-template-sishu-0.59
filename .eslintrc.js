@@ -56,6 +56,7 @@ module.exports = {
     computed: false,
     toJS: false,
     observer: false,
+    DeviceInfo: false,
     ROUTES: false,
   },
   rules: {

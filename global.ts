@@ -2,6 +2,7 @@ import { Dimensions, Platform, StyleSheet } from 'react-native'
 import { observable, action, computed, toJS } from 'mobx'
 import { observer } from 'mobx-react'
 import { ROUTES } from './src/routes'
+import getDeviceInfo from './src/utils/getDeviceInfo'
 
 const { height, width } = Dimensions.get('window')
 
@@ -15,4 +16,5 @@ global.action = action
 global.computed = computed
 global.toJS = toJS
 global.observer = observer
+global.DeviceInfo = getDeviceInfo()
 global.ROUTES = ROUTES

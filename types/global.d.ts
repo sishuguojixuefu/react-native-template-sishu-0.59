@@ -42,6 +42,10 @@ declare namespace global {
   let observer: any
   let __DEV__: boolean
   /**
+   * 利用 react-native-device-info 获取的设备信息
+   */
+  let DeviceInfo: any
+  /**
    * 路由配置
    */
   let ROUTES: any
@@ -57,4 +61,5 @@ declare const computed: any
 declare const toJS: any
 declare const observer: any
 declare const __DEV__: boolean
+declare const DeviceInfo: any
 declare const ROUTES: any
