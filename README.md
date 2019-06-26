@@ -203,8 +203,8 @@ public class MainActivity extends ReactActivity {
     "an:run": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
     "an:release": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
     "an:installRelease": "yarn gradle:clean && cd android && ./gradlew installRelease",
-    "android:staging": "yarn gradle:clean && cd android && ./gradlew assembleReleaseStaging",
-    "android:installStaging": "yarn gradle:clean && cd android && ./gradlew installReleaseStaging",
+    "an:staging": "yarn gradle:clean && cd android && ./gradlew assembleReleaseStaging",
+    "an:installStaging": "yarn gradle:clean && cd android && ./gradlew installReleaseStaging",
     "an:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
     "an:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
     "an:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
