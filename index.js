@@ -2,7 +2,7 @@ import { configure } from 'mobx'
 import { AppRegistry, Text, TextInput } from 'react-native'
 import addCustomProps from 'react-native-add-custom-props'
 import './global'
-import App from './App'
+import App from './App.tsx'
 import { name as appName } from './app.json'
 
 // 不允许在动作外部修改状态
