@@ -52,13 +52,27 @@ maven {
 
 ```
 packagingOptions {
-  具体配置参考：http://t.cn/Ewt1xD2
+    exclude 'META-INF/android_release.kotlin_module'
+    exclude 'META-INF/DEPENDENCIES'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/LICENSE.txt'
+    exclude 'META-INF/license.txt'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/NOTICE.txt'
+    exclude 'META-INF/notice.txt'
+    exclude 'META-INF/ASL2.0'
 }
 ```
 
 - pickFirsts: 当出现重复文件，会使用第一个匹配的文件打包进入 apk
 - merges: 当出现重复文件，合并重复的文件打入 apk
 - excludes: 打包的时候排除匹配的文件
+
+#### 参考链接
+
+- [PackagingOptions](http://t.cn/Ewt1xD2)
+- [More than one file was found with OS independent path](http://t.cn/AipuM9Ll)
+- [More than one file was found with OS independent path 'META-INF/LICENSE'](http://t.cn/AipuMfcH)
 
 ### 2、配置 splits
 
