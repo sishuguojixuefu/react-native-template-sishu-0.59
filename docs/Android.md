@@ -283,3 +283,13 @@ public static Object getBuildConfigValue(Context context, String fieldName) {
 ...
 String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 ```
+
+## 持续集成
+
+### shell 文件的坑
+
+为了安全性 shell 文件默认都是不可执行的，当然也包括 `android/gradlew` 这个用来打包的脚本文件，这会给持续集成带来麻烦：运维同学默认是执行不了我们的打包命令的。解决办法很简单：
+
+```sh
+$ git update-index --add --chmod=+x android/gradlew
+```
