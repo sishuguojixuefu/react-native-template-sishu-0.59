@@ -1,9 +1,9 @@
-import { AsyncStorage } from 'react-native-community/async-storage'
+import AsyncStorage from '@react-native-community/async-storage'
 
 export default class LocalStorage {
   public static get = async (key: string) => {
     const value = await AsyncStorage.getItem(key)
-    return JSON.parse(value)
+    return value ? JSON.parse(value) : value
   }
 
   public static set = async (key: string, value: string | number | object | (string | number)[]) => {
