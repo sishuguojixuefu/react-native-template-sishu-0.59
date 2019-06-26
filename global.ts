@@ -1,4 +1,4 @@
-import { Dimensions, PixelRatio, Platform, StyleSheet } from 'react-native'
+import { Dimensions, Platform, StyleSheet } from 'react-native'
 import { observable, action, computed, toJS } from 'mobx'
 import { observer } from 'mobx-react'
 import { ROUTES } from './src/routes'
