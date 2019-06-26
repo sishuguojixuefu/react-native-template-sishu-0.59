@@ -1,3 +1,5 @@
+import React, { Component } from 'react'
+import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 import Home from '~/screens/HomeScreen'
 
@@ -42,4 +44,14 @@ const RootStack = createStackNavigator(
 // <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。
 const AppContainer = createAppContainer(RootStack)
 
-export default AppContainer
+class AntdApp extends Component {
+  public render() {
+    return (
+      <Provider>
+        <AppContainer />
+      </Provider>
+    )
+  }
+}
+
+export default AntdApp

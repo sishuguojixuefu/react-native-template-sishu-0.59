@@ -6,7 +6,6 @@
  * https://github.com/sishuguojixuefu/react-native-template-sishu
  */
 
-import { Provider as AntdProvider } from '@sishuguojixuefu/antd-mobile-rn'
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import AppContainer from './src/routes'
@@ -15,9 +14,7 @@ class App extends Component {
   public render() {
     return (
       <View style={styles.container}>
-        <AntdProvider>
-          <AppContainer />
-        </AntdProvider>
+        <AppContainer />
       </View>
     )
   }
