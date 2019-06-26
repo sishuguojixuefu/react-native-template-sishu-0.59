@@ -65,7 +65,7 @@ module.exports = {
     'no-console': [
       'error',
       {
-        allow: ['warn', 'error', 'info', 'disableYellowBox'],
+        allow: ['warn', 'error', 'info', 'log', 'disableYellowBox'],
       },
     ],
     'no-param-reassign': ['error', { props: false }],
