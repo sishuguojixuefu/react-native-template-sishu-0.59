@@ -298,6 +298,11 @@ public static Object getBuildConfigValue(Context context, String fieldName) {
 String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 ```
 
+## Android 开发必知必会
+
+- [应用界面主题 Theme 使用方法](http://t.cn/Aip3wADF)
+- [Android Theme.AppCompat 中，你应该熟悉的颜色属性](http://t.cn/RkMz1mC)
+
 ## 持续集成
 
 ### shell 文件的坑

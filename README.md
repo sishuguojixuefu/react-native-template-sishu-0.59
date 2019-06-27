@@ -212,10 +212,14 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-## 文档
+## 高级配置
 
-- [react-native-code-push](./docs/react-native-code-push.md)
 - [安卓高级配置](./docs/Android.md)
+- [react-native-code-push](./docs/react-native-code-push.md)
+- [react-native-splash-screen](http://t.cn/AipunyjA)
+
+## 其他文档
+
 - [基于官方模版的变动之处](./docs/Change.md)
 - [如何删除不想要的依赖？](./docs/Remove.md)
 - [踩过的坑](./Shit.md)

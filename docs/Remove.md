@@ -17,6 +17,7 @@
 - react-native-device-info
 - @react-native-community/async-storage
 - react-native-fs
+- react-native-spring-scrollview
 
 ### 非原生库
 

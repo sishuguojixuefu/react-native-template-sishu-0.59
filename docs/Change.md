@@ -59,12 +59,21 @@
 - [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
 - [@ant-design/icons-react-native](http://t.cn/Ai9CXbQn): Ant Design Icons for React Native
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
+- [react-native-largelist-v3](http://t.cn/AipgAXRU): React Native 高性能的列表组件
+- [react-native-spring-scrollview](http://t.cn/AipgAFV6): React Native Spring ScrollView V2 is a high performance cross-platform native bounces ScrollView for React Native
 
 #### utils
 
 - [react-native-add-custom-props](http://t.cn/Ai9O4Ptd): add custom props tp react native component
 - [axios](http://t.cn/ROfXFuj): Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
 - [dayjs](http://t.cn/Ei0icT0): Moment.js 的 2kB 轻量化方案，拥有同样强大的 API
+- [fast-deep-equal](http://t.cn/Rk5t8Xr): The fastest deep equality check with Date and RegExp support
+- [kind-of](http://t.cn/E9KortF): Get the native JavaScript type of a value, fast. Used by superstruct, micromatch and many others!
+- [lodash.clonedeep](http://t.cn/AipgUT4e): 深拷贝
+- [lodash.debounce](http://t.cn/Aipgbeca): 创建一个 debounced（防抖动）函数，该函数会从上一次被调用后，延迟 wait 毫秒后调用 func 方法
+- [lodash.omit](http://t.cn/AipgyRg5): 删除 object 对象的属性
+- [lodash.random](http://t.cn/AipgUaBK): 产生一个包括 lower 与 upper 之间的数
+- [qs](http://t.cn/AipgU1g5): A querystring parsing and stringifying library with some added security.
 - [md5](http://t.cn/RAG3xcN): 用于使用 MD5 散列消息的 JavaScript 函数
 - [uuid](http://t.cn/RarS3SE): 简单，快速生成 RFC4122 UUIDS
 
