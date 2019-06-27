@@ -68,6 +68,7 @@
 - [axios](http://t.cn/ROfXFuj): Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
 - [dayjs](http://t.cn/Ei0icT0): Moment.js 的 2kB 轻量化方案，拥有同样强大的 API
 - [fast-deep-equal](http://t.cn/Rk5t8Xr): The fastest deep equality check with Date and RegExp support
+- [hash.js](http://t.cn/AipkVm4e): 生成哈希值得库
 - [kind-of](http://t.cn/E9KortF): Get the native JavaScript type of a value, fast. Used by superstruct, micromatch and many others!
 - [lodash.clonedeep](http://t.cn/AipgUT4e): 深拷贝
 - [lodash.debounce](http://t.cn/Aipgbeca): 创建一个 debounced（防抖动）函数，该函数会从上一次被调用后，延迟 wait 毫秒后调用 func 方法
