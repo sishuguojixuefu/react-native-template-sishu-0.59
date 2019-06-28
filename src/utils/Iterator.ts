@@ -6,7 +6,7 @@
 function Iterator(array: [], step: number = 1) {
   let nextIndex = 0
   return {
-    next: function() {
+    next() {
       if (nextIndex < array.length) {
         const satrtIndex = nextIndex
         const endIndex = satrtIndex + step
@@ -14,9 +14,8 @@ function Iterator(array: [], step: number = 1) {
         return {
           value: array.slice(satrtIndex, endIndex),
         }
-      } else {
-        return { done: true }
       }
+      return { done: true }
     },
   }
 }
