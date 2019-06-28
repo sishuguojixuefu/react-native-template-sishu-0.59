@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.2.6] - 2019-6-28 13
+
+- 删除 mobx、mobx-react 相关的全局变量
+- rename AppStore.ts to appStore.ts
+
 ## [0.2.5] - 2019-6-28 13
 
 > react-native-spring-scrollview、react-native-keyboard-manager 需要 link
@@ -71,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - 支持在开发者模式下打印 info、warn、error
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.5...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.6...HEAD
+[0.2.6]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.2...v0.2.3
