@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { StatusBar } from 'react-native'
 import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
-import Home from '~/screens/HomeScreen'
 import { getCurrentRouteName } from '~/utils/Navigation'
+import Home from '~/screens/HomeScreen'
+import AppStore from '~/stores/AppStore'
 
 // 把 Routes 放在 enum 以此来避免引用时的拼写错误。
 export enum ROUTES {
@@ -45,20 +47,22 @@ const RootStack = createStackNavigator(
 // <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。
 const AppContainer = createAppContainer(RootStack)
 
-@inject('appStore')
 @observer
-class App extends Component<any, any> {
+class AntdApp extends Component<any, any> {
   public render() {
-    const { appStore } = this.props
     return (
       <Provider>
+        <StatusBar backgroundColor="#0BA5F6" barStyle="light-content" />
         <AppContainer
           onNavigationStateChange={(prevState, currentState) => {
             const prevScreen = getCurrentRouteName(prevState)
             const currentScreen = getCurrentRouteName(currentState)
 
             if (prevScreen !== currentScreen) {
-              appStore.setCurrentScreen(currentScreen)
+              AppStore.setNavigation({
+                screenName: currentScreen,
+                routeInfo: {},
+              })
             }
           }}
         />
@@ -67,4 +71,4 @@ class App extends Component<any, any> {
   }
 }
 
-export default App
+export default AntdApp

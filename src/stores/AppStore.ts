@@ -1,9 +1,9 @@
 export interface NavigationPropsType {
-  screenName: string
+  screenName: string | null
   routeInfo: object
 }
 
-export default class AppStore {
+class AppStore {
   @observable public navigation?: NavigationPropsType
 
   /**
@@ -13,3 +13,5 @@ export default class AppStore {
     this.navigation = navigation
   }
 }
+
+export default new AppStore()

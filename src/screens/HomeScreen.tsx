@@ -1,5 +1,7 @@
+/* eslint-disable no-useless-concat */
 import React from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
+import { observer } from 'mobx-react'
 import BaseScreen, { BaseScreenProps } from '~/screens/BaseScreen'
 
 const instructions = Platform.select({
@@ -9,24 +11,13 @@ const instructions = Platform.select({
 
 interface Props extends BaseScreenProps {}
 
-interface State {
-  entry: string
-}
-
-class HomeScreen extends BaseScreen<Props, State> {
-  public constructor(props: Props) {
-    super(props)
-    this.state = {
-      entry: 'App.tsx',
-    }
-  }
-
+@observer
+class HomeScreen extends BaseScreen<Props, any> {
   public render() {
-    const { entry } = this.state
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit {entry}</Text>
+        <Text style={styles.instructions}>To get started, edit App.tsx</Text>
         <Text style={styles.instructions}>{instructions}</Text>
       </View>
     )

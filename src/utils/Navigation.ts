@@ -1,4 +1,5 @@
 import { NavigationState, NavigationLeafRoute, NavigationParams } from 'react-navigation'
+
 /**
  *  从 navigation state 中获取当前页面名
  * @param navigationState NavigationState
