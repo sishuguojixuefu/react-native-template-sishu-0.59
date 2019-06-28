@@ -9,8 +9,17 @@
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import AppContainer from './src/routes'
+import appStore from '~/stores/appStore'
 
 class App extends Component {
+  public constructor(props) {
+    super(props)
+    // 标识当前页面
+    appStore.setCurrentRoute({
+      screenName: 'App.tsx',
+    })
+  }
+
   public render() {
     return (
       <View style={styles.container}>
