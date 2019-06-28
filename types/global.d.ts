@@ -29,6 +29,10 @@ declare namespace global {
    */
   let action: any
   /**
+   * 将 “最终的” 修改放入一个异步动作中
+   */
+  let runInAction: any
+  /**
    * 计算值(computed values)是可以根据现有的状态或其它计算值衍生出的值
    */
   let computed: any
@@ -46,6 +50,10 @@ declare namespace global {
    */
   let DeviceInfo: any
   /**
+   * mobx-react 注入方法
+   */
+  let inject: any
+  /**
    * 路由配置
    */
   let ROUTES: any
@@ -57,9 +65,11 @@ declare const windowWidth: number
 declare const hairlineWidth: number
 declare const observable: any
 declare const action: any
+declare const runInAction: any
 declare const computed: any
 declare const toJS: any
 declare const observer: any
 declare const __DEV__: boolean
 declare const DeviceInfo: any
+declare const inject: any
 declare const ROUTES: any

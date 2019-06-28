@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 import Home from '~/screens/HomeScreen'
+import { getCurrentRouteName } from '~/utils/Navigation'
 
 // 把 Routes 放在 enum 以此来避免引用时的拼写错误。
 export enum ROUTES {
@@ -44,14 +45,26 @@ const RootStack = createStackNavigator(
 // <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。
 const AppContainer = createAppContainer(RootStack)
 
-class AntdApp extends Component {
+@inject('appStore')
+@observer
+class App extends Component<any, any> {
   public render() {
+    const { appStore } = this.props
     return (
       <Provider>
-        <AppContainer />
+        <AppContainer
+          onNavigationStateChange={(prevState, currentState) => {
+            const prevScreen = getCurrentRouteName(prevState)
+            const currentScreen = getCurrentRouteName(currentState)
+
+            if (prevScreen !== currentScreen) {
+              appStore.setCurrentScreen(currentScreen)
+            }
+          }}
+        />
       </Provider>
     )
   }
 }
 
-export default AntdApp
+export default App
