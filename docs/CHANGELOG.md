@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.2.5] - 2019-6-28 13
+
+> react-native-spring-scrollview、react-native-keyboard-manager 需要 link
+
+- 添加项目依赖 @sishuguojixuefu/react-native-form、fast-deep-equal、hash.js、kind-of、lodash.clonedeep、lodash.omit、lodash.random、lodash.debounce、qs、react-native-keyboard-manager、react-native-largelist-v3、react-native-spring-scrollview
+- 添加开发依赖 @types/kind-of、@types/lodash.clonedeep、@types/lodash.omit、@types/lodash.random、@types/lodash.debounce、@types/qs
+- 移除 react-navigation-animated-switch
+- 增加全局变量 inject、runInAction
+- 引入 StatusBar
+- 添加了 Navigation.ts、Iterator.ts 这两个工具类
+- 添加 AppStore 管理应用全局 Store，常量放在 global 下，全局状态放在 mobx store 中
+- 大面积优化文档和语法
+
 ## [0.2.4] - 2019-6-26 10
 
 - 优化文档
@@ -58,7 +71,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - 支持在开发者模式下打印 info、warn、error
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.4...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.5...HEAD
+[0.2.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.1...v0.2.2
