@@ -1,0 +1,43 @@
+{
+  "import RoutesEnum": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "imre",
+    "body": ["import Routes from '~/routes/RoutesEnum'"]
+  },
+  "import LocalStorage": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "imls",
+    "body": ["import LocalStorage from '~/utils/LocalStorage'"]
+  },
+  "Sishu Class Component": {
+    "prefix": "sscc",
+    "body": [
+      "import React from 'react'",
+      "import { View, Text, StyleSheet } from 'react-native'",
+      "import { observer } from 'mobx-react'",
+      "import BaseScreen, { BaseScreenProps } from '~/screens/BaseScreen'\n",
+      "interface Props extends BaseScreenProps {}\n",
+      "@observer",
+      "class $TM_FILENAME_BASE extends BaseScreen<Props, any> {",
+      "\tpublic static defaultProps = {}\n",
+      "\tpublic constructor(props: Props) {",
+      "\t\tsuper(props)",
+      "\t}\n",
+      "\tpublic render() {",
+      "\t\treturn (",
+      "\t\t\t<View style={styles.container}>",
+      "\t\t\t\t<Text> $TM_FILENAME_BASE </Text>",
+      "\t\t\t</View>",
+      "\t\t)",
+      "\t}",
+      "}\n",
+      "const styles = StyleSheet.create({",
+      "\tcontainer: {",
+      "\t\tflex: 1,",
+      "\t}",
+      "})\n",
+      "export default $TM_FILENAME_BASE",
+      ""
+    ]
+  }
+}

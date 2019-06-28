@@ -3,10 +3,10 @@ import { StatusBar } from 'react-native'
 import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 import { observer } from 'mobx-react'
-import { getCurrentRouteName } from '~/utils/Navigation'
+import { getCurrentRoute } from '~/utils/Navigation'
 import HomeScreen from '~/screens/HomeScreen'
 import appStore from '~/stores/appStore'
-import Routes from '~/routes/RoutesEnum'
+import Routes from '~/routes/Routes'
 
 // The stack for the main navigation
 // stack navigator 为你的应用提供了一种在屏幕之间切换并管理导航历史记录的方式。
@@ -51,13 +51,12 @@ class App extends Component<any, any> {
         <StatusBar backgroundColor="#0BA5F6" barStyle="light-content" />
         <AppContainer
           onNavigationStateChange={(prevState, currentState) => {
-            const prevScreen = getCurrentRouteName(prevState)
-            const currentScreen = getCurrentRouteName(currentState)
-
-            if (prevScreen !== currentScreen) {
-              appStore.setNavigation({
-                screenName: currentScreen,
-                routeInfo: {},
+            const prevScreen = getCurrentRoute(prevState)
+            const currentScreen = getCurrentRoute(currentState)
+            if (currentScreen && prevScreen !== currentScreen) {
+              appStore.setCurrentRoute({
+                screenName: currentScreen.routeName,
+                routeInfo: currentScreen,
               })
             }
           }}

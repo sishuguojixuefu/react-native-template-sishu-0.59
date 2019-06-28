@@ -1,23 +1,23 @@
-import { NavigationState, NavigationLeafRoute, NavigationParams } from 'react-navigation'
+import { NavigationState, NavigationLeafRoute, NavigationParams, NavigationRoute } from 'react-navigation'
 
 /**
  *  从 navigation state 中获取当前页面名
  * @param navigationState NavigationState
  */
-export const getCurrentRouteName = (
+export const getCurrentRoute = (
   navigationState: NavigationState | NavigationLeafRoute<NavigationParams>
-): string | null => {
+): NavigationRoute<NavigationParams> | null => {
   if (!navigationState) {
     return null
   }
   const route = navigationState.routes[navigationState.index]
   // 在嵌套的导航中快速翻找
   if (route.routes) {
-    return getCurrentRouteName(route)
+    return getCurrentRoute(route)
   }
-  return route.routeName
+  return route
 }
 
 export default {
-  getCurrentRouteName,
+  getCurrentRoute,
 }

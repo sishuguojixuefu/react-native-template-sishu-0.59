@@ -1,4 +1,5 @@
 import { observable, action } from 'mobx'
+import omit from 'lodash.omit'
 
 export interface NavigationPropsType {
   screenName: string | null
@@ -6,13 +7,15 @@ export interface NavigationPropsType {
 }
 
 class AppStore {
-  @observable public navigation?: NavigationPropsType
+  @observable public currentRoute?: NavigationPropsType
 
   /**
-   * 设置navigation
+   * 设置当前的路由
    */
-  @action public setNavigation = (navigation: NavigationPropsType): void => {
-    this.navigation = navigation
+  @action public setCurrentRoute = (currentRoute: NavigationPropsType): void => {
+    const { routeInfo } = currentRoute
+    currentRoute.routeInfo = omit(routeInfo, ['routeName'])
+    this.currentRoute = currentRoute
   }
 }
 
