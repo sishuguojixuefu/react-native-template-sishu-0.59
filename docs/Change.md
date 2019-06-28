@@ -27,6 +27,7 @@
 - [react-native-fs](http://t.cn/RsYhBvM): React Native 原生文件系统访问组件
 - [react-native-code-push](http://t.cn/Ai91zL6x): React Native module for CodePush
 - [react-native-keyboard-manager](http://t.cn/Ai07QoyX): Library to prevent issues of keyboard sliding up and cover inputs on React-Native iOS projects ⚛
+- [react-native-screens](http://t.cn/Ai0wWWkv): 该项目旨在将原生导航容器组件公开给 React Native，结合 react-navigation 能快捷的地提高性能
 
 #### 数据可视化
 
