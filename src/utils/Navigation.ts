@@ -1,9 +1,11 @@
-import { NavigationState } from 'react-navigation'
+import { NavigationState, NavigationLeafRoute, NavigationParams } from 'react-navigation'
 /**
  *  从 navigation state 中获取当前页面名
  * @param navigationState NavigationState
  */
-export const getCurrentRouteName = (navigationState: NavigationState): string | null => {
+export const getCurrentRouteName = (
+  navigationState: NavigationState | NavigationLeafRoute<NavigationParams>
+): string | null => {
   if (!navigationState) {
     return null
   }
