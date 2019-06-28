@@ -48,7 +48,6 @@
 - [react-native-gesture-handler](http://t.cn/AiKMLWNy): react-navigation 依赖这个插件
 - [react-navigation](http://t.cn/RBfba1a): 官方推荐导航组件
 - [react-navigation-addon-search-layout](http://t.cn/AiKMi8Ux): 一个简单但完全可以接受的搜索布局屏幕，在 iOS 和 Android 上看起来很不错。
-- [react-navigation-animated-switch](http://t.cn/AiKMiajA): 让 Switch 栈具有动画
 - [react-navigation-back-button](http://t.cn/E9DntJc): 模仿 react-navigation 返回键，能够拦截返回事件
 - [react-navigation-backhandler](http://t.cn/RkCpfeP): 使用 React-Navigation 轻松处理 Android 后退按钮行为
 - [react-navigation-collapsible](http://t.cn/E9D8NTs): 可折叠标题的 React Navigation 扩展。使您的 React Navigation 标题可折叠
@@ -58,6 +57,7 @@
 #### UI 组件
 
 - [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
+- [@sishuguojixuefu/react-native-form](http://t.cn/Ai9YDRcb): 私塾 React Native 动态表单项目
 - [@ant-design/icons-react-native](http://t.cn/Ai9CXbQn): Ant Design Icons for React Native
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
 - [react-native-largelist-v3](http://t.cn/AipgAXRU): React Native 高性能的列表组件

@@ -4,6 +4,7 @@
   "@nozbe/with-observables": "latest",
   "@react-native-community/async-storage": "latest",
   "@sishuguojixuefu/antd-mobile-rn": "latest",
+  "@sishuguojixuefu/react-native-form": "latest",
   "axios": "latest",
   "dayjs": "latest",
   "fast-deep-equal": "latest",
