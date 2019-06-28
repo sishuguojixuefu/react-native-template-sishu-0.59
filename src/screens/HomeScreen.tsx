@@ -3,6 +3,7 @@ import React from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
 import { observer } from 'mobx-react'
 import BaseScreen, { BaseScreenProps } from '~/screens/BaseScreen'
+import appStore from '~/stores/appStore'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -13,6 +14,14 @@ interface Props extends BaseScreenProps {}
 
 @observer
 class HomeScreen extends BaseScreen<Props, any> {
+  public constructor(props) {
+    super(props)
+    // 标识当前页面
+    appStore.setCurrentRoute({
+      screenName: 'HomeScreen',
+    })
+  }
+
   public render() {
     return (
       <View style={styles.container}>

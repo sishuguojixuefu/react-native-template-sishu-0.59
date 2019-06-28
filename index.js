@@ -5,6 +5,10 @@ import './global'
 import App from './App.tsx'
 import { name as appName } from './app.json'
 
+// 标识当前页面
+appStore.setCurrentRoute({
+  screenName: 'index.js',
+})
 // 不允许在动作外部修改状态
 configure({
   enforceActions: 'observed',
