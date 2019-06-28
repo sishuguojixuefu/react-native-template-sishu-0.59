@@ -36,12 +36,8 @@
     "url": "https://github.com/sishuguojixuefu/react-native-template-sishu/issues"
   },
   "homepage": "https://github.com/sishuguojixuefu/react-native-template-sishu#readme",
-  "devDependencies": {
-    "@types/jest": "^24.0.13",
-    "@types/react": "^16.8.19",
-    "@types/react-native": "^0.57.60",
-    "@types/react-native-vector-icons": "^6.4.1",
-    "@types/react-navigation": "^3.0.7",
-    "@types/react-test-renderer": "^16.8.1"
+  "peerDependencies": {
+    "react-native": "0.59.9",
+    "react": "16.8.3"
   }
 }
