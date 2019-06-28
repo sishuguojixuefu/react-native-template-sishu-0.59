@@ -4,7 +4,7 @@ import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 import { getCurrentRouteName } from '~/utils/Navigation'
 import Home from '~/screens/HomeScreen'
-import AppStore from '~/stores/AppStore'
+import AppStore from '~/stores/appStore'
 
 // 把 Routes 放在 enum 以此来避免引用时的拼写错误。
 export enum ROUTES {

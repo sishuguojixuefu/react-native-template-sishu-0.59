@@ -1,3 +1,5 @@
+import { observable, action } from 'mobx'
+
 export interface NavigationPropsType {
   screenName: string | null
   routeInfo: object
