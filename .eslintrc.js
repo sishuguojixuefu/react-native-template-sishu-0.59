@@ -52,7 +52,6 @@ module.exports = {
     windowWidth: false,
     hairlineWidth: false,
     DeviceInfo: false,
-    ROUTES: false,
   },
   rules: {
     // 启用的规则及其各自的错误级别

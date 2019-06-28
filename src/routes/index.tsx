@@ -2,23 +2,19 @@ import React, { Component } from 'react'
 import { StatusBar } from 'react-native'
 import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
+import { observer } from 'mobx-react'
 import { getCurrentRouteName } from '~/utils/Navigation'
-import Home from '~/screens/HomeScreen'
-import AppStore from '~/stores/appStore'
-
-// 把 Routes 放在 enum 以此来避免引用时的拼写错误。
-export enum ROUTES {
-  MainStack = 'MainStack',
-  HomeScreen = 'HomeScreen',
-}
+import HomeScreen from '~/screens/HomeScreen'
+import appStore from '~/stores/appStore'
+import Routes from '~/routes/RoutesEnum'
 
 // The stack for the main navigation
 // stack navigator 为你的应用提供了一种在屏幕之间切换并管理导航历史记录的方式。
 // createStackNavigator是一个函数，它接受一个路由配置对象和一个可选配置对象并返回一个 React 组件。
 const MainStack = createStackNavigator(
   {
-    [ROUTES.HomeScreen]: {
-      screen: Home, // 配置中唯一必须的属性是screen（此项设置一个组件）
+    [Routes.HomeScreen]: {
+      screen: HomeScreen, // 配置中唯一必须的属性是screen（此项设置一个组件）
       navigationOptions: {
         title: 'Home', // 可用作 headerTitle 的回退的字符串。 此外, 将用作 tabBarLabel 的回退 (如果嵌套在 TabNavigator 中) 或 drawerLabel (如果嵌套在DrawerNavigator)
         headerTitle: '首页', // 支持自定义组件，默认是一个 Text
@@ -26,14 +22,14 @@ const MainStack = createStackNavigator(
     },
   },
   {
-    initialRouteName: ROUTES.HomeScreen, // 指定堆栈中的初始路由
+    initialRouteName: Routes.HomeScreen, // 指定堆栈中的初始路由
   }
 )
 
 // The app root stack, all navigation start from here
 const RootStack = createStackNavigator(
   {
-    [ROUTES.MainStack]: {
+    [Routes.MainStack]: {
       screen: MainStack,
       title: 'Welcome',
     },
@@ -48,7 +44,7 @@ const RootStack = createStackNavigator(
 const AppContainer = createAppContainer(RootStack)
 
 @observer
-class AntdApp extends Component<any, any> {
+class App extends Component<any, any> {
   public render() {
     return (
       <Provider>
@@ -59,7 +55,7 @@ class AntdApp extends Component<any, any> {
             const currentScreen = getCurrentRouteName(currentState)
 
             if (prevScreen !== currentScreen) {
-              AppStore.setNavigation({
+              appStore.setNavigation({
                 screenName: currentScreen,
                 routeInfo: {},
               })
@@ -71,4 +67,4 @@ class AntdApp extends Component<any, any> {
   }
 }
 
-export default AntdApp
+export default App

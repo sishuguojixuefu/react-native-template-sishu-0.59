@@ -24,14 +24,6 @@ declare namespace global {
    * 利用 react-native-device-info 获取的设备信息
    */
   let DeviceInfo: any
-  /**
-   * mobx-react 注入方法
-   */
-  let inject: any
-  /**
-   * 路由配置
-   */
-  let ROUTES: any
 }
 declare const ios: boolean
 declare const android: boolean
@@ -40,4 +32,3 @@ declare const windowWidth: number
 declare const hairlineWidth: number
 declare const __DEV__: boolean
 declare const DeviceInfo: any
-declare const ROUTES: any
