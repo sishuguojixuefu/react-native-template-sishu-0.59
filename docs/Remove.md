@@ -18,6 +18,7 @@
 - @react-native-community/async-storage
 - react-native-fs
 - react-native-spring-scrollview
+- react-native-keyboard-manager
 
 ### 非原生库
 

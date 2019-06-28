@@ -23,6 +23,7 @@
   "react-native-echarts-wrapper": "latest",
   "react-native-fs": "latest",
   "react-native-gesture-handler": "latest",
+  "react-native-keyboard-manager": "latest",
   "react-native-largelist-v3": "latest",
   "react-native-spring-scrollview": "latest",
   "react-native-vector-icons": "latest",

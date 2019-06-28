@@ -1,4 +1,12 @@
-## 自定义安卓打包的后缀
+## 一、配置 App 名称
+
+很简单,我们直接打开 `android/app/src/main/res/values/strings.xml`，即可看到配置中的 `app_name`，修改为你想要的即可。
+
+## 二、修改 App 的图标
+
+也很简单，在 `android\app\src\main\res\mipmap-xxxxxx` 中直接覆盖图标就可以，注意图标的大小。
+
+## 三、自定义安卓打包的后缀
 
 配置 `android/app/build.gradle`:
 
@@ -16,15 +24,7 @@ android: {
 }
 ```
 
-## 配置 App 名称
-
-很简单,我们直接打开 `android/app/src/main/res/values/strings.xml`，即可看到配置中的 `app_name`，修改为你想要的即可。
-
-## 修改 App 的图标
-
-也很简单，在 `android\app\src\main\res\mipmap-xxxxxx` 中直接覆盖图标就可以，注意图标的大小。
-
-## Maven 仓库
+## 四、Maven 仓库
 
 将以下代码配置到 `android/build.gradle` 配置文件的 `buildscript/repositories` 和 `allprojects/repositories` 下
 
@@ -44,7 +44,33 @@ maven {
 - `aliyun`: 为了加快下载速度
 - `jitpack`: 为了解决 react-native-image-crop-picker [Could not find com.github.yalantis:ucrop:2.2.1-native](http://t.cn/Ewx8bc3)的问题
 
-## 构建配置
+## 五、打包 APK
+
+1、在项目根目录执行 `yarn an:keygen` 生成密钥文件 `my-release-key.keystore`
+
+2、把 `my-release-key.keystore` 文件放到你工程中的 `android/app` 文件夹下。
+
+3、配置 `android/app/build.gradle`
+
+```diff
+android{
++    signingConfigs {
++        release {
++            storeFile file("my-release-key.keystore")
++            storePassword "****"
++            keyAlias "my-key-alias"
++            keyPassword "****"
++        }
++    }
+    buildTypes {
+        release {
++            signingConfig signingConfigs.release
+        }
+    }
+}
+```
+
+## 六、构建配置
 
 ### 1、配置 PackagingOptions
 
@@ -68,7 +94,7 @@ packagingOptions {
 - merges: 当出现重复文件，合并重复的文件打入 apk
 - excludes: 打包的时候排除匹配的文件
 
-#### 参考链接
+**参考链接**
 
 - [PackagingOptions](http://t.cn/Ewt1xD2)
 - [More than one file was found with OS independent path](http://t.cn/AipuM9Ll)
@@ -99,7 +125,34 @@ packagingOptions {
 
 - density: 针对不同的分辨率生成 `APK` 以减小 `APK` 文件的大小
 
-### 3、配置 release buildTypes
+### 3、去除无用的语言资源
+
+通过配置 `android/defaultConfig/resConfigs` 可以选择只打包哪几种语言，进而去掉各种 aar 包中全世界的语言，尤其是 support 包中的。
+
+选择保留什么语言要根据产品的用户和市场来定，如果只选择默认英语和中文语言，配置如下：
+
+```diff
+defaultConfig {
++    resConfigs "en","zh"
+}
+```
+
+### 4、启用 Proguard 代码混淆来缩小 APK 文件的大小（慎选）
+
+Proguard 是一个 Java 字节码混淆压缩工具，它可以移除掉 React Native Java（和它的依赖库中）中没有被使用到的部分，最终有效的减少 APK 的大小。
+
+```diff
+- def enableProguardInReleaseBuilds = false
++ def enableProguardInReleaseBuilds = true
+```
+
+警告：启用 Proguard 之后，你必须再次全面地测试你的应用。Proguard 有时候需要为你引入的每个原生库做一些额外的配置。参见 `app/proguard-rules.pro` 文件和每个原生库的安装说明
+
+当您使用 ProGuard 时，您必须始终解决所有警告。
+
+这些警告告诉你，这些库引用了一些代码，没有任何来源。那可能可能不行这取决于有问题的代码是否被调用。参考：[android – 使用 Proguard 获取警告(使用外部库)](http://t.cn/EwIL17p)
+
+### 5、配置 release buildTypes
 
 ```diff
 buildTypes {
@@ -121,88 +174,7 @@ buildTypes {
 > 注意 `shrinkResources` 只要在 `minifyEnabled` 开启的情况下才能使用
 > 否则编译报错：Removing unused resources requires unused code shrinking to be turned on. See http://d.android.com/r/tools/shrink-resources.html for more information.
 
-### 4、去除无用的语言资源
-
-通过配置 `android/defaultConfig/resConfigs` 可以选择只打包哪几种语言，进而去掉各种 aar 包中全世界的语言，尤其是 support 包中的。
-
-选择保留什么语言要根据产品的用户和市场来定，如果只选择默认英语和中文语言，配置如下：
-
-```diff
-defaultConfig {
-+    resConfigs "en","zh"
-}
-```
-
-### 5、使用 implementation 代替 compile
-
-![implementation](https://i.loli.net/2018/11/02/5bdb50fb13fa5.png)
-
-如图，`compile` 已经被废弃并且已经被 `impementation` 和 `api` 代替.而且 2018 年底会彻底废弃，修复的话就是把 `android\app\build.gradle` 中的 `dependencies` 配置中的 `compile` 改为 `impementation`。
-
-### 6、配置 dexOptions.javaMaxHeapSize
-
-> android studio 需要较大的内存才能正常编译项目，主要解决这个警告：[com.android.build.api.transform.TransformException](http://t.cn/EZcTDtV)
-
-在 `android\gradle.properties` 中加入以下配置：
-
-```diff
-+ dexOptions.javaMaxHeapSize = 2g
-```
-
-### 6、配置方法数超过 64K 的应用
-
-随着 Android 平台的持续成长，Android 应用的大小也在增加。当您的应用及其引用的库达到特定大小时，您会遇到构建错误，指明您的应用已达到 Android 应用构建架构的极限。会报告这一错误：
-
-> The number of method references in a .dex file cannot exceed 64K.
-
-解决办法是配置您的应用进行 Dalvik 可执行文件分包，在 `android/app/build.gradle` 中做下面的配置：
-
-```diff
-defaultConfig {
-+    multiDexEnabled true
-}
-```
-
-### 7、删除未使用到 xml 和图片
-
-如何知道哪些 xml 和图片未被使用到？使用 Android Studio 的 Lint，步骤：
-
-1. `Android Studio` -> `Menu` -> `Refactor` -> `Remove Unused Resources`
-2. 选择 `Refactor` 一键删除
-3. 选择 `Perview` 预览未使用到的资源
-
-或者
-
-点击菜单栏 `Analyze` -> `Run Inspection by Name` -> `unused resources` -> `Moudule ‘app’` -> `OK`，这样会搜出来哪些未被使用到未使用到 xml 和图片，如下：
-
-![Analyze](http://wuxiaolong.me/images/reduceAPKSize1.png)
-
-### 8、删除未使用到代码
-
-同样使用 `Android Studio` 的 `Lint` ，步骤：点击菜单栏 `Analyze` -> `Run Inspection by Name` -> `unused declaration` -> `Moudule ‘app’` -> `OK`
-
-### 9、使用微信 Android 资源混淆工具（可选）
-
-> 待完成
-
-微信 AndResGuard 是一个帮助你缩小 APK 大小的工具。
-
-### 10、启用 Proguard 代码混淆来缩小 APK 文件的大小（慎选）
-
-Proguard 是一个 Java 字节码混淆压缩工具，它可以移除掉 React Native Java（和它的依赖库中）中没有被使用到的部分，最终有效的减少 APK 的大小。
-
-```diff
-- def enableProguardInReleaseBuilds = false
-+ def enableProguardInReleaseBuilds = true
-```
-
-警告：启用 Proguard 之后，你必须再次全面地测试你的应用。Proguard 有时候需要为你引入的每个原生库做一些额外的配置。参见 `app/proguard-rules.pro` 文件和每个原生库的安装说明
-
-当您使用 ProGuard 时，您必须始终解决所有警告。
-
-这些警告告诉你，这些库引用了一些代码，没有任何来源。那可能可能不行这取决于有问题的代码是否被调用。参考：[android – 使用 Proguard 获取警告(使用外部库)](http://t.cn/EwIL17p)
-
-### 11、Failed to read PNG signature: file does not start with PNG signature
+### 6、Failed to read PNG signature: file does not start with PNG signature
 
 > 原文：http://t.cn/EwQnc12
 
@@ -216,33 +188,53 @@ buildTypes {
 }
 ```
 
-## 打包 APK
+### 7、配置 dexOptions.javaMaxHeapSize
 
-1、在项目根目录执行 `yarn an:keygen` 生成密钥文件 `my-release-key.keystore`
+> android studio 需要较大的内存才能正常编译项目，主要解决这个警告：[com.android.build.api.transform.TransformException](http://t.cn/EZcTDtV)
 
-2、把 `my-release-key.keystore` 文件放到你工程中的 `android/app` 文件夹下。
-
-3、配置 `android/app/build.gradle`
+在 `android\gradle.properties` 中加入以下配置：
 
 ```diff
-android{
-+    signingConfigs {
-+        release {
-+            storeFile file("my-release-key.keystore")
-+            storePassword "****"
-+            keyAlias "my-key-alias"
-+            keyPassword "****"
-+        }
-+    }
-    buildTypes {
-        release {
-+            signingConfig signingConfigs.release
-        }
-    }
++ dexOptions.javaMaxHeapSize = 2g
+```
+
+### 8、配置方法数超过 64K 的应用
+
+随着 Android 平台的持续成长，Android 应用的大小也在增加。当您的应用及其引用的库达到特定大小时，您会遇到构建错误，指明您的应用已达到 Android 应用构建架构的极限。会报告这一错误：
+
+> The number of method references in a .dex file cannot exceed 64K.
+
+解决办法是配置您的应用进行 Dalvik 可执行文件分包，在 `android/app/build.gradle` 中做下面的配置：
+
+```diff
+defaultConfig {
++    multiDexEnabled true
 }
 ```
 
-## React Native 软件盘顶起 tabbar 的问题
+### 9、删除未使用到 xml 和图片
+
+如何知道哪些 xml 和图片未被使用到？使用 Android Studio 的 Lint，步骤：
+
+1. `Android Studio` -> `Menu` -> `Refactor` -> `Remove Unused Resources`
+2. 选择 `Refactor` 一键删除
+3. 选择 `Perview` 预览未使用到的资源
+
+或者
+
+点击菜单栏 `Analyze` -> `Run Inspection by Name` -> `unused resources` -> `Moudule ‘app’` -> `OK`，这样会搜出来哪些未被使用到未使用到 xml 和图片，如下：
+
+![Analyze](http://wuxiaolong.me/images/reduceAPKSize1.png)
+
+### 10、删除未使用到代码
+
+同样使用 `Android Studio` 的 `Lint` ，步骤：点击菜单栏 `Analyze` -> `Run Inspection by Name` -> `unused declaration` -> `Moudule ‘app’` -> `OK`
+
+### 11、使用微信 Android 资源混淆工具（可选）
+
+微信 AndResGuard 是一个帮助你缩小 APK 大小的工具。
+
+## 七、React Native 软件盘顶起 tabbar 的问题
 
 打开 `android/app/src/main/AndroidManifest.xml` 文件，加入下面的代码：
 
@@ -251,7 +243,7 @@ android{
 + android:windowSoftInputMode="stateAlwaysHidden|adjustPan|adjustResize"
 ```
 
-## BuidConfig
+## 八、BuidConfig
 
 > 最初学习自：https://www.jianshu.com/p/3d9b23afe514
 > 在 react-native 中，我们可以借助 react-native-config-reader 来方便地读取这些属性
