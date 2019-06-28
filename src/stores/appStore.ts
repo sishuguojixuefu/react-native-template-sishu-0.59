@@ -3,7 +3,7 @@ import omit from 'lodash.omit'
 
 export interface NavigationPropsType {
   screenName: string | null
-  routeInfo: object
+  routeInfo?: object
 }
 
 class AppStore {
@@ -13,8 +13,11 @@ class AppStore {
    * 设置当前的路由
    */
   @action public setCurrentRoute = (currentRoute: NavigationPropsType): void => {
-    const { routeInfo } = currentRoute
-    currentRoute.routeInfo = omit(routeInfo, ['routeName'])
+    if (currentRoute && currentRoute.routeInfo) {
+      const { routeInfo } = currentRoute
+      currentRoute.routeInfo = omit(routeInfo, ['routeName'])
+    }
+    console.info('currentRoute', currentRoute)
     this.currentRoute = currentRoute
   }
 }
