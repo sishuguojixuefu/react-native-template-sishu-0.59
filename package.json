@@ -37,7 +37,12 @@
   },
   "homepage": "https://github.com/sishuguojixuefu/react-native-template-sishu#readme",
   "peerDependencies": {
-    "react-native": "0.59.9",
-    "react": "16.8.3"
+    "react": "16.8.3",
+    "react-native": "0.59.9"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.22",
+    "mobx-react": "^6.1.1",
+    "@types/react-native": "^0.57.64"
   }
 }

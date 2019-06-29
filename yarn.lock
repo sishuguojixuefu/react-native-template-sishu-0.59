@@ -2,58 +2,23 @@
 # yarn lockfile v1
 
 
-"@types/jest-diff@*":
-  version "20.0.1"
-  resolved "https://registry.yarnpkg.com/@types/jest-diff/-/jest-diff-20.0.1.tgz#35cc15b9c4f30a18ef21852e255fdb02f6d59b89"
-  integrity sha512-yALhelO3i0hqZwhjtcr6dYyaLoCHbAMshwtj6cGxTvHZAKXHsYGdff6E8EPw3xLKY0ELUTQ69Q1rQiJENnccMA==
-
-"@types/jest@^24.0.13":
-  version "24.0.13"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.13.tgz#10f50b64cb05fb02411fbba49e9042a3a11da3f9"
-  integrity sha512-3m6RPnO35r7Dg+uMLj1+xfZaOgIHHHut61djNjzwExXN4/Pm9has9C6I1KMYSfz7mahDhWUOVg4HW/nZdv5Pww==
-  dependencies:
-    "@types/jest-diff" "*"
-
 "@types/prop-types@*":
   version "15.7.1"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.1.tgz#f1a11e7babb0c3cad68100be381d1e064c68f1f6"
   integrity sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==
 
-"@types/react-native-vector-icons@^6.4.1":
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.1.tgz#d0862f3eb97bbe5720ab604f2f10ee07dacb31ef"
-  integrity sha512-2C9jyyJKEjzX0C4nP+9rNNjEhutWwalkRdaSTEYtNjUkkkTk68WGG2hgjrcBjdm4Gn1Vi9OgUd+FR8GNmCyp+A==
-  dependencies:
-    "@types/react" "*"
-    "@types/react-native" "*"
-
-"@types/react-native@*", "@types/react-native@^0.57.60":
-  version "0.57.60"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.60.tgz#61e97a84e2f64ed971e7d238bb30cec188898235"
-  integrity sha512-zObrnRsCbpM7qDm97d8+5qiSIMMYRaWgpqu6orjbjzLUAcJaKnpBMXgW6bRXWkFBjHgm3hjDAdVVGMWlrYJBdw==
+"@types/react-native@^0.57.64":
+  version "0.57.64"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.64.tgz#bb26d57f8b0975f0562efbd41722048fb275eb47"
+  integrity sha512-g8iKvLkEPB+49EKauH7rVrX0y9Gb59+kyFjBFAMOAtwMjfFqiRBK6argXowDq0L6zE8kBoAmJN7v8WGlxOKBeg==
   dependencies:
     "@types/prop-types" "*"
     "@types/react" "*"
 
-"@types/react-navigation@^3.0.7":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@types/react-navigation/-/react-navigation-3.0.7.tgz#5d327b00de2bb58203977002c3ea21302da72034"
-  integrity sha512-JFsNeCAQEQGTpObiD1QczDyCyQkFBaQA/F85Fo2W8QML1b6UNYHlUDtEYJA6jcfXqPoL15dVPBVj9NBJlHToqA==
-  dependencies:
-    "@types/react" "*"
-    "@types/react-native" "*"
-
-"@types/react-test-renderer@^16.8.1":
-  version "16.8.1"
-  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.8.1.tgz#96f3ce45a3a41c94eca532a99103dd3042c9d055"
-  integrity sha512-8gU69ELfJGxzVWVYj4MTtuHxz9nO+d175XeQ1XrXXxesUBsB4KK6OCfzVhEX6leZWWBDVtMJXp/rUjhClzL7gw==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*", "@types/react@^16.8.19":
-  version "16.8.19"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.19.tgz#629154ef05e2e1985cdde94477deefd823ad9be3"
-  integrity sha512-QzEzjrd1zFzY9cDlbIiFvdr+YUmefuuRYrPxmkwG0UQv5XF35gFIi7a95m1bNVcFU0VimxSZ5QVGSiBmlggQXQ==
+"@types/react@*", "@types/react@^16.8.22":
+  version "16.8.22"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.22.tgz#7f18bf5ea0c1cad73c46b6b1c804a3ce0eec6d54"
+  integrity sha512-C3O1yVqk4sUXqWyx0wlys76eQfhrQhiDhDlHBrjER76lR2S2Agiid/KpOU9oCqj1dISStscz7xXz1Cg8+sCQeA==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -62,3 +27,15 @@ csstype@^2.2.0:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.5.tgz#1cd1dff742ebf4d7c991470ae71e12bb6751e034"
   integrity sha512-JsTaiksRsel5n7XwqPAfB0l3TFKdpjW/kgAELf9vrb5adGA7UCPLajKK5s3nFrcFm3Rkyp/Qkgl73ENc1UY3cA==
+
+mobx-react-lite@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/mobx-react-lite/-/mobx-react-lite-1.4.0.tgz#193beb5fdddf17ae61542f65ff951d84db402351"
+  integrity sha512-5xCuus+QITQpzKOjAOIQ/YxNhOl/En+PlNJF+5QU4Qxn9gnNMJBbweAdEW3HnuVQbfqDYEUnkGs5hmkIIStehg==
+
+mobx-react@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-6.1.1.tgz#24a2c8a3393890fa732b4efd34cc6dcccf6e0e7a"
+  integrity sha512-hjACWCTpxZf9Sv1YgWF/r6HS6Nsly1SYF22qBJeUE3j+FMfoptgjf8Zmcx2d6uzA07Cezwap5Cobq9QYa0MKUw==
+  dependencies:
+    mobx-react-lite "1.4.0"
