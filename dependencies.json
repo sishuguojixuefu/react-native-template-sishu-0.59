@@ -5,6 +5,7 @@
   "@react-native-community/async-storage": "latest",
   "@sishuguojixuefu/antd-mobile-rn": "3.1.8",
   "@sishuguojixuefu/react-native-form": "latest",
+  "antd-mobile-area-data": "2.0.0",
   "axios": "latest",
   "dayjs": "1.8.14",
   "fast-deep-equal": "latest",

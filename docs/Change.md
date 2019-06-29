@@ -58,6 +58,7 @@
 #### UI 组件
 
 - [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
+- [antd-mobile-area-data](http://t.cn/Ai0cGbG1): area date for antd-mobile picker
 - [@sishuguojixuefu/react-native-form](http://t.cn/Ai9YDRcb): 私塾 React Native 动态表单项目
 - [@ant-design/icons-react-native](http://t.cn/Ai9CXbQn): Ant Design Icons for React Native
 - [react-native-vector-icons](http://t.cn/R2J6QcS): React Native 的可自定义图标组件
