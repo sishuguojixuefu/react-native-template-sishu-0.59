@@ -8,6 +8,6 @@ module.exports = {
     }),
   },
   resolver: {
-    sourceExts: ['ts', 'tsx', 'js', 'jsx', 'json', 'mjs'],
+    sourceExts: ['ts', 'tsx', 'js', 'jsx', 'json'],
   },
 }
