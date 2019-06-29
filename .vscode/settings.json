@@ -65,5 +65,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "eslint.enable": true,
+  "eslint.quiet": true,
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }
