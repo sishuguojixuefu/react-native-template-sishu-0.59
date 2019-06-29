@@ -1,14 +1,4 @@
 {
-  "import RoutesEnum": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "imre",
-    "body": ["import Routes from '~/routes/RoutesEnum'"]
-  },
-  "import LocalStorage": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "imls",
-    "body": ["import LocalStorage from '~/utils/LocalStorage'"]
-  },
   "Sishu Class Component": {
     "prefix": "sscc",
     "body": [
