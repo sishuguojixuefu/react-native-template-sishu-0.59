@@ -7,8 +7,11 @@
  */
 
 import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
-import AppContainer from './src/routes/AppContainer'
+import { Provider as ThemeProvider } from '@sishuguojixuefu/antd-mobile-rn'
+import { Provider as MobxProvider } from 'mobx-react'
+import { StyleSheet, View, StatusBar } from 'react-native'
+import { getCurrentRoute } from '~/utils/Navigation'
+import AppContainer from '~/routes/AppContainer'
 import appStore from '~/stores/appStore'
 
 class App extends Component {
@@ -22,9 +25,25 @@ class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <AppContainer />
-      </View>
+      <MobxProvider>
+        <ThemeProvider>
+          <StatusBar backgroundColor="#0BA5F6" barStyle="light-content" />
+          <View style={styles.container}>
+            <AppContainer
+              onNavigationStateChange={(prevState, currentState) => {
+                const prevScreen = getCurrentRoute(prevState)
+                const currentScreen = getCurrentRoute(currentState)
+                if (currentScreen && prevScreen !== currentScreen) {
+                  appStore.setCurrentRoute({
+                    screenName: currentScreen.routeName,
+                    routeInfo: currentScreen,
+                  })
+                }
+              }}
+            />
+          </View>
+        </ThemeProvider>
+      </MobxProvider>
     )
   }
 }

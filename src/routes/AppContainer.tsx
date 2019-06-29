@@ -1,11 +1,5 @@
-import React, { Component } from 'react'
-import { StatusBar } from 'react-native'
-import { Provider as ThemeProvider } from '@sishuguojixuefu/antd-mobile-rn'
-import { observer, Provider as MobxProvider } from 'mobx-react'
 import { createAppContainer, createStackNavigator } from 'react-navigation'
-import { getCurrentRoute } from '~/utils/Navigation'
 import HomeScreen from '~/screens/HomeScreen'
-import appStore from '~/stores/appStore'
 import Routes from '~/routes/Routes'
 
 // The stack for the main navigation
@@ -41,31 +35,4 @@ const RootStack = createStackNavigator(
 )
 
 // <AppContainer />组件不接受任何 props -- 所有配置都在createStackNavigator 函数的可选参数中指定。
-const AppContainer = createAppContainer(RootStack)
-
-@observer
-class App extends Component<any, any> {
-  render() {
-    return (
-      <MobxProvider>
-        <ThemeProvider>
-          <StatusBar backgroundColor="#0BA5F6" barStyle="light-content" />
-          <AppContainer
-            onNavigationStateChange={(prevState, currentState) => {
-              const prevScreen = getCurrentRoute(prevState)
-              const currentScreen = getCurrentRoute(currentState)
-              if (currentScreen && prevScreen !== currentScreen) {
-                appStore.setCurrentRoute({
-                  screenName: currentScreen.routeName,
-                  routeInfo: currentScreen,
-                })
-              }
-            }}
-          />
-        </ThemeProvider>
-      </MobxProvider>
-    )
-  }
-}
-
-export default App
+export default createAppContainer(RootStack)
