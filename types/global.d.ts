@@ -1,3 +1,5 @@
+declare module 'antd-mobile-area-data'
+
 declare namespace global {
   /**
    * 系统是iOS
