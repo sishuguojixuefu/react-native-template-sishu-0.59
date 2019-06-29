@@ -93,7 +93,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       2,
       {
-        extensions: ['.js', '.jsx', '.tsx'],
+        extensions: ['.jsx', '.tsx'],
       },
     ],
     'jsx-a11y/accessible-emoji': 0,
