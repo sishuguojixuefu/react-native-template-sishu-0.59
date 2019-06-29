@@ -1,5 +1,5 @@
 import { Dimensions, Platform, StyleSheet } from 'react-native'
-import getDeviceInfo from './src/utils/getDeviceInfo'
+import getDeviceInfo from './app/utils/getDeviceInfo'
 
 const { height, width } = Dimensions.get('window')
 

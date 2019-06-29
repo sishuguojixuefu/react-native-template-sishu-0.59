@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "*": ["types/*"],
-      "~/*": ["src/*"]
+      "~/*": ["app/*"]
     },
     "target": "esnext",
     "module": "commonjs",

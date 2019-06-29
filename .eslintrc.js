@@ -37,7 +37,7 @@ module.exports = {
     'import/resolver': {
       typescript: {},
       'babel-plugin-root-import': {
-        rootPathSuffix: 'src',
+        rootPathSuffix: 'app',
         rootPathPrefix: '~',
       },
       node: {

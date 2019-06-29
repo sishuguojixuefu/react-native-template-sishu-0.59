@@ -1,7 +1,7 @@
 // http://t.cn/AipSVR08
 import CodePush from 'react-native-code-push'
 
-const codePushStatusDidChange = syncStatus => {
+const codePushStatusDidChange = (syncStatus: number) => {
   switch (syncStatus) {
     case CodePush.SyncStatus.UP_TO_DATE: // 已更新 0
       console.info(`[CodePush]${syncStatus}: 已更新`)
