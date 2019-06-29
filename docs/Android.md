@@ -304,3 +304,11 @@ String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 ```sh
 $ git update-index --add --chmod=+x android/gradlew
 ```
+
+## Gradle Daemon
+
+开启 Gradle Daemon 可以极大地提升 java 代码的增量编译速度。
+
+```sh
+$ (if not exist "%USERPROFILE%/.gradle" mkdir "%USERPROFILE%/.gradle") && (echo org.gradle.daemon=true >> "%USERPROFILE%/.gradle/gradle.properties")
+```

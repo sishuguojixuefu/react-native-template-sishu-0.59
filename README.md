@@ -223,7 +223,6 @@ public class MainActivity extends ReactActivity {
     "ios:debug": "node node_modules/react-native/local-cli/cli.js run-ios",
     "ios:bundle": "react-native bundle --entry-file index.js --bundle-output ./ios/index.ios.bundle --platform ios --dev false --assets-dest ./ios --sourcemap-output ./ios/index.ios.bundle.map",
     "gradle:clean": "cd android && ./gradlew clean",
-    "gradle:stop": "cd android && ./gradlew stop",
     "an:bundle": "react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false --assets-dest ./android/app/src/main/res --sourcemap-output ./android/app/src/main/assets/index.android.bundle.map",
     "an:debug": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
     "an:release": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
