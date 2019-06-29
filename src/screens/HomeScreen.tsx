@@ -14,7 +14,7 @@ interface Props extends BaseScreenProps {}
 
 @observer
 class HomeScreen extends BaseScreen<Props, any> {
-  public constructor(props) {
+  constructor(props) {
     super(props)
     // 标识当前页面
     appStore.setCurrentRoute({
@@ -22,7 +22,7 @@ class HomeScreen extends BaseScreen<Props, any> {
     })
   }
 
-  public render() {
+  render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>

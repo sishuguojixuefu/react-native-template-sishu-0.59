@@ -45,7 +45,7 @@ const AppContainer = createAppContainer(RootStack)
 
 @observer
 class App extends Component<any, any> {
-  public render() {
+  render() {
     return (
       <MobxProvider>
         <ThemeProvider>

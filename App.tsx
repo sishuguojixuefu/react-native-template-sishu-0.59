@@ -12,7 +12,7 @@ import AppContainer from './src/routes/AppContainer'
 import appStore from '~/stores/appStore'
 
 class App extends Component {
-  public constructor(props) {
+  constructor(props) {
     super(props)
     // 标识当前页面
     appStore.setCurrentRoute({
@@ -20,7 +20,7 @@ class App extends Component {
     })
   }
 
-  public render() {
+  render() {
     return (
       <View style={styles.container}>
         <AppContainer />

@@ -124,7 +124,7 @@ Xcode 允许你为每个“配置”（例如，调试，发布）定义自定�
 import CodePush from 'react-native-code-push'
 import CodePushSync from './src/utils/CodePushSync'
 ...
-public componentDidMount() {
+componentDidMount() {
   if (!__DEV__) {
     CodePushSync.syncOnNextSuspend()
   }

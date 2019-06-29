@@ -7,12 +7,12 @@ export interface NavigationPropsType {
 }
 
 class AppStore {
-  @observable public currentRoute?: NavigationPropsType
+  @observable currentRoute?: NavigationPropsType
 
   /**
    * 设置当前的路由
    */
-  @action public setCurrentRoute = (currentRoute: NavigationPropsType): void => {
+  @action setCurrentRoute = (currentRoute: NavigationPropsType): void => {
     if (currentRoute && currentRoute.routeInfo) {
       const { routeInfo } = currentRoute
       currentRoute.routeInfo = omit(routeInfo, ['routeName'])
