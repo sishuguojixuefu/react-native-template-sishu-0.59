@@ -39,7 +39,7 @@ const codePushStatusDidChange = syncStatus => {
  * 安装更新并立刻重启应用
  */
 const syncImmediate = () => {
-  console.info('[CodePush]syncImmediate')
+  console.info('[CodePush]syncImmediate: 安装更新并立刻重启应用')
   CodePush.disallowRestart() // 禁止重启
   CodePush.sync({ installMode: CodePush.InstallMode.IMMEDIATE }, codePushStatusDidChange, progress => {
     console.info('[CodePush]codePushDownloadDidProgress: ', progress)
@@ -53,15 +53,15 @@ const syncImmediate = () => {
  * 安装更新，但不立马重启，直到下一次重新进入
  */
 const syncOnNextRestart = () => {
-  console.info('[CodePush]syncOnNextSuspend')
+  console.info('[CodePush]syncOnNextSuspend: 安装更新，但不立马重启，直到下一次重新进入')
   CodePush.sync({ installMode: CodePush.InstallMode.ON_NEXT_RESTART }, codePushStatusDidChange)
 }
 
 /**
- *安装更新，但是不立马重新启动，直到下一次从后台恢复到前台
+ * 安装更新，但是不立马重新启动，直到下一次从后台恢复到前台
  */
 const syncOnNextResume = () => {
-  console.info('[CodePush]syncOnNextSuspend')
+  console.info('[CodePush]syncOnNextSuspend: 安装更新，但是不立马重新启动，直到下一次从后台恢复到前台')
   CodePush.sync({ installMode: CodePush.InstallMode.ON_NEXT_SUSPEND }, codePushStatusDidChange)
 }
 
@@ -69,7 +69,7 @@ const syncOnNextResume = () => {
  * 下一次处于后台时更新，不会有白屏
  */
 const syncOnNextSuspend = () => {
-  console.info('[CodePush]syncOnNextSuspend')
+  console.info('[CodePush]syncOnNextSuspend: 下一次处于后台时更新，不会有白屏')
   CodePush.sync({ installMode: CodePush.InstallMode.ON_NEXT_SUSPEND }, codePushStatusDidChange)
 }
 
