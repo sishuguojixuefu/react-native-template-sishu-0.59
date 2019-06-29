@@ -3,7 +3,7 @@
   "@nozbe/watermelondb": "latest",
   "@nozbe/with-observables": "latest",
   "@react-native-community/async-storage": "latest",
-  "@sishuguojixuefu/antd-mobile-rn": "latest",
+  "@sishuguojixuefu/antd-mobile-rn": "3.1.8",
   "@sishuguojixuefu/react-native-form": "latest",
   "axios": "latest",
   "dayjs": "1.8.14",
