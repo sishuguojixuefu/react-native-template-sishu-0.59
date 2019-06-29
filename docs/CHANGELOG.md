@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [Unreleased]
 
+## [0.2.7] - 2019-6-29
+
+- 删除全局变量 ROUTES
+- 添加页面代码块
+- 给 index.js、App.tsx、HomeScreem.tsx 这三个页面手动标识当前页面
+- 月下载量改为总下载量
+- 添加 react-native-screens 并编写文档配置说明
+- Android 文档添加 Daemon 使用说明
+
 ## [0.2.6] - 2019-6-28 13
 
 - 删除 mobx、mobx-react 相关的全局变量
@@ -76,7 +85,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - 支持在开发者模式下打印 info、warn、error
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.6...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.7...HEAD
+[0.2.7]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.4...v0.2.5
 [0.2.4]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.3...v0.2.4
