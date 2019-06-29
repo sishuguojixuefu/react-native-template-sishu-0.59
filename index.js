@@ -4,6 +4,7 @@ import addCustomProps from 'react-native-add-custom-props'
 import { useScreens } from 'react-native-screens'
 import './global'
 import App from './App.tsx'
+import appStore from './src/stores/appStore'
 import { name as appName } from './app.json'
 
 // 标识当前页面
