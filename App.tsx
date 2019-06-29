@@ -8,7 +8,7 @@
 
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
-import AppContainer from './src/routes'
+import AppContainer from './src/routes/AppContainer'
 import appStore from '~/stores/appStore'
 
 class App extends Component {
