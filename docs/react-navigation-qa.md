@@ -5,7 +5,7 @@
 ```js
 // createStackNavigator(RouteConfigs, StackNavigatorConfig)
 createStackNavigator(RouteConfigs, {
-  headerMode: 'none', // add this props
+  headerMode: 'none', // add this line
 })
 ```
 
@@ -18,7 +18,7 @@ createStackNavigator(
     HelloScreen: {
       screen: HelloScreen,
       navigationOptions: {
-        header: null, // add this props
+        header: null, // add this line
       },
     },
   },
