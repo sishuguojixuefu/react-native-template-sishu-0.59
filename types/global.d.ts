@@ -27,6 +27,7 @@ declare namespace global {
    */
   let DeviceInfo: any
 }
+
 declare const ios: boolean
 declare const android: boolean
 declare const windowHeight: number

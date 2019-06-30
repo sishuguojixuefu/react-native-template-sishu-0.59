@@ -13,6 +13,7 @@ import { StyleSheet, View, StatusBar } from 'react-native'
 import { getCurrentRoute } from '~/utils/Navigation'
 import AppContainer from '~/routes/AppContainer'
 import appStore from '~/stores/appStore'
+import theme from '~/theme'
 
 class App extends Component {
   constructor(props) {
@@ -26,8 +27,8 @@ class App extends Component {
   render() {
     return (
       <MobxProvider>
-        <ThemeProvider>
-          <StatusBar backgroundColor="#0BA5F6" barStyle="light-content" />
+        <ThemeProvider theme={theme}>
+          <StatusBar backgroundColor={theme.brand_primary} barStyle="light-content" />
           <View style={styles.container}>
             <AppContainer
               onNavigationStateChange={(prevState, currentState) => {
