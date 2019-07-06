@@ -52,15 +52,16 @@ module.exports = {
     windowWidth: false,
     hairlineWidth: false,
     DeviceInfo: false,
+    errorReport: false,
   },
   rules: {
     // 启用的规则及其各自的错误级别
     'global-require': 0,
     'linebreak-style': [2, 'unix'],
     'no-console': [
-      'error',
+      'warn',
       {
-        allow: ['warn', 'error', 'info', 'log', 'disableYellowBox'],
+        allow: ['warn', 'error', 'info', 'disableYellowBox'],
       },
     ],
     'no-param-reassign': ['error', { props: false }],
