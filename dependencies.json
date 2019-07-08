@@ -20,7 +20,7 @@
   "mobx-react": "latest",
   "qs": "latest",
   "react-native-add-custom-props": "latest",
-  "react-native-config-reader": "git+https://git@github.com/sishuguojixuefu/react-native-config-reader.git",
+  "react-native-config-reader": "3.0.1",
   "react-native-device-info": "latest",
   "react-native-echarts-wrapper": "latest",
   "react-native-fs": "latest",
