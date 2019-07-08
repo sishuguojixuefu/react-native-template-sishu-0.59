@@ -7,8 +7,7 @@
  */
 
 import React, { Component } from 'react'
-import { Provider as ThemeProvider } from '@sishuguojixuefu/antd-mobile-rn'
-import { Provider as MobxProvider } from 'mobx-react'
+import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { StyleSheet, View, StatusBar } from 'react-native'
 import { getCurrentRoute } from '~/utils/Navigation'
 import AppContainer from '~/routes/AppContainer'
@@ -26,25 +25,23 @@ class App extends Component {
 
   render() {
     return (
-      <MobxProvider>
-        <ThemeProvider theme={theme}>
-          <StatusBar backgroundColor={theme.brand_primary} barStyle="light-content" />
-          <View style={styles.container}>
-            <AppContainer
-              onNavigationStateChange={(prevState, currentState) => {
-                const prevScreen = getCurrentRoute(prevState)
-                const currentScreen = getCurrentRoute(currentState)
-                if (currentScreen && prevScreen !== currentScreen) {
-                  appStore.setCurrentRoute({
-                    screenName: currentScreen.routeName,
-                    routeInfo: currentScreen,
-                  })
-                }
-              }}
-            />
-          </View>
-        </ThemeProvider>
-      </MobxProvider>
+      <Provider theme={theme}>
+        <StatusBar backgroundColor={theme.brand_primary} barStyle="light-content" />
+        <View style={styles.container}>
+          <AppContainer
+            onNavigationStateChange={(prevState, currentState) => {
+              const prevScreen = getCurrentRoute(prevState)
+              const currentScreen = getCurrentRoute(currentState)
+              if (currentScreen && prevScreen !== currentScreen) {
+                appStore.setCurrentRoute({
+                  screenName: currentScreen.routeName,
+                  routeInfo: currentScreen,
+                })
+              }
+            }}
+          />
+        </View>
+      </Provider>
     )
   }
 }
