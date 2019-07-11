@@ -53,6 +53,7 @@ module.exports = {
     hairlineWidth: false,
     DeviceInfo: false,
     errorReport: false,
+    statusBarHeight: false,
   },
   rules: {
     // 启用的规则及其各自的错误级别

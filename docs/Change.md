@@ -28,6 +28,7 @@
 - [react-native-code-push](http://t.cn/Ai91zL6x): React Native module for CodePush
 - [react-native-keyboard-manager](http://t.cn/Ai07QoyX): Library to prevent issues of keyboard sliding up and cover inputs on React-Native iOS projects ⚛
 - [react-native-screens](http://t.cn/Ai0wWWkv): 该项目旨在将原生导航容器组件公开给 React Native，结合 react-navigation 能快捷的地提高性能
+- [react-native-status-bar-height](http://t.cn/AiWZh2HG): 一个轻量的帮助你获取状态栏高度的组件
 
 #### 数据可视化
 
@@ -57,6 +58,7 @@
 
 #### UI 组件
 
+- [react-native-elements](http://t.cn/AiWZhgMz): 提供了很多实用的组件
 - [@sishuguojixuefu/antd-mobile-rn](http://t.cn/AiKJmVe2): 一个基于 Ant Design Mobile RN 的 UI 组件库
 - [antd-mobile-area-data](http://t.cn/Ai0cGbG1): area date for antd-mobile picker
 - [@sishuguojixuefu/react-native-form](http://t.cn/Ai9YDRcb): 私塾 React Native 动态表单项目

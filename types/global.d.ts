@@ -26,6 +26,10 @@ declare namespace global {
    * 利用 react-native-device-info 获取的设备信息
    */
   let DeviceInfo: any
+  /**
+   * 状态栏高度
+   */
+  let statusBarHeight: number
 }
 
 declare const ios: boolean
@@ -35,3 +39,4 @@ declare const windowWidth: number
 declare const hairlineWidth: number
 declare const __DEV__: boolean
 declare const DeviceInfo: any
+declare const statusBarHeight: number
