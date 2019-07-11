@@ -9,7 +9,7 @@
 import React, { Component } from 'react'
 import { Provider } from '@sishuguojixuefu/antd-mobile-rn'
 import { StyleSheet, View, StatusBar } from 'react-native'
-import { getCurrentRoute } from '~/utils/Navigation'
+import { getCurrentRoute, setTopLevelNavigator } from '~/utils/NavigationService'
 import AppContainer from '~/routes/AppContainer'
 import appStore from '~/stores/appStore'
 import theme from '~/theme'
@@ -29,6 +29,9 @@ class App extends Component {
         <StatusBar backgroundColor={theme.brand_primary} barStyle="light-content" />
         <View style={styles.container}>
           <AppContainer
+            ref={navigatorRef => {
+              setTopLevelNavigator(navigatorRef)
+            }}
             onNavigationStateChange={(prevState, currentState) => {
               const prevScreen = getCurrentRoute(prevState)
               const currentScreen = getCurrentRoute(currentState)
