@@ -58,6 +58,7 @@ module.exports = {
     // 启用的规则及其各自的错误级别
     'global-require': 0,
     'linebreak-style': [2, 'unix'],
+    'prefer-const': 0,
     'no-console': [
       'warn',
       {
