@@ -103,6 +103,7 @@ module.exports = {
     'react-native/no-color-literals': 0,
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 0,
+    'react-native/split-platform-components': 0,
     '@typescript-eslint/explicit-member-accessibility': [2, { accessibility: 'no-public' }],
     '@typescript-eslint/no-empty-interface': 1,
     '@typescript-eslint/explicit-function-return-type': [
