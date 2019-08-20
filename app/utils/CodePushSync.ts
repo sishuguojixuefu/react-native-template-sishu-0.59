@@ -44,6 +44,7 @@ const syncImmediate = () => {
   CodePush.sync({ installMode: CodePush.InstallMode.IMMEDIATE }, codePushStatusDidChange, progress => {
     console.info('[CodePush]codePushDownloadDidProgress: ', progress)
     if (progress.receivedBytes >= progress.totalBytes) {
+      console.info('[CodePush]syncImmediate-强制更新')
       CodePush.allowRestart() // 强制更新
     }
   })
