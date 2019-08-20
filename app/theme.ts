@@ -153,10 +153,11 @@ export default {
   tab_bar_height: 50,
 
   // toast
-  toast_fill: 'rgba(0, 0, 0, .8)',
+  toast_fill: 'rgba(0, 0, 0, .6)',
 
   // search_bar
   search_bar_fill: '#efeff4',
+  search_bar_fill_reverse: '#efeff4',
   search_bar_height: 44,
   search_bar_input_height: 28,
   search_bar_font_size: 15,
