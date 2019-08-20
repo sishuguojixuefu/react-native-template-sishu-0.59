@@ -29,7 +29,11 @@ declare namespace global {
   /**
    * 状态栏高度
    */
-  let statusBarHeight: number
+  let StatusBarHeight: number
+  /**
+   * 导航栏高度
+   */
+  let HeaderHeight: number
 }
 
 declare const ios: boolean
@@ -39,4 +43,5 @@ declare const windowWidth: number
 declare const hairlineWidth: number
 declare const __DEV__: boolean
 declare const DeviceInfo: any
-declare const statusBarHeight: number
+declare const StatusBarHeight: number
+declare const HeaderHeight: number

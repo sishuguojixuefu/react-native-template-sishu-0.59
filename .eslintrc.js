@@ -53,7 +53,8 @@ module.exports = {
     hairlineWidth: false,
     DeviceInfo: false,
     errorReport: false,
-    statusBarHeight: false,
+    StatusBarHeight: false,
+    HeaderHeight: false,
   },
   rules: {
     // 启用的规则及其各自的错误级别
@@ -124,5 +125,6 @@ module.exports = {
     ],
     '@typescript-eslint/no-unused-vars': [1, { args: 'none' }],
     '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/camelcase': 0,
   },
 }

@@ -96,7 +96,6 @@
 - @types/react-test-renderer
 - @typescript-eslint/eslint-plugin
 - @typescript-eslint/parser
-- @types/uuid
 - babel-plugin-import
 - babel-plugin-root-import
 - babel-plugin-transform-remove-console
