@@ -36,7 +36,7 @@
   "react-native-svg": "9.5.1",
   "react-native-svg-uri": "latest",
   "react-native-vector-icons": "latest",
-  "react-native-webview": "latest",
+  "react-native-webview": "5.12.0",
   "react-navigation": "latest",
   "react-navigation-addon-search-layout": "latest",
   "react-navigation-backhandler": "latest",
