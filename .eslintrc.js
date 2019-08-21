@@ -24,7 +24,6 @@ module.exports = {
       impliedStrict: true,
     },
     ecmaVersion: 2018,
-    project: './tsconfig.json',
     sourceType: 'module',
   },
   plugins: [
