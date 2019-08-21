@@ -31,7 +31,7 @@
   "eslint-plugin-react": "latest",
   "eslint-plugin-react-native": "latest",
   "husky": "latest",
-  "lint-staged": "latest",
+  "lint-staged": "8.2.1",
   "prettier": "latest",
   "typescript": "latest"
 }
