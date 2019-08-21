@@ -16,7 +16,6 @@
   "npm.packageManager": "yarn",
   "eslint.packageManager": "yarn",
   "eslint.alwaysShowStatus": true,
-  "eslint.provideLintTask": true,
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
     "javascript",
@@ -65,6 +64,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "eslint.enable": true,
-  "eslint.quiet": true,
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }
