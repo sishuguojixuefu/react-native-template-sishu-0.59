@@ -7,6 +7,7 @@ export interface BaseScreenProps {
 
 export default class BaseScreen<P = {}, S = {}, SS = any> extends React.Component<P, S, SS> {
   params: NavigationParams
+
   constructor(props: any) {
     super(props)
     // @ts-ignore

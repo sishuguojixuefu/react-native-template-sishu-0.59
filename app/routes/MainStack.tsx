@@ -13,6 +13,7 @@ const MainStack = createStackNavigator(
   },
   {
     initialRouteName: Routes.HomeScreen,
+    headerBackTitleVisible: false,
   }
 )
 

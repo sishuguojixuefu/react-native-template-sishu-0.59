@@ -1,5 +1,5 @@
 interface TargetFunction {
-  (page: number, limit: number): Promise<{ data: never[]; total: number }>
+  (params?: object, page?: number, size?: number): Promise<{ data: any[]; total: number }>
 }
 
 /**
@@ -24,30 +24,30 @@ export const createIterator = (array: [], step: number = 1) => {
   }
 }
 
-/**
+/** s
  * 创建异步迭代器
  * @param array
  * @param step
  */
-export const createAsyncIterator = (targetFunction: TargetFunction, limit = 10) => {
+export const createAsyncIterator = (targetFunction: TargetFunction, params: object = {}, size = 10) => {
   const doneData = { done: true, value: [] }
   let page = 1 // 页码
   let totalData: number // 数据总长度
   return {
     async next() {
       if (page === 1) {
-        const { total, data } = await targetFunction(page, limit)
+        const { total, data } = await targetFunction(params, page, size)
         totalData = total
         if (totalData === 0) {
           return doneData
         }
         page++
-        return { done: false, value: data }
+        return { done: total <= size, value: data }
       }
-      if (totalData - (page - 1) * limit > 0) {
-        const { data } = await targetFunction(page, limit)
+      if (totalData - (page - 1) * size > 0) {
+        const { data } = await targetFunction(params, page, size)
         page++
-        return { done: false, value: data }
+        return { done: totalData <= page * size, value: data }
       }
       return doneData
     },

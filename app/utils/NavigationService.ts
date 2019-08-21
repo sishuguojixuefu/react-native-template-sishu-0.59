@@ -18,13 +18,21 @@ export const setTopLevelNavigator = navigatorRef => {
  * @param routeName 路由名
  * @param params 路由参数
  */
-export const navigate = (routeName: string, params: object) => {
+export const navigate = (routeName: string, params?: object) => {
   _navigator.dispatch(
     NavigationActions.navigate({
       routeName,
       params,
     })
   )
+}
+
+/**
+ * 在没有 navigation 这个 prop 的情况下进行页面goBack操作
+ * @参考 http://t.cn/EX2CdBl
+ */
+export const goBack = () => {
+  _navigator.dispatch(NavigationActions.back())
 }
 
 /**
@@ -48,5 +56,6 @@ export const getCurrentRoute = (
 export default {
   setTopLevelNavigator,
   navigate,
+  goBack,
   getCurrentRoute,
 }

@@ -52,7 +52,7 @@ module.exports = {
     windowWidth: false,
     hairlineWidth: false,
     DeviceInfo: false,
-    errorReport: false,
+    isIphoneX: false,
     StatusBarHeight: false,
     HeaderHeight: false,
   },

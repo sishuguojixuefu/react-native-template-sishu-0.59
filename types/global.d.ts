@@ -27,6 +27,10 @@ declare namespace global {
    */
   let DeviceInfo: any
   /**
+   * 是否是iPhoneX
+   */
+  let isIphoneX: boolean
+  /**
    * 状态栏高度
    */
   let StatusBarHeight: number
@@ -43,5 +47,6 @@ declare const windowWidth: number
 declare const hairlineWidth: number
 declare const __DEV__: boolean
 declare const DeviceInfo: any
+declare const isIphoneX: boolean
 declare const StatusBarHeight: number
 declare const HeaderHeight: number
