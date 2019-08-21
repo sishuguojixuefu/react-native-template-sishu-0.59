@@ -19,7 +19,6 @@
 - react-native-fs
 - react-native-spring-scrollview
 - react-native-keyboard-manager
-- react-native-screens
 
 ### 非原生库
 

@@ -158,26 +158,6 @@ if [[ -n "$builddate" ]]; then
 fi
 ```
 
-### react-native-screens
-
-引入这个组件是为了提高 react-navigation 的性能和顺滑度的，大部分配置模板已经配置好了，你只需要修改 `MainActivity.java` 即可：
-
-```java
--import com.facebook.react.ReactActivity;
-+import android.os.Bundle;
-+import com.facebook.react.ReactFragmentActivity;
- import com.facebook.react.ReactActivityDelegate;
-
--public class MainActivity extends ReactActivity {
-+public class MainActivity extends ReactFragmentActivity {
-+
-+    @Override
-+    protected void onCreate(Bundle savedInstanceState) {
-+        super.onCreate(savedInstanceState);
-+    }
- }
-```
-
 ### 处理系统字体
 
 > 注意：ios 已经在模版中配置好，安卓需要手动配置
