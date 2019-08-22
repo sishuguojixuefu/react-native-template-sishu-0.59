@@ -49,9 +49,7 @@
 
 - [react-native-gesture-handler](http://t.cn/AiKMLWNy): react-navigation 依赖这个插件
 - [react-navigation](http://t.cn/RBfba1a): 官方推荐导航组件
-- [react-navigation-addon-search-layout](http://t.cn/AiKMi8Ux): 一个简单但完全可以接受的搜索布局屏幕，在 iOS 和 Android 上看起来很不错。
 - [react-navigation-backhandler](http://t.cn/RkCpfeP): 使用 React-Navigation 轻松处理 Android 后退按钮行为
-- [react-navigation-collapsible](http://t.cn/E9D8NTs): 可折叠标题的 React Navigation 扩展。使您的 React Navigation 标题可折叠
 - [react-navigation-header-buttons](http://t.cn/R1LoGK6): 轻松渲染用于反应导航的标题按钮。
 - [react-navigation-transitions](http://t.cn/E9DR3R7): react-navigation 的自定义过渡效果组件
 
