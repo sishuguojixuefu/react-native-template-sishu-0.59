@@ -44,7 +44,7 @@ request.interceptors.request.use(
 // 添加响应拦截器
 request.interceptors.response.use(
   response => {
-    console.info('响应数据：', response)
+    console.log('响应数据：', response)
     const { data } = response
     return data
   },

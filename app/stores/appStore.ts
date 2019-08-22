@@ -17,7 +17,7 @@ class AppStore {
       const { routeInfo } = currentRoute
       currentRoute.routeInfo = omit(routeInfo, ['routeName'])
     }
-    console.info('currentRoute', currentRoute)
+    console.log('currentRoute', currentRoute)
     this.currentRoute = currentRoute
   }
 }

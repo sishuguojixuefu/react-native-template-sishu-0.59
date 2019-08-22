@@ -14,7 +14,7 @@ export const uploadFile = async (filePath, uploadToken) => {
   const uri = /^file:\/\/(.*)$/.exec(filePath)![1]
   const name = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2')
   // uploadFile(uri, token, formInput, onprogress)
-  console.info(uri, uploadToken, name)
+  console.log(uri, uploadToken, name)
   const key = await qiniu.Rpc.uploadFile(
     uri, // 图片地址
     uploadToken, // 上传令牌
@@ -25,7 +25,7 @@ export const uploadFile = async (filePath, uploadToken) => {
       region: 'https://up-z1.qiniup.com',
     },
     resp => {
-      console.info(resp)
+      console.log(resp)
     }
   )
   return `http://qiniu.sishuxuefu.com/${key}`
