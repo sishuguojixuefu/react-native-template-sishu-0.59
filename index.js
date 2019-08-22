@@ -16,7 +16,7 @@ configure({
 })
 // 屏蔽黄屏警告
 console.disableYellowBox = true
-console.log('YellowBox is disabled.')
+console.info('YellowBox is disabled.')
 // 处理ios系统文字
 if (ios) {
   addCustomProps(Text, { allowFontScaling: false })

@@ -14,7 +14,7 @@ export const uploadFile = async (filePath, uploadToken) => {
   const uri = /^file:\/\/(.*)$/.exec(filePath)![1]
   const name = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2')
   // uploadFile(uri, token, formInput, onprogress)
-  console.log(uri, uploadToken, name)
+  console.info(uri, uploadToken, name)
   const key = await qiniu.Rpc.uploadFile(
     uri, // 图片地址
     uploadToken, // 上传令牌
