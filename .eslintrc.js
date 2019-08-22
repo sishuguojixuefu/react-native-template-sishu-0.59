@@ -94,6 +94,7 @@ module.exports = {
     'react/destructuring-assignment': 0,
     'react/prop-types': 0,
     'react/react-in-jsx-scope': 0,
+    'react/jsx-props-no-spreading': 0,
     'react/jsx-filename-extension': [
       2,
       {
@@ -127,5 +128,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [1, { args: 'none' }],
     '@typescript-eslint/no-non-null-assertion': 0,
     '@typescript-eslint/camelcase': 0,
+    '@typescript-eslint/ban-ts-ignore': 0,
   },
 }

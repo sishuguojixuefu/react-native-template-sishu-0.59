@@ -51,7 +51,7 @@ class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F2F2F2',
+    backgroundColor: theme.fill_body,
     flex: 1,
   },
 })
