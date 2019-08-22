@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-sishu",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "私塾国际学府 React Native 团队开箱即用项目模板",
   "scripts": {
     "install": "node setup.js",
