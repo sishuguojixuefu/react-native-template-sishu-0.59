@@ -1,7 +1,7 @@
 import { createStackNavigator } from 'react-navigation'
 import Routes from '~/routes/Routes'
 import HomeScreen from '~/screens/HomeScreen'
-import commonNavigationOption from '~/routes/commonNavigationOption'
+import commonStackNavigatorConfig from '~/routes/commonStackNavigatorConfig'
 
 const MainStack = createStackNavigator(
   {
@@ -14,7 +14,7 @@ const MainStack = createStackNavigator(
   },
   {
     initialRouteName: Routes.HomeScreen,
-    ...commonNavigationOption,
+    ...commonStackNavigatorConfig,
   }
 )
 

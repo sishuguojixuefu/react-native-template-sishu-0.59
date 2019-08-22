@@ -2,7 +2,7 @@ import { NavigationScreenConfig, NavigationStackViewConfig, NavigationScreenOpti
 import { fromRight } from 'react-navigation-transitions'
 import theme from '~/theme'
 
-const commonNavigationOption: NavigationScreenConfig<NavigationScreenOptions> | NavigationStackViewConfig = {
+const commonStackNavigatorConfig: NavigationScreenConfig<NavigationScreenOptions> | NavigationStackViewConfig = {
   headerStyle: {
     backgroundColor: theme.brand_primary,
   },
@@ -14,4 +14,4 @@ const commonNavigationOption: NavigationScreenConfig<NavigationScreenOptions> | 
   headerBackTitleVisible: false,
 }
 
-export default commonNavigationOption
+export default commonStackNavigatorConfig
