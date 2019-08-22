@@ -63,7 +63,7 @@ module.exports = {
     'no-console': [
       'warn',
       {
-        allow: ['warn', 'error', 'info', 'log', 'disableYellowBox'],
+        allow: ['warn', 'error', 'log', 'info', 'disableYellowBox'],
       },
     ],
     'no-param-reassign': ['error', { props: false }],
@@ -100,6 +100,7 @@ module.exports = {
       },
     ],
     'jsx-a11y/accessible-emoji': 0,
+    'react/static-property-placement': 0,
     'react-native/no-color-literals': 0,
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 0,
