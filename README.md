@@ -14,7 +14,6 @@
 
 - 无缝集成到 React Native CLI 中！✨
 - 与默认的 React Native 模板一致
-- 始终是最新的依赖项 🙌
 - 优雅地集成 axios、mobx、react-navigation
 - 使用一个有经验的项目目录结构
 - 使用一个有经验的 VSCode 配置
