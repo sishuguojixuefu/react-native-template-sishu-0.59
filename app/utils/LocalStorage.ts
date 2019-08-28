@@ -19,13 +19,14 @@ export default class LocalStorage {
   /**
    * 根据key、value以及value的类型更新本地数据
    */
-  static update = async (key: string, value: string | number) => {
+  static update = async (key: string, value: object | string | number) => {
     const item = await LocalStorage.get(key)
     let json = value
     if (Array.isArray(item)) {
       json = item.push(value)
     } else if (typeof item === 'object') {
-      json = Object.assign({}, item, value)
+      // @ts-ignore
+      json = { ...item, ...value }
     }
     await AsyncStorage.setItem(key, JSON.stringify(json))
   }
