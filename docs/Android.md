@@ -181,9 +181,9 @@ buildTypes {
 有时从网上下载的 Demo 资源文件不规范，会出现直接将 jpg 文件改为 png 后缀名的情况，gradle 打包检查时报错编译通不过的。我们通过 `aaptOptions.cruncherEnabled=false` 来禁止 Gradle 检查 png 的合法性：
 
 ```diff
-buildTypes {
-  release {
-+    aaptOptions.cruncherEnabled=false
+android {
+  aaptOptions {
+    cruncherEnabled=false
   }
 }
 ```
@@ -198,7 +198,23 @@ buildTypes {
 + dexOptions.javaMaxHeapSize = 2g
 ```
 
-### 8、配置方法数超过 64K 的应用
+### 8、gradle 优化配置
+
+在 `android\gradle.properties` 中加入以下配置：
+
+```
+# 让gradle使用单独的守护进程
+org.gradle.daemon=true
+# 让gradle并行编译
+org.gradle.parallel=true
+# 让gradle在需要的时候才配置
+org.gradle.configureondemand=true
+# 增加gradle运行的java虚拟机的大小
+org.gradle.jvmargs=-Xmx3072m -XX:MaxPermSize=1024m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
+android.useDeprecatedNdk=true
+```
+
+### 9、配置方法数超过 64K 的应用
 
 随着 Android 平台的持续成长，Android 应用的大小也在增加。当您的应用及其引用的库达到特定大小时，您会遇到构建错误，指明您的应用已达到 Android 应用构建架构的极限。会报告这一错误：
 
@@ -212,38 +228,7 @@ defaultConfig {
 }
 ```
 
-### 9、删除未使用到 xml 和图片
-
-如何知道哪些 xml 和图片未被使用到？使用 Android Studio 的 Lint，步骤：
-
-1. `Android Studio` -> `Menu` -> `Refactor` -> `Remove Unused Resources`
-2. 选择 `Refactor` 一键删除
-3. 选择 `Perview` 预览未使用到的资源
-
-或者
-
-点击菜单栏 `Analyze` -> `Run Inspection by Name` -> `unused resources` -> `Moudule ‘app’` -> `OK`，这样会搜出来哪些未被使用到未使用到 xml 和图片，如下：
-
-![Analyze](http://wuxiaolong.me/images/reduceAPKSize1.png)
-
-### 10、删除未使用到代码
-
-同样使用 `Android Studio` 的 `Lint` ，步骤：点击菜单栏 `Analyze` -> `Run Inspection by Name` -> `unused declaration` -> `Moudule ‘app’` -> `OK`
-
-### 11、使用微信 Android 资源混淆工具（可选）
-
-微信 AndResGuard 是一个帮助你缩小 APK 大小的工具。
-
-## 七、React Native 软件盘顶起 tabbar 的问题
-
-打开 `android/app/src/main/AndroidManifest.xml` 文件，加入下面的代码：
-
-```diff
-- android:windowSoftInputMode="adjustResize"
-+ android:windowSoftInputMode="stateAlwaysHidden|adjustPan|adjustResize"
-```
-
-## 八、BuidConfig
+## 七、BuidConfig
 
 > 最初学习自：https://www.jianshu.com/p/3d9b23afe514
 > 在 react-native 中，我们可以借助 react-native-config-reader 来方便地读取这些属性
@@ -303,12 +288,4 @@ String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 
 ```sh
 $ git update-index --add --chmod=+x android/gradlew
-```
-
-## Gradle Daemon
-
-开启 Gradle Daemon 可以极大地提升 java 代码的增量编译速度。
-
-```sh
-$ (if not exist "%USERPROFILE%/.gradle" mkdir "%USERPROFILE%/.gradle") && (echo org.gradle.daemon=true >> "%USERPROFILE%/.gradle/gradle.properties")
 ```
