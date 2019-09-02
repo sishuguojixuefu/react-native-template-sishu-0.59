@@ -211,7 +211,6 @@ org.gradle.parallel=true
 org.gradle.configureondemand=true
 # 增加gradle运行的java虚拟机的大小
 org.gradle.jvmargs=-Xmx3072m -XX:MaxPermSize=1024m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8
-android.useDeprecatedNdk=true
 ```
 
 ### 9、配置方法数超过 64K 的应用
