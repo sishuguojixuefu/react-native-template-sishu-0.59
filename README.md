@@ -26,8 +26,10 @@
 
 ### 初始化项目
 
+> react native 0.60 做了较大的改动，暂不支持
+
 ```sh
-$ react-native init MyApp --template sishu
+$ react-native init MyApp --template sishu --version 0.59.10
 ```
 
 ### react-native-gesture-handler 配置
