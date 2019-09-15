@@ -24,27 +24,10 @@ android: {
 }
 ```
 
-## 四、Maven 仓库
-
-将以下代码配置到 `android/build.gradle` 配置文件的 `buildscript/repositories` 和 `allprojects/repositories` 下
-
-```js
-maven{
-    url 'http://maven.aliyun.com/nexus/content/groups/public/'
-    name 'aliyun'
-}
-...
-// 请务必将jitpack放在最后
-maven {
-    url "https://jitpack.io"
-    name 'jitpack'
-}
-```
-
 - `aliyun`: 为了加快下载速度
 - `jitpack`: 为了解决 react-native-image-crop-picker [Could not find com.github.yalantis:ucrop:2.2.1-native](http://t.cn/Ewx8bc3)的问题
 
-## 五、打包 APK
+## 四、打包 APK
 
 1、在项目根目录执行 `yarn an:keygen` 生成密钥文件 `my-release-key.keystore`
 
@@ -70,7 +53,7 @@ android{
 }
 ```
 
-## 六、构建配置
+## 五、构建配置
 
 ### 1、配置 PackagingOptions
 
@@ -227,7 +210,7 @@ defaultConfig {
 }
 ```
 
-## 七、BuidConfig
+## 六、BuidConfig
 
 > 最初学习自：https://www.jianshu.com/p/3d9b23afe514
 > 在 react-native 中，我们可以借助 react-native-config-reader 来方便地读取这些属性
@@ -274,22 +257,12 @@ public static Object getBuildConfigValue(Context context, String fieldName) {
 String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 ```
 
-## 八、Android 开发必知必会
+## 七、Android 开发必知必会
 
 - [应用界面主题 Theme 使用方法](http://t.cn/Aip3wADF)
 - [Android Theme.AppCompat 中，你应该熟悉的颜色属性](http://t.cn/RkMz1mC)
 
-## 九、持续集成
-
-### shell 文件的坑
-
-为了安全性 shell 文件默认都是不可执行的，当然也包括 `android/gradlew` 这个用来打包的脚本文件，这会给持续集成带来麻烦：运维同学默认是执行不了我们的打包命令的。解决办法很简单：
-
-```sh
-$ git update-index --add --chmod=+x android/gradlew
-```
-
-## 十、闪屏图尺寸
+## 九、闪屏图尺寸
 
 - mdpi：320x480
 - hdpi：480x800

@@ -32,9 +32,67 @@
 $ react-native init MyApp --template sishu --version 0.59.10
 ```
 
-### react-native-gesture-handler 配置
+### 安卓配置
 
-iOS 啥都不用做
+#### Maven 仓库
+
+将以下代码配置到 `android/build.gradle` 配置文件的 `buildscript/repositories` 和 `allprojects/repositories` 下
+
+```js
+maven{
+    url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    name 'aliyun'
+}
+...
+// 请务必将jitpack放在最后
+maven {
+    url "https://jitpack.io"
+    name 'jitpack'
+}
+```
+
+#### shell 文件的坑
+
+为了安全性 shell 文件默认都是不可执行的，当然也包括 `android/gradlew` 这个用来打包的脚本文件，这会给持续集成带来麻烦：运维同学默认是执行不了我们的打包命令的。解决办法很简单：
+
+```sh
+$ git update-index --add --chmod=+x android/gradlew
+```
+
+#### 处理系统字体
+
+在 `android\app\src\main\java\com\appName\MainActivity.java` 文件中加入如下代码：
+
+```java
+...
+import android.content.res.Configuration;
+import android.content.res.Resources;
+...
+
+public class MainActivity extends ReactActivity {
+  ...
+  // 让文字不随系统文字变化：http://t.cn/Rs26Veb
+  @Override
+  public void onConfigurationChanged(Configuration newConfig) {
+    if (newConfig.fontScale != 1)//非默认值
+    getResources();
+    super.onConfigurationChanged(newConfig);
+  }
+  @Override
+  public Resources getResources() {
+    Resources res = super.getResources();
+    if (res.getConfiguration().fontScale != 1) {//非默认值
+      Configuration newConfig = new Configuration();
+      newConfig.setToDefaults();//设置默认
+      res.updateConfiguration(newConfig, res.getDisplayMetrics());
+    }
+    return res;
+  }
+  ...
+}
+```
+
+#### react-native-gesture-handler 配置
 
 为了完成 `react-native-gesture-handler` 在 Android 上的安装，请确保在 `MainActivity.java` 上完成如下修改：
 
@@ -65,21 +123,13 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-### watermelondb 配置
+#### react-native-config-reader
 
-> 翻译不甚精准，可参考[原文](http://t.cn/Ai9ZWNsp)
+打开 `android/app/src/main/packageName/MainApplication.java` 把 `new RNConfigReaderPackage()` 替换为 `new RNConfigReaderPackage(BuildConfig.class)`
 
-#### ios
+> 自定义 BuildConfig 请戳 http://t.cn/AipENa1O
 
-ios 需要配置 Xcode 项目对 swift 的支持：
-
-- 在 Xcode 中打开 `ios/YourAppName.xcodeproj`
-- 右键**你的 App 名字**(它在左侧的项目导航上)，然后点击 `New File`
-- 给项目创建一个空的 `Swift` 文件（确保添加的时候**你的 App 名字**是被选中的），然后当 Xcode 询问时，点击 **Create Bridging Header** **并且不要删除 `Swift`**
-
-#### android
-
-android 需要手动 link
+#### watermelondb
 
 1、在 `android/settings.gradle` 添加：
 
@@ -130,19 +180,9 @@ protected List<ReactPackage> getPackages() {
 }
 ```
 
-### react-native-keyboard-manager
+### ios
 
-react-native-keyboard-manager 是用来解决 ios 键盘问题的组件，如果不需要 `Next/Previous` 则不需要任何配置，如果需要请阅读[官方文档](http://t.cn/Ai07QoyX)
-
-### react-native-config-reader
-
-#### Android
-
-打开 `android/app/src/main/packageName/MainApplication.java` 把 `new RNConfigReaderPackage()` 替换为 `new RNConfigReaderPackage(BuildConfig.class)`
-
-> 自定义 BuildConfig 请戳 http://t.cn/AipENa1O
-
-#### iOS
+#### react-native-config-reader
 
 > 由于插件需要读取系统配置，我们需要手动在 info.plist 中添加一些字段
 
@@ -159,40 +199,11 @@ if [[ -n "$builddate" ]]; then
 fi
 ```
 
-### 处理系统字体
+#### watermelondb
 
-> 注意：ios 已经在模版中配置好，安卓需要手动配置
-
-在 `android\app\src\main\java\com\appName\MainActivity.java` 文件中加入如下代码：
-
-```java
-...
-import android.content.res.Configuration;
-import android.content.res.Resources;
-...
-
-public class MainActivity extends ReactActivity {
-  ...
-  // 让文字不随系统文字变化：http://t.cn/Rs26Veb
-  @Override
-  public void onConfigurationChanged(Configuration newConfig) {
-    if (newConfig.fontScale != 1)//非默认值
-    getResources();
-    super.onConfigurationChanged(newConfig);
-  }
-  @Override
-  public Resources getResources() {
-    Resources res = super.getResources();
-    if (res.getConfiguration().fontScale != 1) {//非默认值
-      Configuration newConfig = new Configuration();
-      newConfig.setToDefaults();//设置默认
-      res.updateConfiguration(newConfig, res.getDisplayMetrics());
-    }
-    return res;
-  }
-  ...
-}
-```
+- Open `ios/YourAppName.xcodeproj` in Xcode
+- Right-click on **Your App Name** in the Project Navigator on the left, and click **New File…**
+- Create a single empty `Swift` file to the project (make sure that **Your App Name** target is selected when adding), and when Xcode asks, press **Create Bridging Header** and **do not remove** `Swift` file then.
 
 ### 超六的 npm 工作流程
 
