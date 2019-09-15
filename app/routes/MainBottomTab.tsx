@@ -1,7 +1,6 @@
 import React from 'react'
 import { Image } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation'
-import MineStack from '~/routes/MineStack'
 import theme from '~/theme'
 import HomeScreen from '~/screens/HomeScreen'
 
