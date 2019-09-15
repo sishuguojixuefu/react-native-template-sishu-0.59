@@ -8,7 +8,7 @@ export default createAppContainer(
       [Routes.MainStack]: MainStack,
     },
     {
-      initialRouteName: Routes.AuthLoadingScreen,
+      initialRouteName: Routes.MainStack,
     }
   )
 )

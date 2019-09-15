@@ -7,7 +7,7 @@ interface TargetFunction {
  * @param array 数组
  * @param step 步长
  */
-export const createIterator = (array: [], step: number = 1) => {
+export const createIterator = (array: [], step = 1) => {
   let nextIndex = 0
   return {
     next() {

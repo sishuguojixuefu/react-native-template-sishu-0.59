@@ -1,14 +1,14 @@
 import { NavigationScreenConfig, NavigationStackViewConfig, NavigationScreenOptions } from 'react-navigation'
 import { fromRight } from 'react-navigation-transitions'
-import theme from '~/theme'
 
 const commonStackNavigatorConfig: NavigationScreenConfig<NavigationScreenOptions> | NavigationStackViewConfig = {
   headerStyle: {
-    backgroundColor: theme.brand_primary,
+    backgroundColor: '#ffffff',
   },
-  headerTintColor: '#FFFFFF',
+  headerTintColor: '#000000',
   headerTitleStyle: {
     fontWeight: 'bold',
+    color: '#000000',
   },
   transitionConfig: () => fromRight(),
   headerBackTitleVisible: false,

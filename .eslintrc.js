@@ -74,6 +74,7 @@ module.exports = {
     'no-useless-constructor': 0,
     'no-unused-expressions': 0,
     'no-plusplus': 0,
+    'no-nested-ternary': 0,
     'lines-between-class-members': [
       1,
       'always',
@@ -105,6 +106,7 @@ module.exports = {
     'react/static-property-placement': 0,
     'react-native/no-color-literals': 0,
     'react-native/no-raw-text': 0,
+    'react-native/no-inline-styles': 0,
     'react-native/split-platform-components': 0,
     '@typescript-eslint/explicit-member-accessibility': [2, { accessibility: 'no-public' }],
     '@typescript-eslint/no-empty-interface': 1,

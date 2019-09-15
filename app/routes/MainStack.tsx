@@ -1,19 +1,19 @@
 import { createStackNavigator } from 'react-navigation'
 import Routes from '~/routes/Routes'
-import HomeScreen from '~/screens/HomeScreen'
+import MainBottomTab from '~/routes/MainBottomTab'
 import commonStackNavigatorConfig from '~/routes/commonStackNavigatorConfig'
 
 const MainStack = createStackNavigator(
   {
-    [Routes.HomeScreen]: {
-      screen: HomeScreen,
+    [Routes.MainBottomTab]: {
+      screen: MainBottomTab,
       navigationOptions: {
-        headerTitle: '首页',
+        header: null,
       },
     },
   },
   {
-    initialRouteName: Routes.HomeScreen,
+    initialRouteName: Routes.MainBottomTab,
     ...commonStackNavigatorConfig,
   }
 )

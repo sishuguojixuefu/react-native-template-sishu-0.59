@@ -2,6 +2,7 @@
 enum Routes {
   AuthLoadingScreen = 'AuthLoadingScreen',
   MainStack = 'MainStack',
+  MainBottomTab = 'MainBottomTab',
   HomeScreen = 'HomeScreen',
 }
 

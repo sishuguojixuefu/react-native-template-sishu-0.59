@@ -11,8 +11,9 @@ import uuid from 'uuid'
  * @param {string} filePath
  */
 export const uploadFile = async (filePath, uploadToken) => {
-  const uri = /^file:\/\/(.*)$/.exec(filePath)![1]
-  const name = filePath.replace(/(.*\/)*([^.]+).*/gi, '$2')
+  const path = `file://${filePath}` // ios、android兼容处理
+  const uri = /^file:\/\/(.*)$/.exec(path)![1]
+  const name = path.replace(/(.*\/)*([^.]+).*/gi, '$2')
   // uploadFile(uri, token, formInput, onprogress)
   console.log(uri, uploadToken, name)
   const key = await qiniu.Rpc.uploadFile(
