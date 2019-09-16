@@ -95,7 +95,7 @@ Xcode 允许你为每个“配置”（例如，调试，发布）定义自定�
 
 双击`Staging`并修改`Staging`的路径`$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)`到`$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)`
 
-![](https://i.loli.net/2018/11/19/5bf281ac19fce.png)
+![](https://i.loli.net/2019/09/16/5zjDy7pCkKFI2No.png)
 
 注意：由于[https://github.com/facebook/react-native/issues/11813](https://github.com/facebook/react-native/issues/11813)，我们必须执行此步骤，以便在 RN 0.40.0 或更高版本上使用除调试或发布之外的其他配置
 
