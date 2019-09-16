@@ -254,7 +254,45 @@ public static Object getBuildConfigValue(Context context, String fieldName) {
 String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 ```
 
-## 七、Android 开发必知必会
+## 七、解决在 Android P 上的提醒弹窗 （Detected problems with API compatibility(visit g.co/dev/appcompat for more info)
+
+在 `MainActivity.java` 中添加 closeAndroidPDialog 方法并在 `onCreate` 方法中调用
+
+```java
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+...
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+  SplashScreen.show(this, true);
+  super.onCreate(savedInstanceState);
+  closeAndroidPDialog(); // here
+}
+...
+private void closeAndroidPDialog(){
+  try {
+    Class aClass = Class.forName("android.content.pm.PackageParser$Package");
+    Constructor declaredConstructor = aClass.getDeclaredConstructor(String.class);
+    declaredConstructor.setAccessible(true);
+  } catch (Exception e) {
+    e.printStackTrace();
+  }
+  try {
+    Class cls = Class.forName("android.app.ActivityThread");
+    Method declaredMethod = cls.getDeclaredMethod("currentActivityThread");
+    declaredMethod.setAccessible(true);
+    Object activityThread = declaredMethod.invoke(null);
+    Field mHiddenApiWarningShown = cls.getDeclaredField("mHiddenApiWarningShown");
+    mHiddenApiWarningShown.setAccessible(true);
+    mHiddenApiWarningShown.setBoolean(activityThread, true);
+  } catch (Exception e) {
+    e.printStackTrace();
+  }
+}
+```
+
+## 八、Android 开发必知必会
 
 - [应用界面主题 Theme 使用方法](http://t.cn/Aip3wADF)
 - [Android Theme.AppCompat 中，你应该熟悉的颜色属性](http://t.cn/RkMz1mC)
