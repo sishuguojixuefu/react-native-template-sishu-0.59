@@ -238,6 +238,7 @@ fi
 ### 启动屏（防止启动白屏）
 
 - [react-native-splash-screen](https://github.com/crazycodeboy/react-native-splash-screen)
+- [react-native-splash-screen-ios.md](./docs/react-native-splash-screen-ios.md)
 
 ### 热更新
 
