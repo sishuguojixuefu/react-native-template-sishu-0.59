@@ -105,7 +105,7 @@ Xcode 允许你为每个“配置”（例如，调试，发布）定义自定�
 
 ![](https://i.loli.net/2019/09/16/uDeHM12OhmwkKCY.png)
 
-给这个设置命名为 `CODEPUSH_KEY` (名字可自定义),展开它。把 `Staging` 的 key 添加到 `Staging` 项上，把 `Production` 的 key 添加到 `Release` 下
+给这个设置命名为 `CODEPUSH_KEY` (名字可自定义),展开它。把 `Staging` 的 key 添加到 `Staging` 项上，把 `Production` 的 key 添加到 `Release` 下，把 `Staging` 的 key 添加到 `Staging` 下：
 
 ![](https://i.loli.net/2019/09/16/XRO8W6hUSHcefu9.png)
 
