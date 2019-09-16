@@ -119,16 +119,51 @@ Xcode 允许你为每个“配置”（例如，调试，发布）定义自定�
 
 就是这样现在，当你运行或构建应用程序时，`Staging` 环境将自动配置为与你的 `Staging` 部署同步，并且你的 `release` 版本将配置为 `Production key`
 
-# App.tsx 调用
+# code-push-cli
+
+## 准备工作
+
+- 安装 code-push-cli: `npm i -g code-push-cli`
+- 注册 AppCenter: `code-push register`
+- 登录: `code-push login`
+- 记住 code push token 的登录: `code-push login --accessKey <accessKey>`
+
+## 命令解释
+
+- access-key
+  - `code-push access-key ls`: 列出登陆的 token
+  - `code-push access-key rm <accessKye>`: 删除某个 access-key
+- app
+  - add
+    - `code-push app add ios_rndemo ios react-native`: 添加 ios 应用
+    - `code-push app add android_rndemo android react-native`: 添加 android 应用
+  - remove: `code-push app remove <appName>`: 移除一个 app
+  - rename: `code-push app rename <oldAppName> <newAppName>`: 重命名一个存在的 app
+  - list: `code-push app list`: 列出账号下面的所有 app
+- deployment
+  - `code-push deployment ls <appName> -k`: 查看应用的 key
+  - `code-push deployment add <appName> <deploymentName>`: 添加部署环境
+  - `code-push deployment rm <appName> <deploymentName>`: 删除部署环境
+  - `code-push deployment rename <appName> <deploymentName> <newDeploymentName>`: 重命名部署环境
+  - `code-push deployment history <projectName> <Staging/Production>`: 查看发布的历史记录
+  - `code-push deployment clear <appName> <deploymentName>`: 清除发布历史
+- release-react
+  - `code-push release-react <AppName> <Platform> --t <本更新包面向的版本号> --des <本次更新说明> -d <Staging/Production> -m <false/true> --dev <false/true>`
+- collaborator
+  - `$ code-push collaborator add <appName> <collaboratorEmail>`: 和其它开发者在一起合作同一个 CodePush 应用
+  - `code-push collaborator rm <appName> <collaboratorEmail>`: 解除合作者关系
+  - `code-push collaborator ls <appName>`: 列出所有合作者
+
+# app/index.tsx 调用
 
 ```js
 ...
 import CodePush from 'react-native-code-push'
-import CodePushSync from './src/utils/CodePushSync'
+import CodePushSync from '~/utils/CodePushSync'
 ...
 componentDidMount() {
   if (!__DEV__) {
-    CodePushSync.syncOnNextSuspend()
+    CodePushSync.syncImmediate()
   }
 }
 ...
@@ -139,7 +174,7 @@ export default CodePush({
    * ON_APP_START: APP开启的时候
    * MANUAL: 手动调用 codePush.sync() 检查
    */
-  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+  checkFrequency: CodePush.CheckFrequency.ON_APP_START,
 })(App)
 ```
 
