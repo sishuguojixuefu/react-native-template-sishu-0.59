@@ -248,7 +248,7 @@ fi
 
 - [基于官方模版的变动之处](./docs/Change.md)
 - [如何删除不想要的依赖？](./docs/Remove.md)
-- [踩过的坑](./Shit.md)
+- [踩过的坑](./docs/Shit.md)
 
 ## 相关项目
 
