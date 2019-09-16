@@ -3,7 +3,7 @@
 ## 添加依赖
 
 ```sh
-$ yarn add react-native-code-push
+$ yarn add react-native-code-push@5.6.0
 ```
 
 ## link
@@ -13,6 +13,8 @@ $ react-native link react-native-code-push
 ```
 
 # 配置
+
+> 这里的配置直接使用多部署环境的配置
 
 ## Android
 
@@ -101,11 +103,11 @@ Xcode 允许你为每个“配置”（例如，调试，发布）定义自定�
 
 点击工具栏上的`+`,选择`Add User-Defined Setting`
 
-![](https://i.loli.net/2018/11/19/5bf281ac19fce.png)
+![](https://i.loli.net/2019/09/16/uDeHM12OhmwkKCY.png)
 
 给这个设置命名为 `CODEPUSH_KEY` (名字可自定义),展开它。把 `Staging` 的 key 添加到 `Staging` 项上，把 `Production` 的 key 添加到 `Release` 下
 
-![](https://i.loli.net/2018/11/19/5bf281ac19fce.png)
+![](https://i.loli.net/2019/09/16/XRO8W6hUSHcefu9.png)
 
 > 注意：你可以通过 `code-push deployment ls <APP_NAME> -k` 终端运行来检索这些 key
 
