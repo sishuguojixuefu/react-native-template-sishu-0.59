@@ -32,6 +32,29 @@
 $ react-native init MyApp --template sishu --version 0.59.10
 ```
 
+### 超六的 npm 工作流程
+
+```json
+{
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "ios:debug": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "ios:bundle": "react-native bundle --entry-file index.js --bundle-output ./ios/index.ios.bundle --platform ios --dev false --assets-dest ./ios --sourcemap-output ./ios/index.ios.bundle.map",
+    "gradle:clean": "cd android && ./gradlew clean",
+    "an:bundle": "react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false --assets-dest ./android/app/src/main/res --sourcemap-output ./android/app/src/main/assets/index.android.bundle.map",
+    "an:debug": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
+    "an:release": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
+    "an:installRelease": "yarn gradle:clean && cd android && ./gradlew installRelease",
+    "an:staging": "yarn gradle:clean && cd android && ./gradlew assembleReleaseStaging",
+    "an:installStaging": "yarn gradle:clean && cd android && ./gradlew installReleaseStaging",
+    "an:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
+    "an:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
+    "an:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
+  }
+}
+```
+
 ### 安卓配置
 
 #### Maven 仓库
@@ -50,6 +73,9 @@ maven {
     name 'jitpack'
 }
 ```
+
+- `aliyun`: 为了加快下载速度
+- `jitpack`: 为了解决 react-native-image-crop-picker [Could not find com.github.yalantis:ucrop:2.2.1-native](http://t.cn/Ewx8bc3)的问题
 
 #### shell 文件的坑
 
@@ -138,19 +164,7 @@ include ':watermelondb'
 project(':watermelondb').projectDir = new File(rootProject.projectDir, '../node_modules/@nozbe/watermelondb/native/android')
 ```
 
-2、在 `android/app/build.gradle` 添加：
-
-```js
-apply plugin: "com.android.application"
-apply plugin: 'kotlin-android'  // ⬅️ This!
-// ...
-dependencies {
-    // ...
-    implementation project(':watermelondb') // ⬅️ This!
-}
-```
-
-3、在 `android/build.gradle`, 添加 Kotlin 支持:
+2、在 `android/build.gradle`, 添加 Kotlin 支持:
 
 ```js
 buildscript {
@@ -162,6 +176,18 @@ buildscript {
         // ...
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // ⬅️ This!
     }
+}
+```
+
+3、在 `android/app/build.gradle` 添加：
+
+```js
+apply plugin: "com.android.application"
+apply plugin: 'kotlin-android'  // ⬅️ This!
+// ...
+dependencies {
+    // ...
+    implementation project(':watermelondb') // ⬅️ This!
 }
 ```
 
@@ -179,6 +205,10 @@ protected List<ReactPackage> getPackages() {
   );
 }
 ```
+
+#### 高级配置
+
+- [安卓高级配置](./docs/Android.md)
 
 ### ios
 
@@ -205,33 +235,12 @@ fi
 - Right-click on **Your App Name** in the Project Navigator on the left, and click **New File…**
 - Create a single empty `Swift` file to the project (make sure that **Your App Name** target is selected when adding), and when Xcode asks, press **Create Bridging Header** and **do not remove** `Swift` file then.
 
-### 超六的 npm 工作流程
+### 热更新
 
-```json
-{
-  "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "ios:debug": "node node_modules/react-native/local-cli/cli.js run-ios",
-    "ios:bundle": "react-native bundle --entry-file index.js --bundle-output ./ios/index.ios.bundle --platform ios --dev false --assets-dest ./ios --sourcemap-output ./ios/index.ios.bundle.map",
-    "gradle:clean": "cd android && ./gradlew clean",
-    "an:bundle": "react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --platform android --dev false --assets-dest ./android/app/src/main/res --sourcemap-output ./android/app/src/main/assets/index.android.bundle.map",
-    "an:debug": "yarn gradle:clean && node node_modules/react-native/local-cli/cli.js run-android",
-    "an:release": "yarn gradle:clean && cd android && ./gradlew assembleRelease",
-    "an:installRelease": "yarn gradle:clean && cd android && ./gradlew installRelease",
-    "an:staging": "yarn gradle:clean && cd android && ./gradlew assembleReleaseStaging",
-    "an:installStaging": "yarn gradle:clean && cd android && ./gradlew installReleaseStaging",
-    "an:keygen": "keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 36500",
-    "an:key-debug": "keytool -list -v -keystore ~/.android/debug.keystore",
-    "an:key-release": "keytool -v -list -keystore ./android/app/my-release-key.keystore"
-  }
-}
-```
-
-## 高级配置
-
-- [安卓高级配置](./docs/Android.md)
 - [react-native-code-push](./docs/react-native-code-push.md)
+
+### 启动屏（防止启动白屏）
+
 - [react-native-splash-screen](http://t.cn/AipunyjA)
 
 ## 其他文档

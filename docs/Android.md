@@ -24,9 +24,6 @@ android: {
 }
 ```
 
-- `aliyun`: 为了加快下载速度
-- `jitpack`: 为了解决 react-native-image-crop-picker [Could not find com.github.yalantis:ucrop:2.2.1-native](http://t.cn/Ewx8bc3)的问题
-
 ## 四、打包 APK
 
 1、在项目根目录执行 `yarn an:keygen` 生成密钥文件 `my-release-key.keystore`
@@ -89,7 +86,7 @@ packagingOptions {
 
 默认情况下，生成的 `APK` 会同时包含针对于 `x86` 和 `ARMv7a` 两种 `CPU` 架构的原生代码。这样可以让我们更方便的向其他人分享这个 `APK`，因为它几乎可以运行在所有的 Android 设备上。但是，这会导致所有设备上都有一些根本不会运行的代码，白白占据了空间。目前安卓设备绝大多数是 `ARM` 架构，因此对于大部分应用来说可以考虑去掉 `x86` 架构的支持。
 
-你可以在 `android/app/build.gradle` 中修改如下代码（`false` 改为 `true`）来生成针对不同 CPU 架构的 APK。
+你可以在 `android/app/build.gradle` 中修改如下代码：
 
 ```diff
 - include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"

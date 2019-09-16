@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <Provider theme={theme}>
-        <StatusBar backgroundColor={theme.brand_primary} barStyle="light-content" />
+        <StatusBar translucent={false} backgroundColor="#ffffff" barStyle="dark-content" />
         <View style={styles.container}>
           <AppContainer
             ref={navigatorRef => {
