@@ -216,7 +216,7 @@ protected List<ReactPackage> getPackages() {
 
 > 由于插件需要读取系统配置，我们需要手动在 info.plist 中添加一些字段
 
-1. 添加 `BUILD_TYPE`，取值为 `\$(CONFIGURATION)`
+1. 添加 `BUILD_TYPE`，取值为 `$(CONFIGURATION)`
 2. 添加 `CodePushDeploymentKey`，取值为配置好的热更新 Key
 3. 添加 `BUILD_TIME`,取值为空，并通过脚本在每次编译的时候对其更新，脚本添加步骤 `Target`-> `Build Phases` -> `+` -> `New Run Script Phase`, Shell 代码如下
 
@@ -235,13 +235,13 @@ fi
 - Right-click on **Your App Name** in the Project Navigator on the left, and click **New File…**
 - Create a single empty `Swift` file to the project (make sure that **Your App Name** target is selected when adding), and when Xcode asks, press **Create Bridging Header** and **do not remove** `Swift` file then.
 
-### 热更新
-
-- [react-native-code-push](./docs/react-native-code-push.md)
-
 ### 启动屏（防止启动白屏）
 
 - [react-native-splash-screen](http://t.cn/AipunyjA)
+
+### 热更新
+
+- [react-native-code-push](./docs/react-native-code-push.md)
 
 ## 其他文档
 
