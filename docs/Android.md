@@ -259,6 +259,7 @@ String versionName = (String)getBuildConfigValue(activity, "VERSION_NAME"))
 在 `MainActivity.java` 中添加 closeAndroidPDialog 方法并在 `onCreate` 方法中调用
 
 ```java
+import android.os.Bundle;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
