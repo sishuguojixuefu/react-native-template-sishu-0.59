@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 ## [0.4.0] - 2019-9-17
 
+- 大面积优化更新
+
 ## [0.2.7] - 2019-6-29
 
 - 删除全局变量 ROUTES
