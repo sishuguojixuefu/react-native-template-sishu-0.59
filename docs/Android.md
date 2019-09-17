@@ -266,9 +266,8 @@ import java.lang.reflect.Method;
 ...
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-  SplashScreen.show(this, true);
-  super.onCreate(savedInstanceState);
   closeAndroidPDialog(); // here
+  super.onCreate(savedInstanceState);
 }
 ...
 private void closeAndroidPDialog(){
