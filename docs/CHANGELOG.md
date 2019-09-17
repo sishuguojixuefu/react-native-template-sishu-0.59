@@ -85,7 +85,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - 支持在开发者模式下打印 info、warn、error
 
-[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.7...HEAD
+[unreleased]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.7...v0.4.0
 [0.2.7]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/sishuguojixuefu/react-native-template-sishu/compare/v0.2.4...v0.2.5
