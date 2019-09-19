@@ -248,6 +248,7 @@ fi
 
 - `Privacy - Camera Usage Description`
 - `Privacy - Photo Library Usage Description`
+- `Privacy - Microphone Usage Description`
 
 ### 启动屏（防止启动白屏）
 
