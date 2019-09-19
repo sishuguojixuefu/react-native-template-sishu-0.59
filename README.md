@@ -210,6 +210,16 @@ protected List<ReactPackage> getPackages() {
 
 - [安卓高级配置](./docs/Android.md)
 
+#### 权限
+
+```xml
+<!--拍照-->
+<uses-permission android:name="android.permission.CAMERA"/>
+<!-- 前置摄像头 -->
+<uses-feature android:name="android.hardware.camera" android:required="false" />
+<uses-feature android:name="android.hardware.camera.front" android:required="false" />
+```
+
 ### ios
 
 #### react-native-config-reader
@@ -233,6 +243,11 @@ fi
 - Open `ios/YourAppName.xcodeproj` in Xcode
 - Right-click on **Your App Name** in the Project Navigator on the left, and click **New File…**
 - Create a single empty `Swift` file to the project (make sure that **Your App Name** target is selected when adding), and when Xcode asks, press **Create Bridging Header** and **do not remove** `Swift` file then.
+
+#### 权限
+
+- `Privacy - Camera Usage Description`
+- `Privacy - Photo Library Usage Description`
 
 ### 启动屏（防止启动白屏）
 
