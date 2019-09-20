@@ -268,10 +268,7 @@ fi
 ## 相关项目
 
 - [react-native-template-typescript](http://t.cn/R1u8olx)：干净简约的 React Native 模板，可快速启动 TypeScript
-- [react-native-template-youngjuning](http://t.cn/ECLfOA5): 杨俊宁的个人 react-native 模版
 - [react-native-template-rocketseat-basic](http://t.cn/AiKIMyxQ): 具有 Rocketseat 中使用的结构的 React Native 应用程序的基本模板
 - [awesome-react-native](http://t.cn/RAXKJGR):Awesome React Native components, news, tools, and learning material!
 - [awesome-mobx](https://github.com/mobxjs/awesome-mobx)
 - [react-typescript-cheatsheet](http://t.cn/Ai9xcymw): react typescript 备忘录
-- [react-navigation-slide-from-right-transition](http://t.cn/RsjwjbZ): 从右侧滑动转换配置，用于在 android 上使用 react navigation 的堆栈导航器
-- [react-navigation-animated-switch](http://t.cn/AiKMiajA): A switch navigator but with transitions between screens powered by the react-native-reanimated Transitions API
