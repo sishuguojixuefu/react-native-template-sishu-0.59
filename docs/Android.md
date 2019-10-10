@@ -80,7 +80,7 @@ packagingOptions {
 - [More than one file was found with OS independent path](http://t.cn/AipuM9Ll)
 - [More than one file was found with OS independent path 'META-INF/LICENSE'](http://t.cn/AipuMfcH)
 
-### 2、配置 splits
+### 2、配置 splits（慎选）
 
 > 查看手机 CPU 信息：`adb shell` -> `cd /proc` -> `cat cpuinfo`
 
