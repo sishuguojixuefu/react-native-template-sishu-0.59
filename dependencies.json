@@ -2,7 +2,6 @@
   "@ant-design/icons-react-native": "1.0.2",
   "@react-native-community/async-storage": "1.6.1",
   "@sishuguojixuefu/antd-mobile-rn": "3.1.8-beta.10",
-  "@sishuguojixuefu/react-native-form": "0.8.1",
   "@sishuguojixuefu/react-native-qiniu": "0.3.0",
   "antd-mobile-area-data": "2.0.0",
   "axios": "0.19.0",
