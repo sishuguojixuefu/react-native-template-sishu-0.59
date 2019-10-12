@@ -37,8 +37,6 @@
 #### 数据持久化
 
 - [@react-native-community/async-storage](http://t.cn/Aipa9GHY): An asynchronous, persistent, key-value storage system for React Native.
-- [@nozbe/watermelondb](http://t.cn/RsoPVsb): 用于功能强大的 React 和 React Native 应用程序的高性能响应式数据库
-- [@nozbe/with-observables](http://t.cn/AiKjlDYC): 用于将 RxJS Observable 连接到 React 组件的 HOC（高阶组件）
 
 #### mobx
 

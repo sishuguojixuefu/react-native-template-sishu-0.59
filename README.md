@@ -155,57 +155,6 @@ public class MainActivity extends ReactActivity {
 
 > 自定义 BuildConfig 请戳 http://t.cn/AipENa1O
 
-#### watermelondb
-
-1、在 `android/settings.gradle` 添加：
-
-```js
-include ':watermelondb'
-project(':watermelondb').projectDir = new File(rootProject.projectDir, '../node_modules/@nozbe/watermelondb/native/android')
-```
-
-2、在 `android/build.gradle`, 添加 Kotlin 支持:
-
-```js
-buildscript {
-    ext {
-        kotlin_version = '1.3.21' // ⬅️ This!
-    }
-    // ...
-    dependencies {
-        // ...
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // ⬅️ This!
-    }
-}
-```
-
-3、在 `android/app/build.gradle` 添加：
-
-```js
-apply plugin: "com.android.application"
-apply plugin: 'kotlin-android'  // ⬅️ This!
-// ...
-dependencies {
-    // ...
-    implementation project(':watermelondb') // ⬅️ This!
-}
-```
-
-4、最后，在 `android/app/src/main/java/{YOUR_APP_PACKAGE}/MainApplication.java`, 中添加：
-
-```java
-// ...
-import com.nozbe.watermelondb.WatermelonDBPackage; // ⬅️ This!
-// ...
-@Override
-protected List<ReactPackage> getPackages() {
-  return Arrays.<ReactPackage>asList(
-    new MainReactPackage(),
-    new WatermelonDBPackage() // ⬅️ Here!
-  );
-}
-```
-
 #### 高级配置
 
 - [安卓高级配置](./docs/Android.md)
@@ -237,12 +186,6 @@ if [[ -n "$builddate" ]]; then
 /usr/libexec/PlistBuddy -c "Set :BUILD_TIME $builddate" ${infoplist}
 fi
 ```
-
-#### watermelondb
-
-- Open `ios/YourAppName.xcodeproj` in Xcode
-- Right-click on **Your App Name** in the Project Navigator on the left, and click **New File…**
-- Create a single empty `Swift` file to the project (make sure that **Your App Name** target is selected when adding), and when Xcode asks, press **Create Bridging Header** and **do not remove** `Swift` file then.
 
 #### 权限
 
