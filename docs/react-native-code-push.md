@@ -119,7 +119,7 @@ Xcode 允许你为每个“配置”（例如，调试，发布）定义自定�
 
 就是这样现在，当你运行或构建应用程序时，`Staging` 环境将自动配置为与你的 `Staging` 部署同步，并且你的 `release` 版本将配置为 `Production key`
 
-# code-push-cli
+# code-push-cli
 
 ## 准备工作
 
