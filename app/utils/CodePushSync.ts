@@ -68,6 +68,7 @@ const syncOnNextResume = () => {
 
 /**
  * 下一次处于后台时更新，不会有白屏
+ * https://github.com/microsoft/react-native-code-push/issues/827
  */
 const syncOnNextSuspend = () => {
   console.info('[CodePush]syncOnNextSuspend: 下一次处于后台时更新，不会有白屏')
