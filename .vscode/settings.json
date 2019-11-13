@@ -29,13 +29,6 @@
       "autoFix": true
     }
   ],
-  "prettier.endOfLine": "lf",
-  "prettier.jsxSingleQuote": true,
-  "prettier.printWidth": 120,
-  "prettier.requireConfig": true,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "es5",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
