@@ -1,0 +1,104 @@
+{
+  "npm.packageManager": "yarn",
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.autoStash": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/android/*/**": true,
+    "**/ios/*/**": true
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "yarn-error.log": true
+  },
+  "search.exclude": {
+    "**/.vscode": true
+  },
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.tabSize": 2,
+  "editor.fontSize": 19,
+  "editor.wordWrap": "on",
+  "editor.renderControlCharacters": false,
+  "editor.renderWhitespace": "none",
+  "editor.mouseWheelZoom": true,
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnSave": true,
+  "javascript.suggest.autoImports": false,
+  "eslint.packageManager": "yarn",
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    }
+  ],
+  "gitlens.blame.ignoreWhitespace": true,
+  "prettier.printWidth": 120,
+  "prettier.endOfLine": "lf",
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "diffEditor.renderSideBySide": false,
+  "editor.suggest.shareSuggestSelections": true,
+  "search.useGlobalIgnoreFiles": true,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.quoteStyle": "single",
+  "editor.tabCompletion": "onlySnippets",
+  "editor.cursorBlinking": "smooth",
+  "editor.formatOnPaste": true,
+  "npm.enableScriptExplorer": true,
+  "scm.alwaysShowProviders": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.eol": "\n"
+}
