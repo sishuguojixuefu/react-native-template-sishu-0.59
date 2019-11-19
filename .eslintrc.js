@@ -34,13 +34,13 @@ module.exports = {
   settings: {
     // ESLint 支持在配置文件添加共享设置
     'import/resolver': {
-      typescript: {},
+      typescript,
       'babel-plugin-root-import': {
         rootPathSuffix: 'app',
         rootPathPrefix: '~',
       },
       node: {
-        extensions: ['.js', '.jsx', 'ts', '.tsx'],
+        extensions: ['.js', 'ts', '.tsx'],
       },
     },
   },
@@ -63,7 +63,7 @@ module.exports = {
     'no-console': [
       'warn',
       {
-        allow: ['warn', 'error', 'log', 'info', 'disableYellowBox'],
+        allow: ['warn', 'log', 'info', 'disableYellowBox'],
       },
     ],
     'no-param-reassign': ['error', { props: false }],
@@ -91,19 +91,22 @@ module.exports = {
     ],
     'max-classes-per-file': 0,
     'import/prefer-default-export': 0,
+    'jsx-a11y/accessible-emoji': 0,
     'react/prefer-stateless-function': 0,
     'react/destructuring-assignment': 0,
     'react/prop-types': 0,
     'react/react-in-jsx-scope': 0,
     'react/jsx-props-no-spreading': 0,
+    'react/static-property-placement': 0,
+    'react/jsx-sort-default-props': 1,
+    'react/jsx-sort-props': 1,
     'react/jsx-filename-extension': [
       2,
       {
-        extensions: ['.jsx', '.tsx'],
+        extensions: ['.tsx'],
       },
     ],
-    'jsx-a11y/accessible-emoji': 0,
-    'react/static-property-placement': 0,
+
     'react-native/no-color-literals': 0,
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 0,
@@ -117,7 +120,7 @@ module.exports = {
         allowTypedFunctionExpressions: true,
       },
     ],
-    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-explicit-any': 1,
     '@typescript-eslint/no-use-before-define': [
       2,
       {
