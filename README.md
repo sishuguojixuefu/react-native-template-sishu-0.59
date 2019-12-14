@@ -180,7 +180,6 @@ public class MainActivity extends ReactActivity {
 
 ```shell
 #!/bin/bash
-echo "In the build time script run."
 infoplist="$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH"
 builddate=`date +%Y-%m-%d_%H:%M`
 if [[ -n "$builddate" ]]; then
