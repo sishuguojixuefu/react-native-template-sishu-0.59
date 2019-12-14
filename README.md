@@ -179,6 +179,7 @@ public class MainActivity extends ReactActivity {
 2. 添加 `BUILD_TIME`,取值为空，并通过脚本在每次编译的时候对其更新，脚本添加步骤 `Target`-> `Build Phases` -> `+` -> `New Run Script Phase`, Shell 代码如下
 
 ```shell
+#!/bin/bash
 echo "In the build time script run."
 infoplist="$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH"
 builddate=`date +%Y-%m-%d_%H:%M`
