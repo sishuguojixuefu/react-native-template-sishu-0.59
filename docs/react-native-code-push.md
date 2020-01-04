@@ -148,7 +148,7 @@ Xcode 允许你为每个“配置”（例如，调试，发布）定义自定�
   - `code-push deployment history <projectName> <Staging/Production>`: 查看发布的历史记录
   - `code-push deployment clear <appName> <deploymentName>`: 清除发布历史
 - release-react
-  - `code-push release-react <AppName> <Platform> --t <本更新包面向的版本号> --des <本次更新说明> -d <部署环境名字> -m <false/true> --dev <false/true>`
+  - `code-push release-react <AppName> <Platform> --t <本更新包面向的版本号> --des <本次更新说明> -d <部署环境名字,默认Staging> -m <false/true> --dev <false/true>`
 - collaborator
   - `$ code-push collaborator add <appName> <collaboratorEmail>`: 和其它开发者在一起合作同一个 CodePush 应用
   - `code-push collaborator rm <appName> <collaboratorEmail>`: 解除合作者关系
